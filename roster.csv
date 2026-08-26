@@ -1,0 +1,12 @@
+ID,Name,Batch No,Email,Phone,Package,Adults,Kids,Attendance,Expected,Paid,Balance Due,Status,Verified By,Ref,Hoodies,Diet
+ATT-001,Dr. Varun Agarwal,HIMS-2012-001,varun@example.com,+91 98765 43200,Alumni Solo,1,0,Confirmed Attending,6000,6000,0,Paid,Dr. Varun Agarwal,UPI/SELF,Alumni: L,Vegetarian
+ATT-002,Dr. ABC 2,HIMS-2012-004,abc2@example.com,+91 98765 43210,Alumni + Spouse,2,0,Confirmed Attending,10000,10000,0,Paid,Dr. XYZ 1,UPI/6192837101,Alumni: L | Spouse: M,Vegetarian
+ATT-003,Dr. XYZ 2,HIMS-2012-019,xyz2@example.com,+91 98765 43211,Alumni Solo,1,0,Confirmed Attending,6000,6000,0,Paid,Dr. Varun Agarwal,UPI/6192849921,Alumni: S,Vegetarian (Jain)
+ATT-004,Dr. ABC 3,HIMS-2012-045,abc3@example.com,+91 98765 43212,Alumni + Family (2+2),2,2,Confirmed Attending,14000,14000,0,Paid,Dr. ABC 1,NEFT/HDFC882910,Alumni: XL | Spouse: M,Non-Vegetarian
+ATT-005,Dr. XYZ 3,HIMS-2012-012,xyz3@example.com,+91 98765 43213,Alumni + Spouse,2,0,Confirmed Attending,10000,10000,0,Paid,Dr. XYZ 1,UPI/6201928472,Alumni: M | Spouse: M,Vegetarian
+ATT-006,Dr. ABC 4,HIMS-2012-051,abc4@example.com,+91 98765 43214,Alumni Solo,1,0,Confirmed Attending,6000,6000,0,Paid,Dr. Varun Agarwal,UPI/6210948371,Alumni: L,Non-Vegetarian
+ATT-007,Dr. XYZ 4,HIMS-2012-008,xyz4@example.com,+91 98765 43215,Alumni + Family (2+1),2,1,Confirmed Attending,12000,12000,0,Paid,Dr. ABC 1,UPI/6229104829,Alumni: M | Spouse: L,Non-Vegetarian
+ATT-008,Dr. ABC 5,HIMS-2012-088,abc5@example.com,+91 98765 43216,Alumni Solo,1,0,Confirmed Attending,6000,6000,0,Paid,Dr. Varun Agarwal,UPI/6249102837,Alumni: XL,Vegetarian
+ATT-009,Dr. XYZ 5,HIMS-2012-014,xyz5@example.com,+91 98765 43217,Alumni + Spouse,2,0,Confirmed Attending,10000,6000,4000,Partial,Dr. XYZ 2,UPI/6260192841,Alumni: S | Spouse: L,Vegetarian
+ATT-010,Dr. ABC 6,HIMS-2012-077,abc6@example.com,+91 98765 43218,Alumni Solo,1,0,Confirmed Attending,6000,6000,0,Paid,Dr. Varun Agarwal,UPI/6271928491,Alumni: XXL,Non-Vegetarian
+ATT-011,Dr. XYZ 1,HIMS-2012-062,xyz1@example.com,+91 98765 43219,Alumni Solo,1,0,Confirmed Attending,6000,6000,0,Paid,Dr. XYZ 1,UPI/6281093842,Alumni: M,Vegetarian

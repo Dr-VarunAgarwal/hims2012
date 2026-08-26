@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HIMS MBBS 2012 � 15th Reunion Financial Ledger & Audit Trail</title>
+  <title>HIMS MBBS 2012 — 15th Reunion Financial Ledger & Audit Trail</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Chart.js CDN -->
@@ -57,32 +57,33 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         
-        <!-- Left: Branding & Event Info -->
+        <!-- Left: Branding & Event Identity -->
         <div class="flex items-center space-x-3">
           <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center text-white font-bold text-xl shadow-md shadow-indigo-100">
-            ??
+            🏥
           </div>
           <div>
             <div class="flex items-center space-x-2">
-              <h1 class="text-base sm:text-lg font-bold text-slate-900 leading-tight" id="header-event-title">HIMS MBBS 2012 � 15th Reunion</h1>
+              <h1 class="text-base sm:text-lg font-bold text-slate-900 leading-tight" id="header-event-title">HIMS MBBS 2012 — 15th Reunion</h1>
               <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">
                 <span class="w-1.5 h-1.5 mr-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                 Open Ledger
               </span>
             </div>
-            <p class="text-xs text-slate-500 truncate" id="header-event-subtitle">March 26 � 27, 2027 � Jolly Grant / Dehradun</p>
+            <p class="text-xs text-slate-500 truncate" id="header-event-subtitle">March 26 – 27, 2027 • Jolly Grant / Dehradun</p>
           </div>
         </div>
 
-        <!-- Center/Right: View Switcher -->
+        <!-- Center/Right: View Switcher & Action Tools -->
         <div class="flex items-center space-x-2 sm:space-x-3">
+          
           <div class="bg-slate-100 p-1 rounded-xl flex items-center border border-slate-200 shadow-inner">
             <button onclick="setViewMode('admin')" id="btn-view-admin" class="px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center space-x-1.5 bg-white text-brand-700 shadow-sm">
-              <span>??</span>
+              <span>👑</span>
               <span>Admin Panel</span>
             </button>
             <button onclick="setViewMode('attendee')" id="btn-view-attendee" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center space-x-1.5 text-slate-600 hover:text-slate-900">
-              <span>???</span>
+              <span>🎟️</span>
               <span>Attendee Portal</span>
             </button>
           </div>
@@ -90,6 +91,11 @@
           <button onclick="window.print()" class="hidden md:inline-flex items-center px-3 py-1.5 border border-slate-200 text-xs font-medium rounded-lg text-slate-700 bg-white hover:bg-slate-50 shadow-sm transition">
             Print / PDF
           </button>
+
+          <a id="nav-github-link" href="#" target="_blank" class="hidden sm:inline-flex items-center px-3 py-1.5 border border-slate-900 text-xs font-medium rounded-lg text-white bg-slate-900 hover:bg-slate-800 shadow-sm transition">
+            <svg class="w-3.5 h-3.5 mr-1.5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub Repo
+          </a>
         </div>
       </div>
     </div>
@@ -99,38 +105,40 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav class="flex space-x-1 sm:space-x-4 overflow-x-auto py-2">
           <button onclick="switchAdminTab('overview')" class="admin-tab-btn px-3 py-1.5 text-xs font-bold rounded-lg transition text-brand-700 bg-brand-50" data-tab="overview">
-            ?? Overview & Trajectory
+            📈 Overview & Trajectory
           </button>
           <button onclick="switchAdminTab('simulator')" class="admin-tab-btn px-3 py-1.5 text-xs font-medium rounded-lg transition text-slate-600 hover:text-slate-900 hover:bg-slate-100" data-tab="simulator">
-            ??? Simulator
+            🎛️ Headcount & Budget Simulator
           </button>
           <button onclick="switchAdminTab('ledger')" class="admin-tab-btn px-3 py-1.5 text-xs font-medium rounded-lg transition text-slate-600 hover:text-slate-900 hover:bg-slate-100" data-tab="ledger">
-            ?? Expense Ledger & Receipts
+            🧾 Expense Ledger & Receipts
           </button>
           <button onclick="switchAdminTab('roster')" class="admin-tab-btn px-3 py-1.5 text-xs font-medium rounded-lg transition text-slate-600 hover:text-slate-900 hover:bg-slate-100" data-tab="roster">
-            ?? Batch Roster & Dues
+            👥 Batch Registrations & Dues
           </button>
           <button onclick="switchAdminTab('changelog')" class="admin-tab-btn px-3 py-1.5 text-xs font-medium rounded-lg transition text-slate-600 hover:text-slate-900 hover:bg-slate-100" data-tab="changelog">
-            ??? Audit & Change Log
+            🛡️ Audit & Change Log
           </button>
           <button onclick="switchAdminTab('economics')" class="admin-tab-btn px-3 py-1.5 text-xs font-medium rounded-lg transition text-slate-600 hover:text-slate-900 hover:bg-slate-100" data-tab="economics">
-            ?? Unit Economics
+            📦 Unit Economics
           </button>
         </nav>
       </div>
     </div>
   </header>
 
-  <!-- ==================== MAIN CONTENT ==================== -->
+  <!-- ==================== MAIN APPLICATION CONTAINER ==================== -->
   <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
 
-    <!-- #################### 1. ADMIN PANEL #################### -->
+    <!-- ################################################################## -->
+    <!-- #################### 1. ADMIN PANEL SECTION ###################### -->
+    <!-- ################################################################## -->
     <div id="view-admin" class="space-y-6">
 
-      <!-- Summary Diagnostic Banner -->
+      <!-- Top Summary Diagnostic Banner -->
       <div class="rounded-2xl p-5 border flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-sm" id="admin-trajectory-banner">
         <div class="flex items-start space-x-3.5">
-          <div class="text-3xl" id="admin-banner-icon">??</div>
+          <div class="text-3xl" id="admin-banner-icon">🎯</div>
           <div>
             <div class="flex items-center space-x-2">
               <h2 class="text-sm sm:text-base font-bold text-slate-900" id="admin-banner-title">HIMS MBBS 2012 Treasury Health Summary</h2>
@@ -144,19 +152,26 @@
             <span class="mr-1.5">+</span> Log Expenditure
           </button>
           <button onclick="switchAdminTab('changelog')" class="px-3.5 py-2 bg-white hover:bg-slate-50 border border-slate-200 text-xs font-bold rounded-xl shadow-sm transition">
-            View Audit Log ???
+            View Audit Log 🛡️
           </button>
         </div>
       </div>
 
-      <!-- TAB A1: OVERVIEW -->
+      <!-- TAB A1: OVERVIEW & RUNWAY -->
       <div id="admin-tab-overview" class="admin-pane space-y-6">
+        
+        <!-- 5 Main KPI Metric Cards -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          
+          <!-- KPI 1: Inflow Collected -->
           <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
-            <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Total Inflow</span>
-            <div class="mt-2 text-2xl font-black text-slate-900 font-mono" id="kpi-admin-inflow">?0</div>
+            <div class="flex justify-between items-start">
+              <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Total Inflow</span>
+              <span class="p-1.5 rounded-lg bg-emerald-50 text-emerald-600 text-xs">💰</span>
+            </div>
+            <div class="mt-2 text-2xl font-black text-slate-900 font-mono" id="kpi-admin-inflow">₹0</div>
             <div class="mt-2 text-xs text-slate-500 flex justify-between">
-              <span id="kpi-admin-inflow-sub">target ?0</span>
+              <span id="kpi-admin-inflow-sub">target ₹0</span>
               <span class="font-bold text-emerald-700 font-mono" id="kpi-admin-inflow-pct">0%</span>
             </div>
             <div class="w-full bg-slate-100 rounded-full h-1.5 mt-1.5 overflow-hidden">
@@ -164,11 +179,15 @@
             </div>
           </div>
 
+          <!-- KPI 2: Actual Spent -->
           <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
-            <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Actual Spent</span>
-            <div class="mt-2 text-2xl font-black text-slate-900 font-mono" id="kpi-admin-spent">?0</div>
+            <div class="flex justify-between items-start">
+              <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Actual Spent</span>
+              <span class="p-1.5 rounded-lg bg-rose-50 text-rose-600 text-xs">💸</span>
+            </div>
+            <div class="mt-2 text-2xl font-black text-slate-900 font-mono" id="kpi-admin-spent">₹0</div>
             <div class="mt-2 text-xs text-slate-500 flex justify-between">
-              <span id="kpi-admin-committed-sub">+ ?0 committed</span>
+              <span id="kpi-admin-committed-sub">+ ₹0 committed</span>
               <span class="font-bold text-slate-700 font-mono" id="kpi-admin-spent-pct">0%</span>
             </div>
             <div class="w-full bg-slate-100 rounded-full h-1.5 mt-1.5 overflow-hidden">
@@ -176,280 +195,640 @@
             </div>
           </div>
 
+          <!-- KPI 3: Treasury Cash Balance -->
           <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
-            <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Treasury Balance</span>
-            <div class="mt-2 text-2xl font-black text-slate-900 font-mono" id="kpi-admin-treasury">?0</div>
-            <div class="mt-2 text-[11px] text-slate-500">Liquid balance in central pool</div>
+            <div class="flex justify-between items-start">
+              <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Treasury Balance</span>
+              <span class="p-1.5 rounded-lg bg-indigo-50 text-indigo-600 text-xs">🏦</span>
+            </div>
+            <div class="mt-2 text-2xl font-black text-slate-900 font-mono" id="kpi-admin-treasury">₹0</div>
+            <div class="mt-2 text-[11px] text-slate-500">Inflow minus Outflow</div>
+            <div class="mt-1 text-[11px] font-semibold text-indigo-700" id="kpi-admin-reimburse-note">0 reimbursements pending</div>
           </div>
 
+          <!-- KPI 4: Projected Net Margin -->
           <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
-            <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Projected Reserve</span>
-            <div class="mt-2 text-2xl font-black font-mono" id="kpi-admin-margin">?0</div>
+            <div class="flex justify-between items-start">
+              <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Projected Reserve</span>
+              <span class="p-1.5 rounded-lg bg-amber-50 text-amber-600 text-xs">⚖️</span>
+            </div>
+            <div class="mt-2 text-2xl font-black font-mono" id="kpi-admin-margin">₹0</div>
             <div class="mt-2 text-xs flex justify-between items-center">
               <span class="text-slate-500">Forecast Margin</span>
               <span class="px-1.5 py-0.5 rounded text-[10px] font-bold" id="kpi-admin-margin-tag">SURPLUS</span>
             </div>
+            <div class="mt-1 text-[11px] text-slate-400">At target turnout</div>
           </div>
 
+          <!-- KPI 5: Confirmed Headcount -->
           <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
-            <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Confirmed Turnout</span>
+            <div class="flex justify-between items-start">
+              <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Confirmed Turnout</span>
+              <span class="p-1.5 rounded-lg bg-blue-50 text-blue-600 text-xs">👨‍⚕️</span>
+            </div>
             <div class="mt-2 text-2xl font-black text-slate-900 font-mono" id="kpi-admin-headcount">0</div>
             <div class="mt-2 text-[11px] text-slate-500 truncate" id="kpi-admin-headcount-breakdown">0 Batch | 0 Spouse | 0 Kids</div>
             <div class="w-full bg-slate-100 rounded-full h-1.5 mt-1.5 overflow-hidden">
               <div class="bg-blue-500 h-1.5 rounded-full" id="kpi-admin-headcount-bar" style="width: 0%"></div>
             </div>
           </div>
+
         </div>
 
-        <!-- Charts -->
+        <!-- Visual Analytics Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          
+          <!-- Category Spending Donut Chart -->
           <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex flex-col">
-            <h3 class="text-sm font-bold text-slate-900 mb-3">Spending by Category</h3>
+            <div class="flex justify-between items-center mb-3">
+              <div>
+                <h3 class="text-sm font-bold text-slate-900">Spending by Category</h3>
+                <p class="text-xs text-slate-500">Actual spent + committed vendor deposits</p>
+              </div>
+              <span class="text-[10px] font-mono text-slate-400">AUDIT</span>
+            </div>
             <div class="relative flex-1 min-h-[240px] flex items-center justify-center">
               <canvas id="adminCategoryChart"></canvas>
             </div>
+            <div class="mt-3 pt-3 border-t border-slate-100 text-xs text-slate-500 flex justify-between">
+              <span>Fixed Overhead: <strong class="text-slate-800" id="admin-fixed-sum">₹0</strong></span>
+              <span>Variable Inclusions: <strong class="text-slate-800" id="admin-var-sum">₹0</strong></span>
+            </div>
           </div>
 
+          <!-- Trajectory Timeline Chart -->
           <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex flex-col lg:col-span-2">
-            <h3 class="text-sm font-bold text-slate-900 mb-3">Cumulative Treasury Runway</h3>
+            <div class="flex justify-between items-center mb-3">
+              <div>
+                <h3 class="text-sm font-bold text-slate-900">Cumulative Treasury Runway</h3>
+                <p class="text-xs text-slate-500">Collections (Inflow) vs Vendor Disbursements (Outflow)</p>
+              </div>
+              <div class="flex items-center space-x-3 text-xs">
+                <span class="inline-flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500 mr-1"></span> Inflow</span>
+                <span class="inline-flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-rose-500 mr-1"></span> Outflow</span>
+                <span class="inline-flex items-center"><span class="w-2.5 h-2.5 rounded-full bg-indigo-500 mr-1"></span> Treasury</span>
+              </div>
+            </div>
             <div class="relative flex-1 min-h-[240px]">
               <canvas id="adminTrajectoryChart"></canvas>
             </div>
+            <div class="mt-3 pt-3 border-t border-slate-100 flex flex-wrap justify-between text-xs text-slate-500">
+              <span>First Collection: <strong class="text-slate-800" id="admin-date-first">-</strong></span>
+              <span>Latest Entry: <strong class="text-slate-800" id="admin-date-last">-</strong></span>
+              <span>Treasury Growth: <strong class="text-emerald-700 font-mono" id="admin-treasury-growth">+₹0</strong></span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Quick Summary Rows: Recent Expenses & Unpaid Balances -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+            <div class="flex justify-between items-center mb-3">
+              <h3 class="text-sm font-bold text-slate-900">Recent Expenditures</h3>
+              <button onclick="switchAdminTab('ledger')" class="text-xs text-brand-600 hover:text-brand-800 font-bold">Full Ledger &rarr;</button>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs">
+                <thead>
+                  <tr class="border-b border-slate-200 text-slate-400 uppercase text-[10px]">
+                    <th class="pb-2">Date</th>
+                    <th class="pb-2">Item</th>
+                    <th class="pb-2">Added By</th>
+                    <th class="pb-2 text-right">Amount</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100" id="admin-recent-exp-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+            <div class="flex justify-between items-center mb-3">
+              <h3 class="text-sm font-bold text-slate-900">Recent Change Activity</h3>
+              <button onclick="switchAdminTab('changelog')" class="text-xs text-brand-600 hover:text-brand-800 font-bold">All Logs &rarr;</button>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs">
+                <thead>
+                  <tr class="border-b border-slate-200 text-slate-400 uppercase text-[10px]">
+                    <th class="pb-2">Timestamp</th>
+                    <th class="pb-2">Author</th>
+                    <th class="pb-2">Action</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100" id="admin-recent-log-tbody"></tbody>
+              </table>
+            </div>
           </div>
         </div>
+
       </div>
 
-      <!-- TAB A2: SIMULATOR -->
+      <!-- TAB A2: SIMULATOR & SCENARIO ENGINE -->
       <div id="admin-tab-simulator" class="admin-pane hidden space-y-6">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          
           <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-4">
-            <h3 class="text-sm font-bold text-slate-900 pb-2 border-b">Headcount & Pricing Controls</h3>
+            <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+              <h3 class="text-sm font-bold text-slate-900">Simulation Variables</h3>
+              <button onclick="resetSimulator()" class="text-xs text-brand-600 hover:text-brand-800 font-bold">Reset</button>
+            </div>
+
             <div class="space-y-3">
+              <h4 class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">1. Headcount Targets</h4>
               <div>
-                <div class="flex justify-between text-xs font-medium mb-1"><span>Alumni Batchmates</span><span class="font-mono font-bold text-brand-600" id="sim-val-alumni">75</span></div>
-                <input type="range" id="sim-input-alumni" min="20" max="120" value="75" oninput="runSimulation()" class="w-full accent-brand-600">
+                <div class="flex justify-between text-xs font-medium text-slate-700 mb-1">
+                  <span>Alumni Batchmates</span>
+                  <span class="font-mono font-bold text-brand-600" id="sim-val-alumni">75</span>
+                </div>
+                <input type="range" id="sim-input-alumni" min="20" max="120" value="75" oninput="runSimulation()" class="w-full accent-brand-600 cursor-pointer">
               </div>
+
               <div>
-                <div class="flex justify-between text-xs font-medium mb-1"><span>Spouses</span><span class="font-mono font-bold text-brand-600" id="sim-val-spouses">30</span></div>
-                <input type="range" id="sim-input-spouses" min="0" max="60" value="30" oninput="runSimulation()" class="w-full accent-brand-600">
+                <div class="flex justify-between text-xs font-medium text-slate-700 mb-1">
+                  <span>Spouses / Plus-Ones</span>
+                  <span class="font-mono font-bold text-brand-600" id="sim-val-spouses">30</span>
+                </div>
+                <input type="range" id="sim-input-spouses" min="0" max="60" value="30" oninput="runSimulation()" class="w-full accent-brand-600 cursor-pointer">
               </div>
+
               <div>
-                <div class="flex justify-between text-xs font-medium mb-1"><span>Children (>5 yrs)</span><span class="font-mono font-bold text-brand-600" id="sim-val-kids">20</span></div>
-                <input type="range" id="sim-input-kids" min="0" max="40" value="20" oninput="runSimulation()" class="w-full accent-brand-600">
+                <div class="flex justify-between text-xs font-medium text-slate-700 mb-1">
+                  <span>Children (> 5 yrs)</span>
+                  <span class="font-mono font-bold text-brand-600" id="sim-val-kids">20</span>
+                </div>
+                <input type="range" id="sim-input-kids" min="0" max="40" value="20" oninput="runSimulation()" class="w-full accent-brand-600 cursor-pointer">
               </div>
             </div>
-            <div class="pt-3 border-t space-y-2">
-              <div><label class="block text-xs font-medium mb-1">Alumni Base Fee (?)</label><input type="number" id="sim-fee-alumni" value="6000" oninput="runSimulation()" class="w-full px-3 py-1.5 border rounded-lg"></div>
-              <div><label class="block text-xs font-medium mb-1">Spouse Fee (?)</label><input type="number" id="sim-fee-spouse" value="4000" oninput="runSimulation()" class="w-full px-3 py-1.5 border rounded-lg"></div>
-              <div><label class="block text-xs font-medium mb-1">Child Fee (?)</label><input type="number" id="sim-fee-child" value="2000" oninput="runSimulation()" class="w-full px-3 py-1.5 border rounded-lg"></div>
+
+            <div class="space-y-3 pt-3 border-t border-slate-100">
+              <h4 class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">2. Contribution Rates (₹)</h4>
+              <div>
+                <label class="block text-xs font-medium text-slate-700 mb-1">Alumni Base Fee</label>
+                <input type="number" id="sim-fee-alumni" value="6000" step="250" oninput="runSimulation()" class="w-full px-3 py-1.5 text-xs font-mono border border-slate-200 rounded-lg">
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-slate-700 mb-1">Spouse Fee</label>
+                <input type="number" id="sim-fee-spouse" value="4000" step="250" oninput="runSimulation()" class="w-full px-3 py-1.5 text-xs font-mono border border-slate-200 rounded-lg">
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-slate-700 mb-1">Child Fee (5-12 yrs)</label>
+                <input type="number" id="sim-fee-child" value="2000" step="250" oninput="runSimulation()" class="w-full px-3 py-1.5 text-xs font-mono border border-slate-200 rounded-lg">
+              </div>
             </div>
           </div>
 
           <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm lg:col-span-2 space-y-6">
-            <h3 class="text-sm font-bold text-slate-900 pb-2 border-b" id="sim-headcount-badge">Turnout Forecast</h3>
+            <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+              <h3 class="text-sm font-bold text-slate-900">Projected Financial Balance</h3>
+              <span class="text-xs text-slate-500 font-mono font-medium" id="sim-headcount-badge">Total Turnout: 125</span>
+            </div>
+
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-100">
-                <span class="text-[11px] font-bold text-emerald-800 uppercase">Projected Inflow</span>
-                <div class="text-2xl font-black text-emerald-900 font-mono mt-1" id="sim-res-revenue">?0</div>
+                <span class="text-[11px] font-bold text-emerald-800 uppercase tracking-wider">Projected Revenue</span>
+                <div class="text-2xl font-black text-emerald-900 font-mono mt-1" id="sim-res-revenue">₹0</div>
+                <p class="text-[11px] text-emerald-700 mt-1">Total collections</p>
               </div>
+
               <div class="p-4 rounded-xl bg-rose-50 border border-rose-100">
-                <span class="text-[11px] font-bold text-rose-800 uppercase">Total Outflow</span>
-                <div class="text-2xl font-black text-rose-900 font-mono mt-1" id="sim-res-cost">?0</div>
+                <span class="text-[11px] font-bold text-rose-800 uppercase tracking-wider">Total Projected Cost</span>
+                <div class="text-2xl font-black text-rose-900 font-mono mt-1" id="sim-res-cost">₹0</div>
+                <p class="text-[11px] text-rose-700 mt-1">Fixed + Variable sum</p>
               </div>
+
               <div class="p-4 rounded-xl border" id="sim-margin-card">
-                <span class="text-[11px] font-bold uppercase" id="sim-margin-label">Net Reserve Margin</span>
-                <div class="text-2xl font-black font-mono mt-1" id="sim-res-margin">?0</div>
+                <span class="text-[11px] font-bold uppercase tracking-wider" id="sim-margin-label">Net Reserve Margin</span>
+                <div class="text-2xl font-black font-mono mt-1" id="sim-res-margin">₹0</div>
+                <p class="text-[11px] mt-1" id="sim-margin-pct">0% Buffer</p>
               </div>
             </div>
-            <div class="space-y-1" id="sim-breakdown-list"></div>
+
+            <div class="bg-slate-50 rounded-xl p-4 border border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+              <div>
+                <span class="text-slate-500 block">Breakeven Alumni Required:</span>
+                <span class="text-base font-bold text-slate-900 font-mono" id="sim-breakeven-alumni">0</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block">Actual Cost Per Adult:</span>
+                <span class="text-base font-bold text-slate-900 font-mono" id="sim-cost-per-adult">₹0</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block">Contingency Reserve:</span>
+                <span class="text-base font-bold text-slate-900 font-mono">₹30,000</span>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">Cost Breakdown</h4>
+              <div class="space-y-1.5" id="sim-breakdown-list"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TAB A3: EXPENSE LEDGER & RECEIPTS -->
+      <div id="admin-tab-ledger" class="admin-pane hidden space-y-4">
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-3">
+          <div class="flex flex-1 items-center space-x-2">
+            <input type="text" id="expense-search" oninput="filterExpenses()" placeholder="Search description, vendor, author..." class="px-3 py-1.5 text-xs border border-slate-200 rounded-lg w-full max-w-xs">
+            <select id="expense-cat-filter" onchange="filterExpenses()" class="py-1.5 px-2 text-xs border border-slate-200 rounded-lg text-slate-700 bg-white">
+              <option value="ALL">All Categories</option>
+              <option value="Venue & Booking">Venue & Booking</option>
+              <option value="Catering & Dining">Catering & Dining</option>
+              <option value="Souvenirs & Merch">Souvenirs & Merch</option>
+              <option value="Entertainment & AV">Entertainment & AV</option>
+              <option value="Decor & Signage">Decor & Signage</option>
+              <option value="Photography & Video">Photography & Video</option>
+              <option value="Logistics & Buffer">Logistics & Buffer</option>
+            </select>
+          </div>
+          <div class="flex items-center space-x-2">
+            <button onclick="exportExpensesCSV()" class="px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 text-xs font-bold rounded-lg text-slate-700 shadow-sm">
+              Export CSV
+            </button>
+            <button onclick="openAddExpenseModal()" class="px-3.5 py-1.5 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold rounded-lg shadow-sm">
+              + Log Expense
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs divide-y divide-slate-200">
+              <thead class="bg-slate-50 text-slate-500 uppercase text-[10px] tracking-wider font-bold">
+                <tr>
+                  <th class="px-4 py-3">ID & Date</th>
+                  <th class="px-4 py-3">Item / Description</th>
+                  <th class="px-4 py-3">Category</th>
+                  <th class="px-4 py-3">Vendor</th>
+                  <th class="px-4 py-3">Added By</th>
+                  <th class="px-4 py-3">Paid By / Reimbursement</th>
+                  <th class="px-4 py-3 text-right">Amount</th>
+                  <th class="px-4 py-3 text-center">Status</th>
+                  <th class="px-4 py-3 text-center">Proof</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100" id="expenses-tbody"></tbody>
+              <tfoot class="bg-slate-50/80 font-bold text-slate-900 border-t border-slate-200">
+                <tr>
+                  <td colspan="6" class="px-4 py-3 text-right text-xs">Total Filtered:</td>
+                  <td class="px-4 py-3 text-right text-xs font-mono font-bold" id="expense-filtered-total">₹0</td>
+                  <td colspan="2"></td>
+                </tr>
+              </tfoot>
+            </table>
           </div>
         </div>
       </div>
 
-      <!-- TAB A3: LEDGER -->
-      <div id="admin-tab-ledger" class="admin-pane hidden space-y-4">
-        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex justify-between items-center">
-          <input type="text" id="expense-search" oninput="filterExpenses()" placeholder="Search description, vendor, author..." class="px-3 py-1.5 text-xs border rounded-lg w-64">
-          <button onclick="openAddExpenseModal()" class="px-3.5 py-1.5 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold rounded-lg">+ Log Expense</button>
-        </div>
-        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-x-auto">
-          <table class="w-full text-left text-xs divide-y divide-slate-200">
-            <thead class="bg-slate-50 text-slate-500 uppercase text-[10px] font-bold">
-              <tr>
-                <th class="px-4 py-3">ID & Date</th>
-                <th class="px-4 py-3">Item</th>
-                <th class="px-4 py-3">Category</th>
-                <th class="px-4 py-3">Vendor</th>
-                <th class="px-4 py-3">Added By</th>
-                <th class="px-4 py-3 text-right">Amount</th>
-                <th class="px-4 py-3 text-center">Status</th>
-                <th class="px-4 py-3 text-center">Proof</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100" id="expenses-tbody"></tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- TAB A4: ROSTER -->
+      <!-- TAB A4: MASTER ATTENDEE DIRECTORY -->
       <div id="admin-tab-roster" class="admin-pane hidden space-y-4">
-        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex justify-between items-center">
-          <input type="text" id="roster-search" oninput="filterRoster()" placeholder="Search doctor name, roll..." class="px-3 py-1.5 text-xs border rounded-lg w-64">
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-3">
+          <div class="flex flex-1 items-center space-x-2">
+            <input type="text" id="roster-search" oninput="filterRoster()" placeholder="Search doctor name, roll no, phone..." class="px-3 py-1.5 text-xs border border-slate-200 rounded-lg w-full max-w-xs">
+            <select id="roster-status-filter" onchange="filterRoster()" class="py-1.5 px-2 text-xs border border-slate-200 rounded-lg text-slate-700 bg-white">
+              <option value="ALL">All Payment Statuses</option>
+              <option value="Paid">Paid in Full</option>
+              <option value="Partial">Partial</option>
+              <option value="Pending">Payment Pending</option>
+            </select>
+          </div>
+          <div class="flex items-center space-x-2">
+            <button onclick="exportRosterCSV()" class="px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 text-xs font-bold rounded-lg text-slate-700 shadow-sm">
+              Export Roster CSV
+            </button>
+          </div>
         </div>
-        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-x-auto">
-          <table class="w-full text-left text-xs divide-y divide-slate-200">
-            <thead class="bg-slate-50 text-slate-500 uppercase text-[10px] font-bold">
-              <tr>
-                <th class="px-4 py-3">ID</th>
-                <th class="px-4 py-3">Doctor Name</th>
-                <th class="px-4 py-3">Package</th>
-                <th class="px-4 py-3 text-center">Heads</th>
-                <th class="px-4 py-3 text-right">Fee</th>
-                <th class="px-4 py-3 text-right">Paid</th>
-                <th class="px-4 py-3 text-right">Due</th>
-                <th class="px-4 py-3 text-center">Status</th>
-                <th class="px-4 py-3">Verified By</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100" id="roster-tbody"></tbody>
-          </table>
+
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs divide-y divide-slate-200">
+              <thead class="bg-slate-50 text-slate-500 uppercase text-[10px] tracking-wider font-bold">
+                <tr>
+                  <th class="px-4 py-3">ID</th>
+                  <th class="px-4 py-3">Doctor Name & Roll</th>
+                  <th class="px-4 py-3">Package Tier</th>
+                  <th class="px-4 py-3 text-center">Heads</th>
+                  <th class="px-4 py-3 text-right">Fee</th>
+                  <th class="px-4 py-3 text-right">Paid</th>
+                  <th class="px-4 py-3 text-right">Due</th>
+                  <th class="px-4 py-3 text-center">Status</th>
+                  <th class="px-4 py-3">Verified By</th>
+                  <th class="px-4 py-3">Sizing & Diet</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100" id="roster-tbody"></tbody>
+            </table>
+          </div>
         </div>
       </div>
 
-      <!-- TAB A5: CHANGE LOG -->
+      <!-- TAB A5: AUDIT & CHANGE LOG (TRANSPARENT SYSTEM) -->
       <div id="admin-tab-changelog" class="admin-pane hidden space-y-4">
-        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
-          <h3 class="text-sm font-bold text-slate-900">??? Transparent Change Audit Log</h3>
-          <p class="text-xs text-slate-500">Live tamper-evident record of all logged entries and verifications.</p>
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-3">
+          <div>
+            <h3 class="text-sm font-bold text-slate-900 flex items-center">
+              <span class="mr-2">🛡️</span> Transparent Change Audit Log
+            </h3>
+            <p class="text-xs text-slate-500">Tamper-evident record of all logged expenses, payments, and system updates</p>
+          </div>
+          <div class="flex items-center space-x-2">
+            <input type="text" id="log-search" oninput="filterChangeLog()" placeholder="Search author, action, details..." class="px-3 py-1.5 text-xs border border-slate-200 rounded-lg w-48 sm:w-64">
+            <button onclick="exportChangeLogCSV()" class="px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 text-xs font-bold rounded-lg text-slate-700 shadow-sm">
+              Export Log CSV
+            </button>
+          </div>
         </div>
-        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-x-auto">
-          <table class="w-full text-left text-xs divide-y divide-slate-200">
-            <thead class="bg-slate-50 text-slate-500 uppercase text-[10px] font-bold">
-              <tr>
-                <th class="px-4 py-3">Log ID</th>
-                <th class="px-4 py-3">Timestamp</th>
-                <th class="px-4 py-3">Author</th>
-                <th class="px-4 py-3">Action</th>
-                <th class="px-4 py-3">Affected Item</th>
-                <th class="px-4 py-3">Details</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100" id="changelog-tbody"></tbody>
-          </table>
+
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs divide-y divide-slate-200">
+              <thead class="bg-slate-50 text-slate-500 uppercase text-[10px] tracking-wider font-bold">
+                <tr>
+                  <th class="px-4 py-3">Log ID</th>
+                  <th class="px-4 py-3">Timestamp</th>
+                  <th class="px-4 py-3">Author (Doctor)</th>
+                  <th class="px-4 py-3">Action Type</th>
+                  <th class="px-4 py-3">Affected Item</th>
+                  <th class="px-4 py-3">Change Details & Audit Note</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100" id="changelog-tbody"></tbody>
+            </table>
+          </div>
         </div>
       </div>
 
-      <!-- TAB A6: ECONOMICS -->
+      <!-- TAB A6: UNIT ECONOMICS -->
       <div id="admin-tab-economics" class="admin-pane hidden space-y-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
-            <h3 class="text-sm font-bold text-slate-900 mb-3">Fixed Overhead</h3>
-            <tbody id="fixed-costs-tbody" class="divide-y divide-slate-100 text-xs"></tbody>
+            <h3 class="text-sm font-bold text-slate-900 mb-3">Fixed Cost Structure</h3>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs divide-y divide-slate-100">
+                <thead>
+                  <tr class="text-slate-400 uppercase text-[10px] border-b pb-2">
+                    <th class="pb-2">Item</th>
+                    <th class="pb-2 text-right">Budgeted</th>
+                    <th class="pb-2">Notes</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100" id="fixed-costs-tbody"></tbody>
+              </table>
+            </div>
           </div>
+
           <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
             <h3 class="text-sm font-bold text-slate-900 mb-3">Variable Unit Costs (Per Person)</h3>
-            <tbody id="var-costs-tbody" class="divide-y divide-slate-100 text-xs"></tbody>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs divide-y divide-slate-100">
+                <thead>
+                  <tr class="text-slate-400 uppercase text-[10px] border-b pb-2">
+                    <th class="pb-2">Inclusion</th>
+                    <th class="pb-2 text-right">Adult Rate</th>
+                    <th class="pb-2 text-right">Child Rate</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100" id="var-costs-tbody"></tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
 
     </div>
 
-    <!-- #################### 2. ATTENDEE PORTAL #################### -->
+    <!-- ################################################################## -->
+    <!-- ################## 2. ATTENDEE PORTAL SECTION #################### -->
+    <!-- ################################################################## -->
     <div id="view-attendee" class="hidden space-y-6">
-      <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-brand-950 rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
-        <div>
-          <div class="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-400/30 mb-3">?? HIMS MBBS 2012 Reunion</div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">March 26 � 27, 2027</h2>
-          <p class="text-xs sm:text-sm text-indigo-200 mt-1">The Foothills Resort, Jolly Grant / Dehradun</p>
-        </div>
+      
+      <!-- Top Live Event Countdown Hero (March 26-27, 2027) -->
+      <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-brand-950 rounded-3xl p-6 sm:p-8 text-white shadow-xl relative overflow-hidden">
+        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-400/30 mb-3">
+              🏥 HIMS MBBS 2012 &bull; 15th Anniversary Reunion
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">March 26 – 27, 2027</h2>
+            <p class="text-xs sm:text-sm text-indigo-200 mt-1">The Foothills Resort & Convention Centre, Jolly Grant / Dehradun</p>
+          </div>
 
-        <div class="flex items-center space-x-2 sm:space-x-3 text-center font-mono">
-          <div class="bg-white/10 rounded-2xl p-3 w-16 sm:w-20"><div class="text-2xl font-black" id="cnt-days">00</div><div class="text-[9px] uppercase">Days</div></div>
-          <div class="bg-white/10 rounded-2xl p-3 w-16 sm:w-20"><div class="text-2xl font-black" id="cnt-hours">00</div><div class="text-[9px] uppercase">Hours</div></div>
-          <div class="bg-white/10 rounded-2xl p-3 w-16 sm:w-20"><div class="text-2xl font-black" id="cnt-mins">00</div><div class="text-[9px] uppercase">Mins</div></div>
-          <div class="bg-white/10 rounded-2xl p-3 w-16 sm:w-20"><div class="text-2xl font-black" id="cnt-secs">00</div><div class="text-[9px] uppercase">Secs</div></div>
+          <!-- Animated Countdown Clock -->
+          <div class="flex items-center space-x-2 sm:space-x-3 text-center font-mono">
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-3 w-16 sm:w-20 border border-white/10">
+              <div class="text-xl sm:text-3xl font-black text-white" id="cnt-days">00</div>
+              <div class="text-[9px] sm:text-[10px] text-indigo-300 font-sans uppercase mt-1">Days</div>
+            </div>
+            <span class="text-xl font-bold text-indigo-400">:</span>
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-3 w-16 sm:w-20 border border-white/10">
+              <div class="text-xl sm:text-3xl font-black text-white" id="cnt-hours">00</div>
+              <div class="text-[9px] sm:text-[10px] text-indigo-300 font-sans uppercase mt-1">Hours</div>
+            </div>
+            <span class="text-xl font-bold text-indigo-400">:</span>
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-3 w-16 sm:w-20 border border-white/10">
+              <div class="text-xl sm:text-3xl font-black text-white" id="cnt-mins">00</div>
+              <div class="text-[9px] sm:text-[10px] text-indigo-300 font-sans uppercase mt-1">Mins</div>
+            </div>
+            <span class="text-xl font-bold text-indigo-400">:</span>
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-3 w-16 sm:w-20 border border-white/10">
+              <div class="text-xl sm:text-3xl font-black text-white" id="cnt-secs">00</div>
+              <div class="text-[9px] sm:text-[10px] text-indigo-300 font-sans uppercase mt-1">Secs</div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-sm flex items-center justify-between">
-        <div>
-          <h3 class="text-sm font-bold text-slate-900">Select Doctor Profile</h3>
-          <p class="text-xs text-slate-500">Lookup by name to view your pass, dues & sizing</p>
+      <!-- Attendee Lookup Selector Bar -->
+      <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center space-x-3 w-full sm:w-auto">
+          <span class="text-2xl">👨‍⚕️</span>
+          <div>
+            <h3 class="text-sm font-bold text-slate-900">Select Doctor Profile / Registration</h3>
+            <p class="text-xs text-slate-500">Lookup by name or roll number to view your pass, dues & sizing</p>
+          </div>
         </div>
-        <select id="attendee-select" onchange="onAttendeeSelected()" class="py-2 px-3 text-xs font-semibold border rounded-xl bg-slate-50"></select>
+
+        <div class="w-full sm:w-80">
+          <select id="attendee-select" onchange="onAttendeeSelected()" class="w-full py-2 px-3 text-xs font-semibold border border-slate-300 rounded-xl bg-slate-50 text-slate-900 focus:ring-brand-500 shadow-sm">
+            <!-- Populated via JS -->
+          </select>
+        </div>
       </div>
 
+      <!-- Individual Attendee Profile Card & Digital Pass -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
         <div class="lg:col-span-2 space-y-6">
-          <div class="bg-white rounded-3xl border-2 border-brand-500/30 shadow-xl overflow-hidden ticket-pattern">
-            <div class="bg-brand-600 px-6 py-4 text-white flex justify-between items-center">
-              <div><span class="text-[10px] font-mono uppercase">15TH REUNION PASS</span><h3 class="text-lg font-black">HIMS MBBS 2012</h3></div>
-              <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-white/20" id="pass-status-pill">CONFIRMED</span>
-            </div>
-            <div class="p-6 space-y-4">
-              <div class="flex justify-between border-b pb-4">
-                <div><div class="text-xs text-slate-400 font-mono">DOCTOR NAME</div><h4 class="text-2xl font-extrabold text-slate-900" id="pass-attendee-name">Dr. Varun Agarwal</h4><div class="text-xs font-mono text-slate-500" id="pass-batch-id">HIMS-2012-001</div></div>
-                <div class="text-right"><div class="text-xs text-slate-400 font-mono">PACKAGE TIER</div><div class="text-base font-bold text-brand-700" id="pass-package">Alumni Solo</div><div class="text-xs text-slate-500" id="pass-headcount">1 Adult</div></div>
+          
+          <!-- VIP Pass Card -->
+          <div class="bg-white rounded-3xl border-2 border-brand-500/30 shadow-xl overflow-hidden relative ticket-pattern">
+            <div class="bg-gradient-to-r from-brand-600 via-indigo-600 to-brand-700 px-6 py-4 text-white flex justify-between items-center">
+              <div>
+                <span class="text-[10px] font-mono tracking-widest uppercase opacity-80">OFFICIAL 15TH REUNION PASS</span>
+                <h3 class="text-lg font-black tracking-tight" id="pass-event-title">HIMS MBBS 2012 REUNION</h3>
               </div>
-              <div class="grid grid-cols-3 gap-4 text-xs">
-                <div><span class="text-slate-400 block font-mono text-[10px]">HOODIE SIZES</span><span class="font-semibold text-slate-800" id="pass-hoodie">Alumni: L</span></div>
-                <div><span class="text-slate-400 block font-mono text-[10px]">DIET</span><span class="font-semibold text-slate-800" id="pass-diet">Vegetarian</span></div>
-                <div><span class="text-slate-400 block font-mono text-[10px]">SHUTTLE</span><span class="font-semibold text-slate-800" id="pass-shuttle">Dehradun Local</span></div>
+              <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md border border-white/20" id="pass-status-pill">
+                CONFIRMED
+              </span>
+            </div>
+
+            <div class="p-6 sm:p-8 space-y-6">
+              <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-6 border-b border-dashed border-slate-200">
+                <div>
+                  <div class="text-xs text-slate-400 uppercase font-mono tracking-wider">DOCTOR NAME</div>
+                  <h4 class="text-2xl font-extrabold text-slate-900" id="pass-attendee-name">Loading...</h4>
+                  <div class="text-xs font-mono text-slate-500 mt-0.5" id="pass-batch-id">HIMS-2012-000</div>
+                </div>
+
+                <div class="text-left sm:text-right">
+                  <div class="text-xs text-slate-400 uppercase font-mono tracking-wider">PACKAGE TIER</div>
+                  <div class="text-base font-bold text-brand-700" id="pass-package">Alumni + Spouse</div>
+                  <div class="text-xs text-slate-500 font-mono mt-0.5" id="pass-headcount">2 Adults &bull; 0 Kids</div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+                <div>
+                  <span class="text-slate-400 block font-mono text-[10px]">PASS ID</span>
+                  <span class="font-mono font-bold text-slate-800" id="pass-id">ATT-001</span>
+                </div>
+                <div>
+                  <span class="text-slate-400 block font-mono text-[10px]">HOODIE SIZES</span>
+                  <span class="font-semibold text-slate-800" id="pass-hoodie">Alumni: L</span>
+                </div>
+                <div>
+                  <span class="text-slate-400 block font-mono text-[10px]">DIET PREFERENCE</span>
+                  <span class="font-semibold text-slate-800" id="pass-diet">Vegetarian</span>
+                </div>
+                <div>
+                  <span class="text-slate-400 block font-mono text-[10px]">SHUTTLE REQ</span>
+                  <span class="font-semibold text-slate-800 truncate block" id="pass-shuttle">Airport pickup</span>
+                </div>
+              </div>
+
+              <div class="pt-6 border-t border-dashed border-slate-200 flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                  <div class="w-12 h-12 bg-slate-900 rounded-lg flex items-center justify-center text-white text-xl font-mono">
+                    ▦
+                  </div>
+                  <div>
+                    <div class="text-xs font-bold text-slate-900">Check-in Verified QR</div>
+                    <div class="text-[11px] text-slate-500">Scan at Foothills Resort hospitality desk</div>
+                  </div>
+                </div>
+                <div class="text-right font-mono text-xs text-slate-400">
+                  REF: <span class="font-bold text-slate-700" id="pass-txn-ref">UPI/6192837101</span>
+                </div>
               </div>
             </div>
           </div>
 
+          <!-- Payment Dues Card -->
           <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4">
-            <h3 class="text-sm font-bold text-slate-900">Payment & Account Status</h3>
-            <div class="grid grid-cols-3 gap-4 font-mono">
-              <div class="p-4 rounded-2xl bg-slate-50 border"><span class="text-xs text-slate-500">Tier Fee</span><div class="text-2xl font-black" id="pay-amt-expected">?6,000</div></div>
-              <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-100"><span class="text-xs text-emerald-700">Paid</span><div class="text-2xl font-black text-emerald-900" id="pay-amt-paid">?6,000</div></div>
-              <div class="p-4 rounded-2xl bg-slate-50 border"><span class="text-xs text-slate-500">Balance Due</span><div class="text-2xl font-black text-slate-900" id="pay-amt-balance">?0</div></div>
+            <div class="flex justify-between items-center pb-3 border-b border-slate-100">
+              <h3 class="text-sm font-bold text-slate-900">Contribution & Payment Account</h3>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-bold font-mono" id="pay-status-badge">PAID IN FULL</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                <span class="text-[11px] text-slate-500 block">Total Tier Fee</span>
+                <span class="text-2xl font-black text-slate-900 font-mono mt-1 block" id="pay-amt-expected">₹0</span>
+              </div>
+              <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-100">
+                <span class="text-[11px] text-emerald-700 block">Amount Paid</span>
+                <span class="text-2xl font-black text-emerald-900 font-mono mt-1 block" id="pay-amt-paid">₹0</span>
+              </div>
+              <div class="p-4 rounded-2xl border" id="pay-balance-card">
+                <span class="text-[11px] block font-bold" id="pay-balance-label">Balance Due</span>
+                <span class="text-2xl font-black font-mono mt-1 block" id="pay-amt-balance">₹0</span>
+              </div>
+            </div>
+
+            <div id="pay-settlement-cta" class="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs space-y-2 hidden">
+              <div class="flex items-center space-x-2 text-amber-900 font-bold">
+                <span>⚠️</span>
+                <span>Outstanding Balance Settlement</span>
+              </div>
+              <p class="text-amber-800 text-[11px]">
+                Please transfer the remaining balance via UPI to the central batch account:
+                <strong class="font-mono bg-white px-1.5 py-0.5 rounded border border-amber-200 ml-1" id="pay-upi-id">hims2012reunion@okaxis</strong>
+              </p>
+              <div class="text-[11px] text-amber-700">
+                Share your UTR transfer screenshot on the MBBS 2012 WhatsApp group or with Dr. Varun Agarwal / Dr. Dr. ABC 1.
+              </div>
             </div>
           </div>
+
         </div>
 
         <div class="space-y-6">
           <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3">
-            <h3 class="text-sm font-bold text-slate-900">?? Venue & Location</h3>
-            <p class="text-xs text-slate-500">The Foothills Resort, Swami Ram Nagar, Jolly Grant, Dehradun, Uttarakhand 248016</p>
+            <h3 class="text-sm font-bold text-slate-900 flex items-center">
+              <span class="mr-2">📍</span> Venue & Accommodation
+            </h3>
+            <div class="text-xs text-slate-700 space-y-1">
+              <div class="font-bold text-slate-900" id="venue-name">The Foothills Resort, Jolly Grant</div>
+              <p class="text-slate-500" id="venue-address">Swami Ram Nagar, Jolly Grant, Dehradun 248016</p>
+            </div>
+            <div class="pt-2 flex flex-col gap-2">
+              <a href="https://maps.google.com" target="_blank" class="w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-center font-bold text-xs rounded-xl transition">
+                Open in Google Maps 🗺️
+              </a>
+            </div>
           </div>
-          <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3">
-            <h3 class="text-sm font-bold text-slate-900">??? Reunion Highlights</h3>
-            <ul class="text-xs text-slate-600 space-y-2">
-              <li><strong>March 26, 10 AM:</strong> Welcome & Batch Hoodie Handover</li>
-              <li><strong>March 26, 2:30 PM:</strong> HIMS Campus Nostalgia Walk</li>
-              <li><strong>March 26, 7:00 PM:</strong> 15th Gala Banquet & DJ Sonic Night</li>
-              <li><strong>March 27, 8:30 AM:</strong> Batch Group Portrait & Drone Shoot</li>
-              <li><strong>March 27, 7:30 PM:</strong> Foothills Bonfire & Acoustic Jam</li>
-            </ul>
+
+          <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4">
+            <div class="flex justify-between items-center">
+              <h3 class="text-sm font-bold text-slate-900 flex items-center">
+                <span class="mr-2">🗓️</span> Reunion Schedule
+              </h3>
+              <span class="text-[10px] font-mono text-slate-400">MARCH 26–27</span>
+            </div>
+            <div class="space-y-4" id="itinerary-list"></div>
           </div>
         </div>
+
       </div>
+
     </div>
+
   </main>
 
-  <!-- Log Expense Modal -->
+  <!-- ==================== LOG EXPENSE MODAL (WITH AUTHOR ATTRIBUTION) ==================== -->
   <div id="add-expense-modal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
     <div class="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl space-y-4">
-      <div class="flex justify-between items-center pb-2 border-b">
-        <h3 class="text-base font-bold text-slate-900">Log New Expenditure Line Item</h3>
-        <button onclick="closeAddExpenseModal()" class="text-slate-400 text-lg">&times;</button>
+      <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+        <div>
+          <h3 class="text-base font-bold text-slate-900">Log New Expenditure Line Item</h3>
+          <p class="text-[11px] text-slate-500">Every logged item is recorded with contributor attribution in the audit trail.</p>
+        </div>
+        <button onclick="closeAddExpenseModal()" class="text-slate-400 hover:text-slate-600 text-lg">&times;</button>
       </div>
+
       <form id="add-expense-form" onsubmit="handleAddExpense(event)" class="space-y-3 text-xs">
-        <div>
-          <label class="block font-bold mb-1">Added By (Contributor)</label>
-          <select id="modal-exp-author" class="w-full px-3 py-1.5 border rounded-xl font-semibold"></select>
+        
+        <!-- Author / Added By Picker -->
+        <div class="bg-indigo-50/70 p-3 rounded-2xl border border-indigo-100 space-y-1">
+          <label class="block font-bold text-indigo-950">Who is logging this expense? (Added By)</label>
+          <select id="modal-exp-author" class="w-full px-3 py-1.5 border border-indigo-200 rounded-xl bg-white text-slate-900 font-semibold focus:ring-brand-500">
+            <!-- Populated via JS -->
+          </select>
         </div>
+
         <div>
-          <label class="block font-medium mb-1">Expense Title</label>
-          <input type="text" id="modal-exp-title" required placeholder="e.g. Stage lighting deposit" class="w-full px-3 py-2 border rounded-xl">
+          <label class="block font-medium text-slate-700 mb-1">Expense Title / Description</label>
+          <input type="text" id="modal-exp-title" required placeholder="e.g. Banquet Stage advance deposit" class="w-full px-3 py-2 border border-slate-200 rounded-xl">
         </div>
+
         <div class="grid grid-cols-2 gap-3">
           <div>
-            <label class="block font-medium mb-1">Category</label>
-            <select id="modal-exp-category" class="w-full px-3 py-2 border rounded-xl">
+            <label class="block font-medium text-slate-700 mb-1">Category</label>
+            <select id="modal-exp-category" class="w-full px-3 py-2 border border-slate-200 rounded-xl">
               <option value="Venue & Booking">Venue & Booking</option>
               <option value="Catering & Dining">Catering & Dining</option>
               <option value="Souvenirs & Merch">Souvenirs & Merch</option>
@@ -460,84 +839,84 @@
             </select>
           </div>
           <div>
-            <label class="block font-medium mb-1">Amount (?)</label>
-            <input type="number" id="modal-exp-amount" required placeholder="25000" class="w-full px-3 py-2 border rounded-xl font-mono">
+            <label class="block font-medium text-slate-700 mb-1">Amount (₹)</label>
+            <input type="number" id="modal-exp-amount" required placeholder="25000" class="w-full px-3 py-2 border border-slate-200 rounded-xl font-mono font-bold">
           </div>
         </div>
-        <div class="pt-3 flex justify-end space-x-2 border-t">
-          <button type="button" onclick="closeAddExpenseModal()" class="px-4 py-2 bg-slate-100 rounded-xl font-bold">Cancel</button>
-          <button type="submit" class="px-5 py-2 bg-brand-600 text-white rounded-xl font-bold">Save to Ledger</button>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-medium text-slate-700 mb-1">Vendor / Recipient</label>
+            <input type="text" id="modal-exp-vendor" placeholder="e.g. Sonic Audio Dehradun" class="w-full px-3 py-2 border border-slate-200 rounded-xl">
+          </div>
+          <div>
+            <label class="block font-medium text-slate-700 mb-1">Paid By</label>
+            <input type="text" id="modal-exp-paidby" value="Central Treasury Pool" class="w-full px-3 py-2 border border-slate-200 rounded-xl">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-medium text-slate-700 mb-1">Status</label>
+            <select id="modal-exp-status" class="w-full px-3 py-2 border border-slate-200 rounded-xl">
+              <option value="Paid">Paid</option>
+              <option value="Committed">Committed</option>
+              <option value="Planned">Planned</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-medium text-slate-700 mb-1">Receipt Link</label>
+            <input type="url" id="modal-exp-receipt" placeholder="https://drive.google.com/..." class="w-full px-3 py-2 border border-slate-200 rounded-xl">
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-medium text-slate-700 mb-1">Audit Notes / Transaction Ref</label>
+          <input type="text" id="modal-exp-notes" placeholder="e.g. UTR #9928172615 bank confirmation" class="w-full px-3 py-2 border border-slate-200 rounded-xl">
+        </div>
+
+        <div class="pt-3 flex justify-end space-x-2 border-t border-slate-100">
+          <button type="button" onclick="closeAddExpenseModal()" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 rounded-xl text-slate-700 font-bold">Cancel</button>
+          <button type="submit" class="px-5 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-xl font-bold shadow-sm">Save to Ledger & Log</button>
         </div>
       </form>
     </div>
   </div>
 
-  <!-- Embedded Standalone App Data & Logic -->
+  <!-- ==================== JAVASCRIPT APP LOGIC ==================== -->
   <script>
-    let APP_DATA = {
-      config: {
-        event_name: "HIMS MBBS Batch of 2012 � 15th Reunion",
-        dates_display: "March 26 � 27, 2027",
-        venue: "The Foothills Resort & Convention Centre, Jolly Grant / Dehradun",
-        event_start_date: "2027-03-26T10:00:00+05:30",
-        currency_symbol: "?"
-      },
-      contributors: ["Dr. Varun Agarwal", "Dr. ABC 1", "Dr. XYZ 1", "Dr. ABC 2", "Dr. XYZ 2", "Dr. ABC 3", "Dr. XYZ 3", "Dr. ABC 4", "Dr. XYZ 4"],
-      pricing_tiers: { alumni: 6000, spouse: 4000, child_above_5: 2000, child_under_5: 0 },
-      scenarios: { target_alumni: 75, target_spouses: 30, target_kids: 20 },
-      budget_projections: {
-        fixed_costs: [
-          { category: "Venue & Booking", item: "Resort Banquet Hall & Lawn Booking (2 Days)", amount: 195000, notes: "Full-day hall & lawn access" },
-          { category: "Entertainment & AV", item: "DJ, Sound System, Stage Lighting & Dance Floor", amount: 50000, notes: "2 evenings sound setup" },
-          { category: "Photography & Video", item: "Photographer, Videographer & Drone Pilot", amount: 40000, notes: "2 shooters, drone team, aftermovie" },
-          { category: "Decor & Signage", item: "Entry Arch, Nostalgia Photo Wall & Standees", amount: 28000, notes: "Custom MBBS 2012 banners" },
-          { category: "Logistics & Buffer", item: "Emergency Medical Kit & Buffer", amount: 30000, notes: "Unforeseen reserve" }
-        ],
-        variable_costs_per_unit: [
-          { category: "Catering", item: "Buffet Meals (Dinners, Lunches, High Tea)", rate_per_adult: 2800, rate_per_child: 1400 },
-          { category: "Merch", item: "Custom Embroidered 15th Reunion Fleece Hoodie", rate_per_alumni: 1200 },
-          { category: "Kit", item: "Welcome Kit, Batch Mug, Metallic ID Badges", rate_per_alumni: 450, rate_per_spouse: 300 }
-        ]
-      },
-      expenses: [
-        { id: "EXP-001", date: "2026-06-15", category: "Venue & Booking", title: "Resort Booking Advance (50%)", vendor: "Foothills Hospitality", amount: 95000, status: "Paid", added_by: "Dr. Varun Agarwal", receipt_url: "https://drive.google.com" },
-        { id: "EXP-002", date: "2026-07-02", category: "Souvenirs & Merch", title: "Hoodie Advance Deposit", vendor: "StitchCraft Custom", amount: 38000, status: "Paid", added_by: "Dr. ABC 1", receipt_url: "https://drive.google.com" },
-        { id: "EXP-003", date: "2026-07-20", category: "Entertainment & AV", title: "DJ & Sound Booking", vendor: "SonicPulse Audio", amount: 20000, status: "Paid", added_by: "Dr. Varun Agarwal", receipt_url: "https://drive.google.com" },
-        { id: "EXP-004", date: "2026-08-05", category: "Decor & Signage", title: "Photo Booth Props & Wall", vendor: "PrintCraft Media", amount: 9500, status: "Paid", added_by: "Dr. XYZ 1", receipt_url: "https://drive.google.com" },
-        { id: "EXP-005", date: "2026-08-18", category: "Photography & Video", title: "Photographer & Drone Token", vendor: "Lumiere Visuals", amount: 15000, status: "Paid", added_by: "Dr. ABC 2", receipt_url: "https://drive.google.com" }
-      ],
-      attendees: [
-        { id: "ATT-001", name: "Dr. Varun Agarwal", batch_no: "HIMS-2012-001", package: "Alumni Solo", adults: 1, kids: 0, attendance_status: "Confirmed Attending", amount_expected: 6000, amount_paid: 6000, balance_due: 0, payment_status: "Paid", hoodie_sizes: "Alumni: L", food_pref: "Vegetarian", shuttle_request: "Dehradun Local", added_by: "Dr. Varun Agarwal" },
-        { id: "ATT-002", name: "Dr. ABC 2", batch_no: "HIMS-2012-004", package: "Alumni + Spouse", adults: 2, kids: 0, attendance_status: "Confirmed Attending", amount_expected: 10000, amount_paid: 10000, balance_due: 0, payment_status: "Paid", hoodie_sizes: "Alumni: L | Spouse: M", food_pref: "Vegetarian", shuttle_request: "Jolly Grant Airport", added_by: "Dr. XYZ 1" },
-        { id: "ATT-003", name: "Dr. XYZ 2", batch_no: "HIMS-2012-019", package: "Alumni Solo", adults: 1, kids: 0, attendance_status: "Confirmed Attending", amount_expected: 6000, amount_paid: 6000, balance_due: 0, payment_status: "Paid", hoodie_sizes: "Alumni: S", food_pref: "Vegetarian (Jain)", shuttle_request: "Dehradun Station", added_by: "Dr. Varun Agarwal" },
-        { id: "ATT-004", name: "Dr. ABC 3", batch_no: "HIMS-2012-045", package: "Alumni + Family (2+2)", adults: 2, kids: 2, attendance_status: "Confirmed Attending", amount_expected: 14000, amount_paid: 14000, balance_due: 0, payment_status: "Paid", hoodie_sizes: "Alumni: XL | Spouse: M", food_pref: "Non-Vegetarian", shuttle_request: "Self-driving", added_by: "Dr. ABC 1" },
-        { id: "ATT-005", name: "Dr. XYZ 5", batch_no: "HIMS-2012-014", package: "Alumni + Spouse", adults: 2, kids: 0, attendance_status: "Confirmed Attending", amount_expected: 10000, amount_paid: 6000, balance_due: 4000, payment_status: "Partial", hoodie_sizes: "Alumni: S | Spouse: L", food_pref: "Vegetarian", shuttle_request: "Jolly Grant Airport", added_by: "Dr. XYZ 2" }
-      ],
-      change_log: [
-        { id: "LOG-001", timestamp: "2026-06-15 10:30 AM", author: "Dr. Varun Agarwal", action: "Logged Expense", entity: "EXP-001 (Resort Booking Advance)", details: "Added 50% advance deposit of ?95,000 to Foothills Resort for March 26-27, 2027" },
-        { id: "LOG-002", timestamp: "2026-07-02 02:15 PM", author: "Dr. ABC 1", action: "Logged Expense", entity: "EXP-002 (Hoodie Manufacturer Advance)", details: "Added ?38,000 advance payment for 100 customized fleece hoodies" },
-        { id: "LOG-003", timestamp: "2026-07-20 11:20 AM", author: "Dr. Varun Agarwal", action: "Logged Expense", entity: "EXP-003 (DJ & Audio Stage)", details: "Logged ?20,000 advance payment to SonicPulse Audio" },
-        { id: "LOG-004", timestamp: "2026-08-05 04:30 PM", author: "Dr. XYZ 1", action: "Logged Expense", entity: "EXP-004 (Photo Booth Props)", details: "Logged ?9,500 advance paid out-of-pocket" },
-        { id: "LOG-005", timestamp: "2026-08-26 08:30 PM", author: "Dr. Varun Agarwal", action: "Updated System", entity: "Audit Log & Contributor Model", details: "Activated contributor attribution picker and transparent audit log" }
-      ]
-    };
+    let APP_DATA = {"config": {"event_name": "HIMS MBBS Batch of 2012 \u2014 15th Reunion", "tagline": "Open Financial Ledger, Contributor Attribution & Change Audit Log", "institution": "Himalayan Institute of Medical Sciences (HIMS), Dehradun", "batch_name": "MBBS Batch of 2012", "reunion_milestone": "15th Anniversary Reunion", "event_start_date": "2027-03-26T10:00:00+05:30", "event_end_date": "2027-03-27T22:00:00+05:30", "dates_display": "March 26 \u2013 27, 2027", "venue": "The Foothills Resort & Convention Centre, Jolly Grant / Dehradun", "venue_address": "Swami Ram Nagar, Jolly Grant, Dehradun, Uttarakhand 248016", "currency_symbol": "\u20b9", "currency_code": "INR", "github_repo_url": "https://github.com/hims-mbbs-2012/15th-reunion-ledger", "registration_form_url": "https://forms.google.com/hims-mbbs-2012-reunion", "upi_id": "hims2012reunion@okaxis", "treasury_team": "Dr. Varun Agarwal, Dr. ABC 1, Dr. XYZ 1", "last_updated": "2026-08-26"}, "contributors": ["Dr. Varun Agarwal", "Dr. ABC 1", "Dr. XYZ 1", "Dr. ABC 2", "Dr. XYZ 2", "Dr. ABC 3", "Dr. XYZ 3", "Dr. ABC 4", "Dr. XYZ 4"], "pricing_tiers": {"alumni": 6000, "spouse": 4000, "child_above_5": 2000, "child_under_5": 0}, "scenarios": {"target_alumni": 75, "target_spouses": 30, "target_kids": 20}, "itinerary": [{"day": "Day 1 \u2014 March 26", "time": "10:00 AM", "title": "Welcome Reception & Memento Distribution", "desc": "Check-in at the resort desk, collect custom embroidered batch fleece hoodies, personalized name lanyards, and welcome kits."}, {"day": "Day 1 \u2014 March 26", "time": "02:30 PM", "title": "HIMS Campus Nostalgia Walk & Department Tour", "desc": "Visit the medical college campus, central library, hospital lawns, and old lecture theatres with batchmates."}, {"day": "Day 1 \u2014 March 26", "time": "07:00 PM", "title": "15th Anniversary Gala Banquet & DJ Sonic Night", "desc": "Keynote memories, batch yearbook reel, award roasts, live DJ setup, and grand poolside dinner."}, {"day": "Day 2 \u2014 March 27", "time": "08:30 AM", "title": "Batch Group Portrait & Drone Photo Session", "desc": "Formal batch photograph, department group photos, and aerial drone shoot on the resort lawns."}, {"day": "Day 2 \u2014 March 27", "time": "01:30 PM", "title": "Interactive Medical Trivia & Open Mic Memory Lane", "desc": "Fun batch quiz, residency war stories, musical performances, and laughter session."}, {"day": "Day 2 \u2014 March 27", "time": "07:30 PM", "title": "Foothills Barbecue, Bonfire & Acoustic Jam", "desc": "Live acoustic jamming by batch musicians, barbecue spread, bonfire storytelling, and memento exchange."}], "budget_projections": {"fixed_costs": [{"category": "Venue & Booking", "item": "Resort Banquet Hall & Lawn Booking (2 Days)", "amount": 195000, "notes": "Negotiated full-day hall & lawn access"}, {"category": "Entertainment & AV", "item": "DJ, Sound System, Stage Lighting & Dance Floor", "amount": 50000, "notes": "2 evenings sound setup with stage & lasers"}, {"category": "Photography & Video", "item": "Photographer, Videographer & Drone Pilot Coverage", "amount": 40000, "notes": "2 shooters, drone team, edited aftermovie & album"}, {"category": "Decor & Signage", "item": "Entry Arch, Nostalgia Photo Wall & Standees", "amount": 28000, "notes": "Custom MBBS 2012 banners and photo booth"}, {"category": "Logistics & Buffer", "item": "Emergency Medical Kit, Event Permits & Contingency Buffer", "amount": 30000, "notes": "Unforeseen buffer reserve"}], "variable_costs_per_unit": [{"category": "Catering & Dining", "item": "Buffet Meals (2 Dinners, 2 Lunches, 2 High Teas & Breakfasts)", "rate_per_adult": 2800, "rate_per_child": 1400, "notes": "Full board buffet catering"}, {"category": "Souvenirs & Merch", "item": "Custom Embroidered 15th Reunion Fleece Hoodie + Batch Lapel Crest", "rate_per_alumni": 1200, "rate_per_spouse": 0, "rate_per_child": 0, "notes": "Custom sizing surveyed"}, {"category": "Souvenirs & Merch", "item": "Welcome Kit, Batch Mug, Lanyard & Metallic ID Badges", "rate_per_alumni": 450, "rate_per_spouse": 300, "rate_per_child": 200, "notes": "Personalized mementos"}, {"category": "Beverages & Social", "item": "Mocktails, Social Mixers, Evening Starters", "rate_per_adult": 700, "rate_per_child": 250, "notes": "Poolside & bonfire mixers"}, {"category": "Logistics & Transport", "item": "Dehradun Airport / Railway Station Shuttle Vans", "rate_per_adult": 350, "rate_per_child": 150, "notes": "Coordinated group shuttles"}]}, "expenses": [{"id": "EXP-001", "date": "2026-06-15", "category": "Venue & Booking", "title": "Resort Booking Advance Deposit (50%)", "vendor": "Foothills Hospitality Dehradun", "amount": 95000, "status": "Paid", "paid_by": "Central Treasury Pool", "added_by": "Dr. Varun Agarwal", "receipt_url": "https://drive.google.com/file/d/sample-receipt-1/view", "notes": "Bank transfer UTR #9928172615 for March 26-27 resort dates"}, {"id": "EXP-002", "date": "2026-07-02", "category": "Souvenirs & Merch", "title": "Hoodie & Batch Crest Advance Deposit", "vendor": "StitchCraft Custom Apparel", "amount": 38000, "status": "Paid", "paid_by": "Dr. ABC 1 (Reimbursed)", "added_by": "Dr. ABC 1", "receipt_url": "https://drive.google.com/file/d/sample-receipt-2/view", "notes": "Advance for 100 customized HIMS MBBS 2012 fleece hoodies"}, {"id": "EXP-003", "date": "2026-07-20", "category": "Entertainment & AV", "title": "DJ & Sound Stage Booking Advance", "vendor": "SonicPulse Audio Dehradun", "amount": 20000, "status": "Paid", "paid_by": "Central Treasury Pool", "added_by": "Dr. Varun Agarwal", "receipt_url": "https://drive.google.com/file/d/sample-receipt-3/view", "notes": "Includes dual subs, wireless mics, lasers, and stage setup"}, {"id": "EXP-004", "date": "2026-08-05", "category": "Decor & Signage", "title": "Photo Booth Props & Memorabilia Wall Advance", "vendor": "PrintCraft Media Dehradun", "amount": 9500, "status": "Paid", "paid_by": "Dr. XYZ 1 (Reimbursement Pending)", "added_by": "Dr. XYZ 1", "receipt_url": "https://drive.google.com/file/d/sample-receipt-4/view", "notes": "Pending settlement from treasury central account"}, {"id": "EXP-005", "date": "2026-08-18", "category": "Photography & Video", "title": "Photographer & Drone Pilot Token Advance", "vendor": "Lumiere Visuals Rishikesh", "amount": 15000, "status": "Paid", "paid_by": "Central Treasury Pool", "added_by": "Dr. ABC 2", "receipt_url": "https://drive.google.com/file/d/sample-receipt-5/view", "notes": "Full team of 2 shooters + 1 drone operator for March 26-27"}, {"id": "EXP-006", "date": "2027-03-26", "category": "Venue & Booking", "title": "Resort Balance Settlement (Due on Check-in)", "vendor": "Foothills Hospitality Dehradun", "amount": 100000, "status": "Committed", "paid_by": "Central Treasury Pool", "added_by": "Dr. Varun Agarwal", "receipt_url": "", "notes": "Payable during check-in on event day"}, {"id": "EXP-007", "date": "2027-03-27", "category": "Catering & Dining", "title": "Grand Banquet & Catering Settlement (Projected)", "vendor": "Foothills Banquet Catering", "amount": 290000, "status": "Planned", "paid_by": "Central Treasury Pool", "added_by": "Dr. ABC 1", "receipt_url": "", "notes": "Estimated final food bill based on RSVP headcount"}], "attendees": [{"id": "ATT-001", "name": "Dr. ABC 2", "batch_no": "HIMS-2012-004", "email": "abc2@example.com", "phone": "+91 98765 43210", "package": "Alumni + Spouse", "adults": 2, "kids": 0, "attendance_status": "Confirmed Attending", "amount_expected": 10000, "amount_paid": 10000, "balance_due": 0, "payment_status": "Paid", "date": "2026-06-10", "mode": "UPI", "ref": "UPI/6192837101", "added_by": "Dr. XYZ 1", "hoodie_sizes": "Alumni: L | Spouse: M", "food_pref": "Vegetarian", "shuttle_request": "Dehradun Airport (Jolly Grant) - 26th March 9:00 AM", "notes": "Arriving early from Delhi"}, {"id": "ATT-002", "name": "Dr. XYZ 2", "batch_no": "HIMS-2012-019", "email": "xyz2@example.com", "phone": "+91 98765 43211", "package": "Alumni Solo", "adults": 1, "kids": 0, "attendance_status": "Confirmed Attending", "amount_expected": 6000, "amount_paid": 6000, "balance_due": 0, "payment_status": "Paid", "date": "2026-06-12", "mode": "UPI", "ref": "UPI/6192849921", "added_by": "Dr. Varun Agarwal", "hoodie_sizes": "Alumni: S", "food_pref": "Vegetarian (Jain)", "shuttle_request": "Dehradun Railway Station (26th March 8:30 AM)", "notes": "Confirmed solo registration"}, {"id": "ATT-003", "name": "Dr. ABC 3", "batch_no": "HIMS-2012-045", "email": "abc3@example.com", "phone": "+91 98765 43212", "package": "Alumni + Family (2+2)", "adults": 2, "kids": 2, "attendance_status": "Confirmed Attending", "amount_expected": 14000, "amount_paid": 14000, "balance_due": 0, "payment_status": "Paid", "date": "2026-06-14", "mode": "Bank Transfer", "ref": "NEFT/HDFC882910", "added_by": "Dr. ABC 1", "hoodie_sizes": "Alumni: XL | Spouse: M", "food_pref": "Non-Vegetarian", "shuttle_request": "Self-driving from Chandigarh", "notes": "Kids age 6 & 8"}, {"id": "ATT-004", "name": "Dr. XYZ 3", "batch_no": "HIMS-2012-012", "email": "xyz3@example.com", "phone": "+91 98765 43213", "package": "Alumni + Spouse", "adults": 2, "kids": 0, "attendance_status": "Confirmed Attending", "amount_expected": 10000, "amount_paid": 10000, "balance_due": 0, "payment_status": "Paid", "date": "2026-06-15", "mode": "UPI", "ref": "UPI/6201928472", "added_by": "Dr. XYZ 1", "hoodie_sizes": "Alumni: M | Spouse: M", "food_pref": "Vegetarian", "shuttle_request": "Jolly Grant Airport", "notes": "Volunteering for trivia quiz"}, {"id": "ATT-005", "name": "Dr. ABC 4", "batch_no": "HIMS-2012-051", "email": "abc4@example.com", "phone": "+91 98765 43214", "package": "Alumni Solo", "adults": 1, "kids": 0, "attendance_status": "Confirmed Attending", "amount_expected": 6000, "amount_paid": 6000, "balance_due": 0, "payment_status": "Paid", "date": "2026-06-18", "mode": "UPI", "ref": "UPI/6210948371", "added_by": "Dr. Varun Agarwal", "hoodie_sizes": "Alumni: L", "food_pref": "Non-Vegetarian", "shuttle_request": "No shuttle needed", "notes": "Will assist with DJ music curation"}, {"id": "ATT-006", "name": "Dr. XYZ 4", "batch_no": "HIMS-2012-008", "email": "xyz4@example.com", "phone": "+91 98765 43215", "package": "Alumni + Family (2+1)", "adults": 2, "kids": 1, "attendance_status": "Confirmed Attending", "amount_expected": 12000, "amount_paid": 12000, "balance_due": 0, "payment_status": "Paid", "date": "2026-06-22", "mode": "UPI", "ref": "UPI/6229104829", "added_by": "Dr. ABC 1", "hoodie_sizes": "Alumni: M | Spouse: L", "food_pref": "Non-Vegetarian", "shuttle_request": "Jolly Grant Airport", "notes": "Child age 7"}, {"id": "ATT-007", "name": "Dr. ABC 5", "batch_no": "HIMS-2012-088", "email": "abc5@example.com", "phone": "+91 98765 43216", "package": "Alumni Solo", "adults": 1, "kids": 0, "attendance_status": "Confirmed Attending", "amount_expected": 6000, "amount_paid": 6000, "balance_due": 0, "payment_status": "Paid", "date": "2026-06-25", "mode": "UPI", "ref": "UPI/6249102837", "added_by": "Dr. Varun Agarwal", "hoodie_sizes": "Alumni: XL", "food_pref": "Vegetarian", "shuttle_request": "Dehradun Station", "notes": "Bringing camera equipment"}, {"id": "ATT-008", "name": "Dr. XYZ 5", "batch_no": "HIMS-2012-014", "email": "xyz5@example.com", "phone": "+91 98765 43217", "package": "Alumni + Spouse", "adults": 2, "kids": 0, "attendance_status": "Confirmed Attending", "amount_expected": 10000, "amount_paid": 6000, "balance_due": 4000, "payment_status": "Partial", "date": "2026-07-01", "mode": "UPI", "ref": "UPI/6260192841", "added_by": "Dr. XYZ 2", "hoodie_sizes": "Alumni: S | Spouse: L", "food_pref": "Vegetarian", "shuttle_request": "Jolly Grant Airport (26th March 11 AM)", "notes": "Remaining \u20b94,000 balance due"}, {"id": "ATT-009", "name": "Dr. ABC 6", "batch_no": "HIMS-2012-077", "email": "abc6@example.com", "phone": "+91 98765 43218", "package": "Alumni Solo", "adults": 1, "kids": 0, "attendance_status": "Confirmed Attending", "amount_expected": 6000, "amount_paid": 6000, "balance_due": 0, "payment_status": "Paid", "date": "2026-07-05", "mode": "UPI", "ref": "UPI/6271928491", "added_by": "Dr. Varun Agarwal", "hoodie_sizes": "Alumni: XXL", "food_pref": "Non-Vegetarian", "shuttle_request": "No shuttle needed", "notes": "Arriving 25th March night"}, {"id": "ATT-010", "name": "Dr. XYZ 1", "batch_no": "HIMS-2012-062", "email": "xyz1@example.com", "phone": "+91 98765 43219", "package": "Alumni Solo", "adults": 1, "kids": 0, "attendance_status": "Confirmed Attending", "amount_expected": 6000, "amount_paid": 6000, "balance_due": 0, "payment_status": "Paid", "date": "2026-07-09", "mode": "UPI", "ref": "UPI/6281093842", "added_by": "Dr. XYZ 1", "hoodie_sizes": "Alumni: M", "food_pref": "Vegetarian", "shuttle_request": "Local Dehradun", "notes": "Core organizing committee lead"}, {"id": "ATT-011", "name": "Dr. ABC 7", "batch_no": "HIMS-2012-033", "email": "abc7@example.com", "phone": "+91 98765 43222", "package": "Alumni + Spouse", "adults": 2, "kids": 0, "attendance_status": "Tentative (RSVP Pending)", "amount_expected": 10000, "amount_paid": 0, "balance_due": 10000, "payment_status": "Pending", "date": "-", "mode": "Pending", "ref": "-", "added_by": "Dr. ABC 1", "hoodie_sizes": "Alumni: L | Spouse: M", "food_pref": "Vegetarian", "shuttle_request": "TBD", "notes": "Duty leave pending confirmation"}, {"id": "ATT-012", "name": "Dr. XYZ 6", "batch_no": "HIMS-2012-081", "email": "xyz6@example.com", "phone": "+91 98765 43223", "package": "Alumni Solo", "adults": 1, "kids": 0, "attendance_status": "Confirmed Attending", "amount_expected": 6000, "amount_paid": 6000, "balance_due": 0, "payment_status": "Paid", "date": "2026-07-22", "mode": "UPI", "ref": "UPI/6310293847", "added_by": "Dr. XYZ 1", "hoodie_sizes": "Alumni: M", "food_pref": "Non-Vegetarian", "shuttle_request": "Jolly Grant Airport", "notes": "Confirmed solo attendance"}, {"id": "ATT-013", "name": "Dr. ABC 8", "batch_no": "HIMS-2012-102", "email": "abc8@example.com", "phone": "+91 98765 43224", "package": "Alumni + Spouse", "adults": 2, "kids": 0, "attendance_status": "Confirmed Attending", "amount_expected": 10000, "amount_paid": 10000, "balance_due": 0, "payment_status": "Paid", "date": "2026-07-28", "mode": "UPI", "ref": "UPI/6339102847", "added_by": "Dr. Varun Agarwal", "hoodie_sizes": "Alumni: L | Spouse: S", "food_pref": "Non-Vegetarian", "shuttle_request": "Dehradun Station", "notes": "Confirmed couple registration"}, {"id": "ATT-014", "name": "Dr. XYZ 7", "batch_no": "HIMS-2012-112", "email": "xyz7@example.com", "phone": "+91 98765 43225", "package": "Alumni Solo", "adults": 1, "kids": 0, "attendance_status": "Confirmed Attending", "amount_expected": 6000, "amount_paid": 6000, "balance_due": 0, "payment_status": "Paid", "date": "2026-08-02", "mode": "UPI", "ref": "UPI/6340192841", "added_by": "Dr. ABC 2", "hoodie_sizes": "Alumni: XL", "food_pref": "Vegetarian", "shuttle_request": "No shuttle needed", "notes": "Bringing acoustic guitar for evening jamming"}, {"id": "ATT-015", "name": "Dr. ABC 9", "batch_no": "HIMS-2012-049", "email": "abc9@example.com", "phone": "+91 98765 43226", "package": "Alumni + Family (2+2)", "adults": 2, "kids": 2, "attendance_status": "Confirmed Attending", "amount_expected": 14000, "amount_paid": 14000, "balance_due": 0, "payment_status": "Paid", "date": "2026-08-08", "mode": "Bank Transfer", "ref": "NEFT/ICIC771928", "added_by": "Dr. ABC 1", "hoodie_sizes": "Alumni: M | Spouse: XL", "food_pref": "Vegetarian", "shuttle_request": "Jolly Grant Airport", "notes": "Kids age 7 & 10"}, {"id": "ATT-016", "name": "Dr. XYZ 8", "batch_no": "HIMS-2012-002", "email": "xyz8@example.com", "phone": "+91 98765 43227", "package": "Alumni Solo", "adults": 1, "kids": 0, "attendance_status": "Confirmed Attending", "amount_expected": 6000, "amount_paid": 0, "balance_due": 6000, "payment_status": "Pending", "date": "-", "mode": "Pending (Cash on Arrival)", "ref": "-", "added_by": "Dr. Varun Agarwal", "hoodie_sizes": "Alumni: L", "food_pref": "Non-Vegetarian", "shuttle_request": "Jolly Grant Airport", "notes": "International arrival; will settle balance on arrival"}, {"id": "ATT-017", "name": "Dr. ABC 10", "batch_no": "HIMS-2012-057", "email": "abc10@example.com", "phone": "+91 98765 43228", "package": "Alumni + Spouse", "adults": 2, "kids": 0, "attendance_status": "Confirmed Attending", "amount_expected": 10000, "amount_paid": 10000, "balance_due": 0, "payment_status": "Paid", "date": "2026-08-14", "mode": "UPI", "ref": "UPI/6360192841", "added_by": "Dr. XYZ 1", "hoodie_sizes": "Alumni: L | Spouse: L", "food_pref": "Vegetarian", "shuttle_request": "Dehradun Station", "notes": "Registered couple"}, {"id": "ATT-018", "name": "Dr. XYZ 9", "batch_no": "HIMS-2012-029", "email": "xyz9@example.com", "phone": "+91 98765 43229", "package": "Alumni Solo", "adults": 1, "kids": 0, "attendance_status": "Confirmed Attending", "amount_expected": 6000, "amount_paid": 6000, "balance_due": 0, "payment_status": "Paid", "date": "2026-08-20", "mode": "UPI", "ref": "UPI/6371928490", "added_by": "Dr. Varun Agarwal", "hoodie_sizes": "Alumni: S", "food_pref": "Non-Vegetarian", "shuttle_request": "Jolly Grant Airport", "notes": "Confirmed solo registration"}], "change_log": [{"id": "LOG-001", "timestamp": "2026-06-15 10:30 AM", "author": "Dr. Varun Agarwal", "action": "Logged Expense", "entity": "EXP-001 (Resort Booking Advance)", "details": "Added 50% advance deposit of \u20b995,000 to Foothills Resort for March 26-27, 2027 (UTR #9928172615)"}, {"id": "LOG-002", "timestamp": "2026-07-02 02:15 PM", "author": "Dr. ABC 1", "action": "Logged Expense", "entity": "EXP-002 (Hoodie Manufacturer Advance)", "details": "Added \u20b938,000 advance payment for 100 customized HIMS MBBS 2012 fleece hoodies with batch crest"}, {"id": "LOG-003", "timestamp": "2026-07-09 05:40 PM", "author": "Dr. XYZ 1", "action": "Verified Payment", "entity": "ATT-010 (Dr. XYZ 1)", "details": "Verified UPI registration contribution of \u20b96,000 for Alumni Solo pass"}, {"id": "LOG-004", "timestamp": "2026-07-20 11:20 AM", "author": "Dr. Varun Agarwal", "action": "Logged Expense", "entity": "EXP-003 (DJ & Audio Stage Booking)", "details": "Logged \u20b920,000 advance payment to SonicPulse Audio Dehradun for 2 nights audio-visual setup"}, {"id": "LOG-005", "timestamp": "2026-08-05 04:30 PM", "author": "Dr. XYZ 1", "action": "Logged Expense", "entity": "EXP-004 (Photo Booth & Standees)", "details": "Logged \u20b99,500 advance paid out-of-pocket to PrintCraft Media; marked for central treasury reimbursement"}, {"id": "LOG-006", "timestamp": "2026-08-18 01:10 PM", "author": "Dr. ABC 2", "action": "Logged Expense", "entity": "EXP-005 (Photographer & Drone Pilot)", "details": "Logged \u20b915,000 token advance to Lumiere Visuals for drone and 2-shooter photo/video coverage"}, {"id": "LOG-007", "timestamp": "2026-08-20 06:45 PM", "author": "Dr. Varun Agarwal", "action": "Verified Payment", "entity": "ATT-018 (Dr. XYZ 9)", "details": "Recorded full UPI payment of \u20b96,000 for solo registration pass (Hoodie size S)"}, {"id": "LOG-008", "timestamp": "2026-08-26 08:30 PM", "author": "Dr. Varun Agarwal", "action": "Updated Governance System", "entity": "Ledger & Audit Trail", "details": "Activated contributor attribution picker and transparent change audit log for MBBS 2012 Reunion"}]};
+    let currentView = 'admin';
+    let adminCategoryChart = null;
+    let adminTrajectoryChart = null;
+    let countdownInterval = null;
 
-    function formatMoney(amount) { return '?' + Number(amount).toLocaleString('en-IN'); }
+    function formatMoney(amount) {
+      const symbol = APP_DATA.config.currency_symbol || '₹';
+      return symbol + Number(amount).toLocaleString('en-IN');
+    }
 
     function setViewMode(mode) {
+      currentView = mode;
+      const btnAdmin = document.getElementById('btn-view-admin');
+      const btnAttendee = document.getElementById('btn-view-attendee');
+      const adminSubnav = document.getElementById('admin-subnav');
+      const viewAdmin = document.getElementById('view-admin');
+      const viewAttendee = document.getElementById('view-attendee');
+
       if (mode === 'admin') {
-        document.getElementById('view-admin').classList.remove('hidden');
-        document.getElementById('view-attendee').classList.add('hidden');
-        document.getElementById('admin-subnav').classList.remove('hidden');
-        document.getElementById('btn-view-admin').className = "px-3 py-1.5 rounded-lg text-xs font-bold transition bg-white text-brand-700 shadow-sm";
-        document.getElementById('btn-view-attendee').className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-600 hover:text-slate-900";
-        renderCharts();
+        btnAdmin.className = "px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center space-x-1.5 bg-white text-brand-700 shadow-sm";
+        btnAttendee.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center space-x-1.5 text-slate-600 hover:text-slate-900";
+        adminSubnav.classList.remove('hidden');
+        viewAdmin.classList.remove('hidden');
+        viewAttendee.classList.add('hidden');
+        renderAdminCharts();
       } else {
-        document.getElementById('view-admin').classList.add('hidden');
-        document.getElementById('view-attendee').classList.remove('hidden');
-        document.getElementById('admin-subnav').classList.add('hidden');
-        document.getElementById('btn-view-attendee').className = "px-3 py-1.5 rounded-lg text-xs font-bold transition bg-white text-brand-700 shadow-sm";
-        document.getElementById('btn-view-admin').className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition text-slate-600 hover:text-slate-900";
+        btnAttendee.className = "px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center space-x-1.5 bg-white text-brand-700 shadow-sm";
+        btnAdmin.className = "px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center space-x-1.5 text-slate-600 hover:text-slate-900";
+        adminSubnav.classList.add('hidden');
+        viewAdmin.classList.add('hidden');
+        viewAttendee.classList.remove('hidden');
       }
     }
 
@@ -545,86 +924,515 @@
       document.querySelectorAll('.admin-pane').forEach(el => el.classList.add('hidden'));
       document.querySelectorAll('.admin-tab-btn').forEach(btn => {
         btn.classList.remove('text-brand-700', 'bg-brand-50', 'font-bold');
-        btn.classList.add('text-slate-600', 'font-medium');
+        btn.classList.add('text-slate-600', 'hover:text-slate-900', 'hover:bg-slate-100', 'font-medium');
       });
-      document.getElementById('admin-tab-' + tabName).classList.remove('hidden');
-      document.querySelector(`.admin-tab-btn[data-tab="${tabName}"]`).classList.add('text-brand-700', 'bg-brand-50', 'font-bold');
-      if (tabName === 'overview') renderCharts();
+
+      const targetPane = document.getElementById('admin-tab-' + tabName);
+      if (targetPane) targetPane.classList.remove('hidden');
+
+      const activeBtn = document.querySelector(`.admin-tab-btn[data-tab="${tabName}"]`);
+      if (activeBtn) {
+        activeBtn.classList.remove('text-slate-600', 'hover:text-slate-900', 'hover:bg-slate-100', 'font-medium');
+        activeBtn.classList.add('text-brand-700', 'bg-brand-50', 'font-bold');
+      }
+
+      if (tabName === 'overview') renderAdminCharts();
     }
 
     function initApp() {
-      // Contributors select
-      document.getElementById('modal-exp-author').innerHTML = APP_DATA.contributors.map(c => `<option value="${c}">${c}</option>`).join('');
+      document.getElementById('header-event-title').textContent = APP_DATA.config.event_name;
+      document.getElementById('header-event-subtitle').textContent = `${APP_DATA.config.dates_display} • ${APP_DATA.config.venue}`;
+      
+      const ghLink = document.getElementById('nav-github-link');
+      if (ghLink) ghLink.href = APP_DATA.config.github_repo_url || '#';
 
-      // Attendees select
-      document.getElementById('attendee-select').innerHTML = APP_DATA.attendees.map(a => `<option value="${a.id}">${a.name} (${a.batch_no})</option>`).join('');
+      // Populate Contributor Pickers
+      populateContributorPickers();
 
+      // Render Admin Components
       updateAdminKPIs();
-      renderLedger();
-      renderRoster();
-      renderChangeLog();
-      renderCharts();
+      renderAdminRecent();
+      renderLedgerTable();
+      renderRosterTable();
+      renderChangeLogTable();
+      renderEconomicsTables();
+      initSimulator();
+      renderAdminCharts();
+
+      // Render Attendee Components
+      initAttendeePortal();
       startCountdown();
-      onAttendeeSelected();
-      runSimulation();
+    }
+
+    function populateContributorPickers() {
+      const authSelect = document.getElementById('modal-exp-author');
+      authSelect.innerHTML = APP_DATA.contributors.map(c => `
+        <option value="${c}">${c}</option>
+      `).join('');
     }
 
     function updateAdminKPIs() {
-      const collected = APP_DATA.attendees.reduce((s, a) => s + (a.amount_paid || 0), 0);
-      const spent = APP_DATA.expenses.reduce((s, e) => s + (e.amount || 0), 0);
-      const treasury = collected - spent;
-      const targetRev = (75 * 6000) + (30 * 4000) + (20 * 2000);
-      const margin = targetRev - 560000;
+      const totalCollected = APP_DATA.attendees.reduce((s, a) => s + (Number(a.amount_paid) || 0), 0);
+      const totalSpentActual = APP_DATA.expenses.filter(e => e.status === 'Paid').reduce((s, e) => s + (Number(e.amount) || 0), 0);
+      const totalCommitted = APP_DATA.expenses.filter(e => e.status === 'Committed').reduce((s, e) => s + (Number(e.amount) || 0), 0);
+      const totalPlanned = APP_DATA.expenses.filter(e => e.status === 'Planned').reduce((s, e) => s + (Number(e.amount) || 0), 0);
+      const totalAllExpenses = totalSpentActual + totalCommitted + totalPlanned;
+      const treasuryBalance = totalCollected - totalSpentActual;
 
-      document.getElementById('kpi-admin-inflow').textContent = formatMoney(collected);
-      document.getElementById('kpi-admin-spent').textContent = formatMoney(spent);
-      document.getElementById('kpi-admin-treasury').textContent = formatMoney(treasury);
-      document.getElementById('kpi-admin-margin').textContent = formatMoney(margin);
-      document.getElementById('kpi-admin-headcount').textContent = APP_DATA.attendees.length;
+      const targetAlumni = APP_DATA.scenarios.target_alumni;
+      const targetSpouses = APP_DATA.scenarios.target_spouses;
+      const targetKids = APP_DATA.scenarios.target_kids;
+      const targetRevenue = (targetAlumni * APP_DATA.pricing_tiers.alumni) + 
+                            (targetSpouses * APP_DATA.pricing_tiers.spouse) + 
+                            (targetKids * APP_DATA.pricing_tiers.child_above_5);
+
+      const confirmedAlumni = APP_DATA.attendees.filter(a => a.payment_status === 'Paid' || a.payment_status === 'Partial').length;
+      const confirmedAdults = APP_DATA.attendees.filter(a => a.payment_status === 'Paid' || a.payment_status === 'Partial').reduce((s, a) => s + (a.adults || 1), 0);
+      const confirmedKids = APP_DATA.attendees.filter(a => a.payment_status === 'Paid' || a.payment_status === 'Partial').reduce((s, a) => s + (a.kids || 0), 0);
+      const confirmedTotalHeadcount = confirmedAdults + confirmedKids;
+      const targetTotalHeadcount = targetAlumni + targetSpouses + targetKids;
+
+      const pendingReimbursements = APP_DATA.expenses.filter(e => e.paid_by && e.paid_by.includes('Pending')).length;
+      const projectedNetMargin = targetRevenue - totalAllExpenses;
+
+      document.getElementById('kpi-admin-inflow').textContent = formatMoney(totalCollected);
+      document.getElementById('kpi-admin-inflow-sub').textContent = `target ${formatMoney(targetRevenue)}`;
+      const colPct = targetRevenue > 0 ? Math.round((totalCollected / targetRevenue) * 100) : 0;
+      document.getElementById('kpi-admin-inflow-pct').textContent = colPct + '%';
+      document.getElementById('kpi-admin-inflow-bar').style.width = Math.min(colPct, 100) + '%';
+
+      document.getElementById('kpi-admin-spent').textContent = formatMoney(totalSpentActual);
+      document.getElementById('kpi-admin-committed-sub').textContent = `+ ${formatMoney(totalCommitted)} committed`;
+      const spentPct = totalAllExpenses > 0 ? Math.round((totalSpentActual / totalAllExpenses) * 100) : 0;
+      document.getElementById('kpi-admin-spent-pct').textContent = spentPct + '%';
+      document.getElementById('kpi-admin-spent-bar').style.width = Math.min(spentPct, 100) + '%';
+
+      document.getElementById('kpi-admin-treasury').textContent = formatMoney(treasuryBalance);
+      document.getElementById('kpi-admin-reimburse-note').textContent = pendingReimbursements > 0 
+        ? `⚠️ ${pendingReimbursements} reimbursement pending` 
+        : `✓ All advances settled`;
+
+      const marginEl = document.getElementById('kpi-admin-margin');
+      const marginTag = document.getElementById('kpi-admin-margin-tag');
+      marginEl.textContent = formatMoney(projectedNetMargin);
+
+      if (projectedNetMargin >= 0) {
+        marginEl.className = "mt-2 text-2xl font-black font-mono text-emerald-600";
+        marginTag.className = "px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800";
+        marginTag.textContent = "SURPLUS";
+      } else {
+        marginEl.className = "mt-2 text-2xl font-black font-mono text-rose-600";
+        marginTag.className = "px-1.5 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800";
+        marginTag.textContent = "DEFICIT";
+      }
+
+      document.getElementById('kpi-admin-headcount').textContent = confirmedTotalHeadcount;
+      document.getElementById('kpi-admin-headcount-breakdown').textContent = `${confirmedAlumni} Batch | ${confirmedAdults - confirmedAlumni} Spouse | ${confirmedKids} Kids`;
+      const hcPct = targetTotalHeadcount > 0 ? Math.round((confirmedTotalHeadcount / targetTotalHeadcount) * 100) : 0;
+      document.getElementById('kpi-admin-headcount-bar').style.width = Math.min(hcPct, 100) + '%';
+
+      // Banner Logic
+      const banner = document.getElementById('admin-trajectory-banner');
+      const bIcon = document.getElementById('admin-banner-icon');
+      const bTitle = document.getElementById('admin-banner-title');
+      const bPill = document.getElementById('admin-banner-pill');
+      const bDesc = document.getElementById('admin-banner-desc');
+
+      if (projectedNetMargin >= 25000) {
+        banner.className = "rounded-2xl p-5 border flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-sm bg-emerald-50/80 border-emerald-200 text-emerald-950";
+        bIcon.textContent = "🟢";
+        bTitle.textContent = "HIMS MBBS 2012 Treasury is in Strong Financial Health";
+        bPill.className = "px-2 py-0.5 rounded text-[10px] font-bold font-mono uppercase bg-emerald-200 text-emerald-900";
+        bPill.textContent = "Comfortable Surplus";
+        bDesc.textContent = `Projected buffer reserve of ${formatMoney(projectedNetMargin)}. Collections are tracking ahead of venue and merchandise payment dates.`;
+      } else if (projectedNetMargin >= 0) {
+        banner.className = "rounded-2xl p-5 border flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-sm bg-amber-50/80 border-amber-200 text-amber-950";
+        bIcon.textContent = "🟡";
+        bTitle.textContent = "Treasury Operating Near Breakeven";
+        bPill.className = "px-2 py-0.5 rounded text-[10px] font-bold font-mono uppercase bg-amber-200 text-amber-900";
+        bPill.textContent = "Breakeven Margin";
+        bDesc.textContent = `Forecast buffer is tight at ${formatMoney(projectedNetMargin)}. Follow up on pending registrations to maintain contingency reserve.`;
+      } else {
+        banner.className = "rounded-2xl p-5 border flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-sm bg-rose-50/80 border-rose-200 text-rose-950";
+        bIcon.textContent = "🔴";
+        bTitle.textContent = "Projected Deficit Warning";
+        bPill.className = "px-2 py-0.5 rounded text-[10px] font-bold font-mono uppercase bg-rose-200 text-rose-900";
+        bPill.textContent = "Deficit Warning";
+        bDesc.textContent = `Estimated shortfall of ${formatMoney(Math.abs(projectedNetMargin))}. Adjust variable per-head items or contribution rates in the simulator.`;
+      }
     }
 
-    function renderLedger() {
-      document.getElementById('expenses-tbody').innerHTML = APP_DATA.expenses.map(e => `
+    function renderAdminRecent() {
+      const expTbody = document.getElementById('admin-recent-exp-tbody');
+      const sortedExp = [...APP_DATA.expenses].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 5);
+      expTbody.innerHTML = sortedExp.map(e => `
         <tr class="hover:bg-slate-50">
-          <td class="px-4 py-3 font-mono text-[11px]">${e.id}<div class="text-slate-400">${e.date}</div></td>
-          <td class="px-4 py-3 font-bold text-slate-900">${e.title}</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-slate-100 text-[10px] font-semibold">${e.category}</span></td>
-          <td class="px-4 py-3">${e.vendor}</td>
-          <td class="px-4 py-3 font-semibold text-indigo-700">${e.added_by}</td>
-          <td class="px-4 py-3 text-right font-mono font-black">${formatMoney(e.amount)}</td>
-          <td class="px-4 py-3 text-center"><span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">${e.status}</span></td>
-          <td class="px-4 py-3 text-center"><a href="${e.receipt_url}" target="_blank" class="text-brand-600 font-bold underline text-[11px]">View</a></td>
+          <td class="py-2 text-slate-500 font-mono text-[11px]">${e.date}</td>
+          <td class="py-2 font-medium text-slate-900">${e.title}</td>
+          <td class="py-2 text-slate-600"><span class="px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 font-semibold text-[10px]">${e.added_by || 'Dr. Varun Agarwal'}</span></td>
+          <td class="py-2 text-right font-mono font-bold">${formatMoney(e.amount)}</td>
+        </tr>
+      `).join('');
+
+      const logTbody = document.getElementById('admin-recent-log-tbody');
+      const sortedLogs = [...APP_DATA.change_log].slice(-5).reverse();
+      logTbody.innerHTML = sortedLogs.map(l => `
+        <tr class="hover:bg-slate-50">
+          <td class="py-2 text-slate-500 font-mono text-[10px]">${l.timestamp}</td>
+          <td class="py-2 font-bold text-slate-900">${l.author}</td>
+          <td class="py-2"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">${l.action}</span></td>
         </tr>
       `).join('');
     }
 
-    function renderRoster() {
-      document.getElementById('roster-tbody').innerHTML = APP_DATA.attendees.map(a => `
-        <tr class="hover:bg-slate-50">
-          <td class="px-4 py-3 font-mono text-[11px]">${a.id}</td>
-          <td class="px-4 py-3 font-bold text-slate-900">${a.name}<div class="text-[10px] font-mono text-slate-400">${a.batch_no}</div></td>
-          <td class="px-4 py-3">${a.package}</td>
-          <td class="px-4 py-3 text-center font-mono">${a.adults}A</td>
-          <td class="px-4 py-3 text-right font-mono">${formatMoney(a.amount_expected)}</td>
+    // Render Full Ledger Table (With "Added By" Attribution)
+    function renderLedgerTable(items = APP_DATA.expenses) {
+      const tbody = document.getElementById('expenses-tbody');
+      tbody.innerHTML = items.map(e => `
+        <tr class="hover:bg-slate-50/80 transition">
+          <td class="px-4 py-3 whitespace-nowrap">
+            <div class="font-mono text-slate-400 text-[10px]">${e.id}</div>
+            <div class="font-mono text-slate-600 text-xs">${e.date}</div>
+          </td>
+          <td class="px-4 py-3">
+            <div class="font-bold text-slate-900">${e.title}</div>
+            ${e.notes ? `<div class="text-[11px] text-slate-500 mt-0.5">${e.notes}</div>` : ''}
+          </td>
+          <td class="px-4 py-3 whitespace-nowrap"><span class="px-2 py-0.5 rounded bg-slate-100 text-slate-800 text-[11px] font-medium border">${e.category}</span></td>
+          <td class="px-4 py-3 text-slate-700">${e.vendor || '-'}</td>
+          <td class="px-4 py-3 whitespace-nowrap">
+            <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-bold bg-indigo-50 text-indigo-700 border border-indigo-100">
+              👤 ${e.added_by || 'Dr. Varun Agarwal'}
+            </span>
+          </td>
+          <td class="px-4 py-3">
+            <div class="text-slate-800">${e.paid_by || 'Central Pool'}</div>
+            ${e.paid_by && e.paid_by.includes('Pending') ? '<span class="text-[10px] text-amber-600 font-bold">⚠️ Needs Settlement</span>' : ''}
+          </td>
+          <td class="px-4 py-3 text-right font-mono font-black text-slate-900 text-sm">${formatMoney(e.amount)}</td>
+          <td class="px-4 py-3 text-center whitespace-nowrap">
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${
+              e.status === 'Paid' ? 'bg-emerald-100 text-emerald-800' :
+              e.status === 'Committed' ? 'bg-blue-100 text-blue-800' : 'bg-slate-100 text-slate-600'
+            }">${e.status}</span>
+          </td>
+          <td class="px-4 py-3 text-center whitespace-nowrap">
+            ${e.receipt_url ? `<a href="${e.receipt_url}" target="_blank" class="px-2 py-1 bg-brand-50 hover:bg-brand-100 text-brand-700 rounded text-[11px] font-bold">📄 View</a>` : '<span class="text-slate-300">-</span>'}
+          </td>
+        </tr>
+      `).join('');
+
+      const filteredTotal = items.reduce((sum, e) => sum + (Number(e.amount) || 0), 0);
+      document.getElementById('expense-filtered-total').textContent = formatMoney(filteredTotal);
+    }
+
+    function filterExpenses() {
+      const query = document.getElementById('expense-search').value.toLowerCase();
+      const cat = document.getElementById('expense-cat-filter').value;
+      const filtered = APP_DATA.expenses.filter(e => {
+        const matchQ = !query || e.title.toLowerCase().includes(query) || (e.vendor && e.vendor.toLowerCase().includes(query)) || (e.added_by && e.added_by.toLowerCase().includes(query)) || (e.notes && e.notes.toLowerCase().includes(query));
+        const matchC = cat === 'ALL' || e.category === cat;
+        return matchQ && matchC;
+      });
+      renderLedgerTable(filtered);
+    }
+
+    // Render Master Attendee Directory (With "Verified By")
+    function renderRosterTable(items = APP_DATA.attendees) {
+      const tbody = document.getElementById('roster-tbody');
+      tbody.innerHTML = items.map(a => `
+        <tr class="hover:bg-slate-50/80 transition">
+          <td class="px-4 py-3 font-mono text-slate-400 text-[10px]">${a.id}</td>
+          <td class="px-4 py-3">
+            <div class="font-bold text-slate-900">${a.name}</div>
+            <div class="text-[10px] font-mono text-slate-500">${a.batch_no} • ${a.phone}</div>
+          </td>
+          <td class="px-4 py-3 text-slate-700 font-medium">${a.package}</td>
+          <td class="px-4 py-3 text-center font-mono text-xs">${a.adults}A ${a.kids > 0 ? '+ ' + a.kids + 'K' : ''}</td>
+          <td class="px-4 py-3 text-right font-mono text-slate-500">${formatMoney(a.amount_expected)}</td>
           <td class="px-4 py-3 text-right font-mono font-bold text-emerald-700">${formatMoney(a.amount_paid)}</td>
           <td class="px-4 py-3 text-right font-mono font-bold ${a.balance_due > 0 ? 'text-rose-600' : 'text-slate-400'}">${formatMoney(a.balance_due)}</td>
-          <td class="px-4 py-3 text-center"><span class="px-2 py-0.5 rounded text-[10px] font-bold ${a.payment_status === 'Paid' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}">${a.payment_status}</span></td>
-          <td class="px-4 py-3 font-semibold text-slate-700">${a.added_by}</td>
+          <td class="px-4 py-3 text-center">
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${
+              a.payment_status === 'Paid' ? 'bg-emerald-100 text-emerald-800' :
+              a.payment_status === 'Partial' ? 'bg-amber-100 text-amber-800' : 'bg-rose-100 text-rose-800'
+            }">${a.payment_status}</span>
+          </td>
+          <td class="px-4 py-3 whitespace-nowrap">
+            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-semibold text-[10px] border">
+              ${a.added_by || 'Dr. Varun Agarwal'}
+            </span>
+          </td>
+          <td class="px-4 py-3 text-[11px] text-slate-600">
+            <div>${a.hoodie_sizes}</div>
+            <div class="text-[10px] text-slate-400">${a.food_pref}</div>
+          </td>
         </tr>
       `).join('');
     }
 
-    function renderChangeLog() {
-      document.getElementById('changelog-tbody').innerHTML = [...APP_DATA.change_log].reverse().map(l => `
-        <tr class="hover:bg-slate-50">
-          <td class="px-4 py-3 font-mono text-[10px] text-slate-400">${l.id}</td>
-          <td class="px-4 py-3 font-mono text-slate-600">${l.timestamp}</td>
-          <td class="px-4 py-3 font-bold text-indigo-700">${l.author}</td>
-          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">${l.action}</span></td>
-          <td class="px-4 py-3 font-semibold">${l.entity}</td>
-          <td class="px-4 py-3 text-slate-600">${l.details}</td>
+    function filterRoster() {
+      const query = document.getElementById('roster-search').value.toLowerCase();
+      const status = document.getElementById('roster-status-filter').value;
+      const filtered = APP_DATA.attendees.filter(a => {
+        const matchQ = !query || a.name.toLowerCase().includes(query) || a.batch_no.toLowerCase().includes(query) || (a.phone && a.phone.includes(query)) || (a.added_by && a.added_by.toLowerCase().includes(query));
+        const matchS = status === 'ALL' || a.payment_status === status;
+        return matchQ && matchS;
+      });
+      renderRosterTable(filtered);
+    }
+
+    // Render Transparent Audit & Change Log Table
+    function renderChangeLogTable(items = APP_DATA.change_log) {
+      const tbody = document.getElementById('changelog-tbody');
+      const sorted = [...items].reverse();
+      tbody.innerHTML = sorted.map(l => `
+        <tr class="hover:bg-slate-50/80 transition">
+          <td class="px-4 py-3 font-mono text-slate-400 text-[10px] whitespace-nowrap">${l.id}</td>
+          <td class="px-4 py-3 font-mono text-slate-600 text-xs whitespace-nowrap">${l.timestamp}</td>
+          <td class="px-4 py-3 whitespace-nowrap">
+            <span class="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-bold bg-indigo-50 text-indigo-700 border border-indigo-100">
+              👤 ${l.author}
+            </span>
+          </td>
+          <td class="px-4 py-3 whitespace-nowrap">
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${
+              l.action.includes('Expense') ? 'bg-rose-100 text-rose-800' :
+              l.action.includes('Payment') ? 'bg-emerald-100 text-emerald-800' :
+              'bg-blue-100 text-blue-800'
+            }">
+              ${l.action}
+            </span>
+          </td>
+          <td class="px-4 py-3 font-semibold text-slate-900">${l.entity}</td>
+          <td class="px-4 py-3 text-slate-600 text-[11px]">${l.details}</td>
         </tr>
       `).join('');
+    }
+
+    function filterChangeLog() {
+      const query = document.getElementById('log-search').value.toLowerCase();
+      const filtered = APP_DATA.change_log.filter(l => 
+        !query || l.author.toLowerCase().includes(query) || l.action.toLowerCase().includes(query) || l.entity.toLowerCase().includes(query) || l.details.toLowerCase().includes(query)
+      );
+      renderChangeLogTable(filtered);
+    }
+
+    // Economics Tables
+    function renderEconomicsTables() {
+      const fixedTbody = document.getElementById('fixed-costs-tbody');
+      fixedTbody.innerHTML = APP_DATA.budget_projections.fixed_costs.map(f => `
+        <tr class="hover:bg-slate-50">
+          <td class="py-2.5 font-bold text-slate-900">${f.item}<div class="text-[10px] font-normal text-slate-500">${f.category}</div></td>
+          <td class="py-2.5 text-right font-mono font-black text-slate-900">${formatMoney(f.amount)}</td>
+          <td class="py-2.5 text-slate-500 text-[11px]">${f.notes}</td>
+        </tr>
+      `).join('');
+
+      const varTbody = document.getElementById('var-costs-tbody');
+      varTbody.innerHTML = APP_DATA.budget_projections.variable_costs_per_unit.map(v => `
+        <tr class="hover:bg-slate-50">
+          <td class="py-2.5 font-bold text-slate-900">${v.item}<div class="text-[10px] font-normal text-slate-500">${v.category}</div></td>
+          <td class="py-2.5 text-right font-mono text-slate-800">${v.rate_per_adult ? formatMoney(v.rate_per_adult) : (v.rate_per_alumni ? formatMoney(v.rate_per_alumni) : '-')}</td>
+          <td class="py-2.5 text-right font-mono text-slate-800">${v.rate_per_child ? formatMoney(v.rate_per_child) : '-'}</td>
+        </tr>
+      `).join('');
+    }
+
+    // Simulator Logic
+    function initSimulator() {
+      document.getElementById('sim-input-alumni').value = APP_DATA.scenarios.target_alumni;
+      document.getElementById('sim-input-spouses').value = APP_DATA.scenarios.target_spouses;
+      document.getElementById('sim-input-kids').value = APP_DATA.scenarios.target_kids;
+      document.getElementById('sim-fee-alumni').value = APP_DATA.pricing_tiers.alumni;
+      document.getElementById('sim-fee-spouse').value = APP_DATA.pricing_tiers.spouse;
+      document.getElementById('sim-fee-child').value = APP_DATA.pricing_tiers.child_above_5;
+      runSimulation();
+    }
+
+    function resetSimulator() { initSimulator(); }
+
+    function runSimulation() {
+      const alumni = Number(document.getElementById('sim-input-alumni').value);
+      const spouses = Number(document.getElementById('sim-input-spouses').value);
+      const kids = Number(document.getElementById('sim-input-kids').value);
+
+      document.getElementById('sim-val-alumni').textContent = alumni;
+      document.getElementById('sim-val-spouses').textContent = spouses;
+      document.getElementById('sim-val-kids').textContent = kids;
+
+      const feeAlumni = Number(document.getElementById('sim-fee-alumni').value) || 0;
+      const feeSpouse = Number(document.getElementById('sim-fee-spouse').value) || 0;
+      const feeKid = Number(document.getElementById('sim-fee-child').value) || 0;
+
+      const totalHeads = alumni + spouses + kids;
+      const totalAdults = alumni + spouses;
+      document.getElementById('sim-headcount-badge').textContent = `Total Turnout: ${totalHeads} (${totalAdults} Adults, ${kids} Kids)`;
+
+      const totalRev = (alumni * feeAlumni) + (spouses * feeSpouse) + (kids * feeKid);
+      const totalFixed = APP_DATA.budget_projections.fixed_costs.reduce((s, f) => s + f.amount, 0);
+
+      let totalVar = 0;
+      const breakdown = [];
+      APP_DATA.budget_projections.variable_costs_per_unit.forEach(v => {
+        let c = 0;
+        if (v.rate_per_alumni) c += (alumni * v.rate_per_alumni);
+        if (v.rate_per_spouse) c += (spouses * v.rate_per_spouse);
+        if (v.rate_per_adult) c += (totalAdults * v.rate_per_adult);
+        if (v.rate_per_child) c += (kids * v.rate_per_child);
+        totalVar += c;
+        breakdown.push({ name: v.item, cost: c });
+      });
+
+      const totalCost = totalFixed + totalVar;
+      const margin = totalRev - totalCost;
+      const marginPct = totalRev > 0 ? ((margin / totalRev) * 100).toFixed(1) : 0;
+
+      document.getElementById('sim-res-revenue').textContent = formatMoney(totalRev);
+      document.getElementById('sim-res-cost').textContent = formatMoney(totalCost);
+
+      const marginCard = document.getElementById('sim-margin-card');
+      const marginEl = document.getElementById('sim-res-margin');
+      const marginLbl = document.getElementById('sim-margin-label');
+      const marginPctEl = document.getElementById('sim-margin-pct');
+
+      marginEl.textContent = formatMoney(margin);
+      marginPctEl.textContent = `${marginPct}% Contingency Buffer`;
+
+      if (margin >= 0) {
+        marginCard.className = "p-4 rounded-xl bg-indigo-50 border border-indigo-100 text-indigo-900";
+        marginLbl.className = "text-[11px] font-bold text-indigo-800 uppercase tracking-wider";
+        marginEl.className = "text-2xl font-black font-mono text-indigo-900 mt-1";
+      } else {
+        marginCard.className = "p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-900";
+        marginLbl.className = "text-[11px] font-bold text-rose-800 uppercase tracking-wider";
+        marginEl.className = "text-2xl font-black font-mono text-rose-900 mt-1";
+      }
+
+      const varPerAlumniEst = alumni > 0 ? (totalVar / alumni) : 4200;
+      const netContrib = feeAlumni - (varPerAlumniEst * 0.7);
+      const breakevenAlumni = netContrib > 0 ? Math.ceil(totalFixed / netContrib) : 'N/A';
+      document.getElementById('sim-breakeven-alumni').textContent = breakevenAlumni;
+      document.getElementById('sim-cost-per-adult').textContent = formatMoney(totalAdults > 0 ? Math.round(totalCost / totalAdults) : 0);
+
+      const listEl = document.getElementById('sim-breakdown-list');
+      const allItems = [
+        ...APP_DATA.budget_projections.fixed_costs.map(f => ({ name: f.item + ' (Fixed)', cost: f.amount })),
+        ...breakdown.map(b => ({ name: b.name + ' (Variable)', cost: b.cost }))
+      ].sort((a, b) => b.cost - a.cost);
+
+      listEl.innerHTML = allItems.map(item => `
+        <div class="flex justify-between items-center text-xs py-1 border-b border-slate-50">
+          <span class="text-slate-700 truncate mr-2">${item.name}</span>
+          <span class="font-mono font-bold text-slate-900">${formatMoney(item.cost)}</span>
+        </div>
+      `).join('');
+    }
+
+    function renderAdminCharts() {
+      const categoryTotals = {};
+      APP_DATA.expenses.forEach(e => {
+        categoryTotals[e.category] = (categoryTotals[e.category] || 0) + Number(e.amount);
+      });
+
+      const catCtx = document.getElementById('adminCategoryChart');
+      if (catCtx) {
+        if (adminCategoryChart) adminCategoryChart.destroy();
+        adminCategoryChart = new Chart(catCtx, {
+          type: 'doughnut',
+          data: {
+            labels: Object.keys(categoryTotals),
+            datasets: [{
+              data: Object.values(categoryTotals),
+              backgroundColor: ['#4f46e5', '#06b6d4', '#10b981', '#f59e0b', '#ec4899', '#8b5cf6', '#64748b'],
+              borderWidth: 2,
+              borderColor: '#ffffff'
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: 'bottom', labels: { boxWidth: 8, font: { size: 10 } } } }
+          }
+        });
+      }
+
+      const datesSet = new Set();
+      APP_DATA.attendees.filter(a => a.date !== '-').forEach(a => datesSet.add(a.date));
+      APP_DATA.expenses.forEach(e => datesSet.add(e.date));
+      const sortedDates = Array.from(datesSet).sort();
+
+      let cumIn = 0;
+      let cumOut = 0;
+      const inData = [];
+      const outData = [];
+      const balData = [];
+
+      sortedDates.forEach(d => {
+        cumIn += APP_DATA.attendees.filter(a => a.date === d).reduce((s, a) => s + (a.amount_paid || 0), 0);
+        cumOut += APP_DATA.expenses.filter(e => e.date === d && e.status === 'Paid').reduce((s, e) => s + (e.amount || 0), 0);
+        inData.push(cumIn);
+        outData.push(cumOut);
+        balData.push(cumIn - cumOut);
+      });
+
+      const trajCtx = document.getElementById('adminTrajectoryChart');
+      if (trajCtx) {
+        if (adminTrajectoryChart) adminTrajectoryChart.destroy();
+        adminTrajectoryChart = new Chart(trajCtx, {
+          type: 'line',
+          data: {
+            labels: sortedDates,
+            datasets: [
+              { label: 'Inflow', data: inData, borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,0.06)', fill: true, tension: 0.3, borderWidth: 2 },
+              { label: 'Outflow', data: outData, borderColor: '#f43f5e', backgroundColor: 'rgba(244,63,94,0.06)', fill: true, tension: 0.3, borderWidth: 2 },
+              { label: 'Treasury', data: balData, borderColor: '#6366f1', borderDash: [4, 4], tension: 0.3, borderWidth: 2 }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+              x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+              y: { ticks: { callback: v => '₹' + (v / 1000) + 'k', font: { size: 10 } } }
+            }
+          }
+        });
+      }
+
+      if (sortedDates.length > 0) {
+        document.getElementById('admin-date-first').textContent = sortedDates[0];
+        document.getElementById('admin-date-last').textContent = sortedDates[sortedDates.length - 1];
+        const g = balData.length > 1 ? balData[balData.length - 1] - balData[0] : 0;
+        document.getElementById('admin-treasury-growth').textContent = (g >= 0 ? '+' : '') + formatMoney(g);
+      }
+    }
+
+    // ==================== ATTENDEE PORTAL LOGIC ====================
+    function initAttendeePortal() {
+      const select = document.getElementById('attendee-select');
+      select.innerHTML = APP_DATA.attendees.map(a => `
+        <option value="${a.id}">${a.name} (${a.batch_no}) — ${a.payment_status}</option>
+      `).join('');
+
+      document.getElementById('venue-name').textContent = APP_DATA.config.venue;
+      document.getElementById('venue-address').textContent = APP_DATA.config.venue_address;
+      document.getElementById('pay-upi-id').textContent = APP_DATA.config.upi_id || 'hims2012reunion@okaxis';
+
+      const itinList = document.getElementById('itinerary-list');
+      itinList.innerHTML = APP_DATA.itinerary.map((it, idx) => `
+        <div class="flex items-start space-x-3 text-xs">
+          <div class="w-2 h-2 rounded-full bg-brand-500 mt-1.5 flex-shrink-0"></div>
+          <div>
+            <div class="font-mono text-[10px] text-brand-700 font-bold">${it.day} • ${it.time}</div>
+            <div class="font-bold text-slate-900">${it.title}</div>
+            <p class="text-slate-500 text-[11px] mt-0.5">${it.desc}</p>
+          </div>
+        </div>
+      `).join('');
+
+      onAttendeeSelected();
     }
 
     function onAttendeeSelected() {
@@ -632,86 +1440,92 @@
       const att = APP_DATA.attendees.find(a => a.id === attId) || APP_DATA.attendees[0];
 
       document.getElementById('pass-attendee-name').textContent = att.name;
-      document.getElementById('pass-batch-id').textContent = att.batch_no;
+      document.getElementById('pass-batch-id').textContent = `${att.batch_no} • ${att.email}`;
       document.getElementById('pass-package').textContent = att.package;
+      document.getElementById('pass-headcount').textContent = `${att.adults} Adult${att.adults > 1 ? 's' : ''} • ${att.kids} Kid${att.kids > 1 ? 's' : ''}`;
+      document.getElementById('pass-id').textContent = att.id;
       document.getElementById('pass-hoodie').textContent = att.hoodie_sizes;
       document.getElementById('pass-diet').textContent = att.food_pref;
       document.getElementById('pass-shuttle').textContent = att.shuttle_request;
+      document.getElementById('pass-txn-ref').textContent = att.ref || 'PENDING';
+
+      const passPill = document.getElementById('pass-status-pill');
+      if (att.attendance_status.includes('Confirmed')) {
+        passPill.className = "px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-100 border border-emerald-400/30";
+        passPill.textContent = "CONFIRMED ATTENDING";
+      } else {
+        passPill.className = "px-2.5 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-100 border border-amber-400/30";
+        passPill.textContent = "RSVP PENDING";
+      }
 
       document.getElementById('pay-amt-expected').textContent = formatMoney(att.amount_expected);
       document.getElementById('pay-amt-paid').textContent = formatMoney(att.amount_paid);
       document.getElementById('pay-amt-balance').textContent = formatMoney(att.balance_due);
-    }
 
-    function runSimulation() {
-      const alumni = Number(document.getElementById('sim-input-alumni').value);
-      const spouses = Number(document.getElementById('sim-input-spouses').value);
-      const kids = Number(document.getElementById('sim-input-kids').value);
-      document.getElementById('sim-val-alumni').textContent = alumni;
-      document.getElementById('sim-val-spouses').textContent = spouses;
-      document.getElementById('sim-val-kids').textContent = kids;
+      const payBadge = document.getElementById('pay-status-badge');
+      const balCard = document.getElementById('pay-balance-card');
+      const balLbl = document.getElementById('pay-balance-label');
+      const ctaBox = document.getElementById('pay-settlement-cta');
 
-      const fA = Number(document.getElementById('sim-fee-alumni').value) || 0;
-      const fS = Number(document.getElementById('sim-fee-spouse').value) || 0;
-      const fK = Number(document.getElementById('sim-fee-child').value) || 0;
-
-      const rev = (alumni * fA) + (spouses * fS) + (kids * fK);
-      const fix = 343000;
-      const varCost = (alumni * 4450) + (spouses * 3100) + (kids * 1650);
-      const total = fix + varCost;
-      const margin = rev - total;
-
-      document.getElementById('sim-res-revenue').textContent = formatMoney(rev);
-      document.getElementById('sim-res-cost').textContent = formatMoney(total);
-      document.getElementById('sim-res-margin').textContent = formatMoney(margin);
-      document.getElementById('sim-headcount-badge').textContent = `Total Turnout: ${alumni + spouses + kids}`;
-    }
-
-    function renderCharts() {
-      const catCtx = document.getElementById('adminCategoryChart');
-      if (catCtx) {
-        new Chart(catCtx, {
-          type: 'doughnut',
-          data: {
-            labels: ['Venue', 'Catering', 'Merch', 'DJ/AV', 'Photo/Video'],
-            datasets: [{ data: [195000, 290000, 38000, 50000, 40000], backgroundColor: ['#4f46e5', '#06b6d4', '#10b981', '#f59e0b', '#ec4899'] }]
-          },
-          options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } }
-        });
-      }
-
-      const trajCtx = document.getElementById('adminTrajectoryChart');
-      if (trajCtx) {
-        new Chart(trajCtx, {
-          type: 'line',
-          data: {
-            labels: ['June 2026', 'July 2026', 'August 2026', 'March 2027'],
-            datasets: [
-              { label: 'Inflow', data: [36000, 72000, 132000, 610000], borderColor: '#10b981', tension: 0.3 },
-              { label: 'Outflow', data: [95000, 153000, 177500, 578000], borderColor: '#f43f5e', tension: 0.3 }
-            ]
-          },
-          options: { responsive: true, maintainAspectRatio: false }
-        });
+      if (att.balance_due === 0 && att.amount_paid > 0) {
+        payBadge.className = "px-2.5 py-0.5 rounded-full text-xs font-bold font-mono bg-emerald-100 text-emerald-800";
+        payBadge.textContent = "PAID IN FULL ✓";
+        balCard.className = "p-4 rounded-2xl bg-emerald-50/50 border border-emerald-100 text-emerald-900";
+        balLbl.className = "text-[11px] text-emerald-700 block font-bold";
+        ctaBox.classList.add('hidden');
+      } else if (att.balance_due > 0 && att.amount_paid > 0) {
+        payBadge.className = "px-2.5 py-0.5 rounded-full text-xs font-bold font-mono bg-amber-100 text-amber-800";
+        payBadge.textContent = "PARTIALLY PAID";
+        balCard.className = "p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900";
+        balLbl.className = "text-[11px] text-amber-700 block font-bold";
+        ctaBox.classList.remove('hidden');
+      } else {
+        payBadge.className = "px-2.5 py-0.5 rounded-full text-xs font-bold font-mono bg-rose-100 text-rose-800";
+        payBadge.textContent = "PAYMENT PENDING";
+        balCard.className = "p-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-900";
+        balLbl.className = "text-[11px] text-rose-700 block font-bold";
+        ctaBox.classList.remove('hidden');
       }
     }
 
+    // Target Countdown: March 26, 2027
     function startCountdown() {
-      const target = new Date("2027-03-26T10:00:00+05:30").getTime();
-      function update() {
-        const diff = target - new Date().getTime();
-        if (diff <= 0) return;
-        document.getElementById('cnt-days').textContent = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
-        document.getElementById('cnt-hours').textContent = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
-        document.getElementById('cnt-mins').textContent = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-        document.getElementById('cnt-secs').textContent = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+      const targetDate = new Date(APP_DATA.config.event_start_date || "2027-03-26T10:00:00+05:30").getTime();
+
+      function updateClock() {
+        const now = new Date().getTime();
+        const diff = targetDate - now;
+
+        if (diff <= 0) {
+          document.getElementById('cnt-days').textContent = "00";
+          document.getElementById('cnt-hours').textContent = "00";
+          document.getElementById('cnt-mins').textContent = "00";
+          document.getElementById('cnt-secs').textContent = "00";
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById('cnt-days').textContent = String(days).padStart(2, '0');
+        document.getElementById('cnt-hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('cnt-mins').textContent = String(mins).padStart(2, '0');
+        document.getElementById('cnt-secs').textContent = String(secs).padStart(2, '0');
       }
-      update();
-      setInterval(update, 1000);
+
+      updateClock();
+      countdownInterval = setInterval(updateClock, 1000);
     }
 
-    function openAddExpenseModal() { document.getElementById('add-expense-modal').classList.remove('hidden'); }
-    function closeAddExpenseModal() { document.getElementById('add-expense-modal').classList.add('hidden'); }
+    // Modal & Expense Handler with Automatic Change Logging
+    function openAddExpenseModal() {
+      document.getElementById('add-expense-modal').classList.remove('hidden');
+    }
+    function closeAddExpenseModal() {
+      document.getElementById('add-expense-modal').classList.add('hidden');
+    }
 
     function handleAddExpense(e) {
       e.preventDefault();
@@ -719,34 +1533,98 @@
       const title = document.getElementById('modal-exp-title').value;
       const amount = Number(document.getElementById('modal-exp-amount').value);
       const category = document.getElementById('modal-exp-category').value;
+      const vendor = document.getElementById('modal-exp-vendor').value;
+      const paidby = document.getElementById('modal-exp-paidby').value;
+      const status = document.getElementById('modal-exp-status').value;
+      const receipt = document.getElementById('modal-exp-receipt').value;
+      const notes = document.getElementById('modal-exp-notes').value;
 
       const expId = "EXP-0" + (APP_DATA.expenses.length + 1);
-      APP_DATA.expenses.unshift({
+      const newExp = {
         id: expId,
         date: new Date().toISOString().split('T')[0],
         title: title,
         category: category,
         amount: amount,
-        vendor: "Local Vendor",
+        vendor: vendor,
+        paid_by: paidby,
         added_by: author,
-        status: "Paid",
-        receipt_url: "https://drive.google.com"
-      });
+        status: status,
+        receipt_url: receipt,
+        notes: notes
+      };
 
-      APP_DATA.change_log.push({
+      // Append Expense
+      APP_DATA.expenses.unshift(newExp);
+
+      // Append Audit Change Log Entry
+      const now = new Date();
+      const timeStr = now.toLocaleDateString('en-GB') + ' ' + now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+      const newLog = {
         id: "LOG-0" + (APP_DATA.change_log.length + 1),
-        timestamp: new Date().toLocaleDateString('en-GB') + " " + new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}),
+        timestamp: timeStr,
         author: author,
         action: "Logged Expense",
         entity: `${expId} (${title})`,
-        details: `Logged ${category} of ${formatMoney(amount)}`
-      });
+        details: `Added ${category} expense of ${formatMoney(amount)} to vendor ${vendor || 'N/A'} (${status})`
+      };
+      APP_DATA.change_log.push(newLog);
 
       closeAddExpenseModal();
       updateAdminKPIs();
-      renderLedger();
-      renderChangeLog();
-      alert(`Expense logged successfully by ${author}! Added to Audit Log.`);
+      renderLedgerTable();
+      renderChangeLogTable();
+      renderAdminRecent();
+      renderAdminCharts();
+      alert(`Expense logged successfully by ${author}! Changes recorded in the Audit Log.`);
+    }
+
+    function exportExpensesCSV() {
+      const headers = ["ID", "Date", "Category", "Title", "Vendor", "Added By", "Amount", "Status", "Paid By", "Receipt URL", "Notes"];
+      const rows = APP_DATA.expenses.map(e => [
+        `"${e.id}"`, `"${e.date}"`, `"${e.category}"`, `"${e.title}"`, `"${e.vendor || ''}"`,
+        `"${e.added_by || ''}"`, e.amount, `"${e.status}"`, `"${e.paid_by || ''}"`, `"${e.receipt_url || ''}"`, `"${e.notes || ''}"`
+      ]);
+      const csvContent = "data:text/csv;charset=utf-8," + [headers.join(","), ...rows.map(r => r.join(","))].join("\n");
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `hims_mbbs_2012_expenses_${new Date().toISOString().split('T')[0]}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function exportRosterCSV() {
+      const headers = ["ID", "Name", "Batch No", "Email", "Phone", "Package", "Adults", "Kids", "Attendance", "Expected", "Paid", "Balance Due", "Status", "Verified By", "Ref", "Hoodies", "Diet"];
+      const rows = APP_DATA.attendees.map(a => [
+        `"${a.id}"`, `"${a.name}"`, `"${a.batch_no}"`, `"${a.email}"`, `"${a.phone}"`, `"${a.package}"`,
+        a.adults, a.kids, `"${a.attendance_status}"`, a.amount_expected, a.amount_paid, a.balance_due,
+        `"${a.payment_status}"`, `"${a.added_by || ''}"`, `"${a.ref}"`, `"${a.hoodie_sizes}"`, `"${a.food_pref}"`
+      ]);
+      const csvContent = "data:text/csv;charset=utf-8," + [headers.join(","), ...rows.map(r => r.join(","))].join("\n");
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `hims_mbbs_2012_roster_${new Date().toISOString().split('T')[0]}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function exportChangeLogCSV() {
+      const headers = ["Log ID", "Timestamp", "Author", "Action Type", "Affected Entity", "Details"];
+      const rows = APP_DATA.change_log.map(l => [
+        `"${l.id}"`, `"${l.timestamp}"`, `"${l.author}"`, `"${l.action}"`, `"${l.entity}"`, `"${l.details}"`
+      ]);
+      const csvContent = "data:text/csv;charset=utf-8," + [headers.join(","), ...rows.map(r => r.join(","))].join("\n");
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `hims_mbbs_2012_audit_log_${new Date().toISOString().split('T')[0]}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
 
     document.addEventListener('DOMContentLoaded', initApp);
