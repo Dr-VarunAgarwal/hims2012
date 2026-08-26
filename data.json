@@ -1,7 +1,7 @@
 {
   "config": {
     "event_name": "HIMS MBBS Batch of 2012 \u2014 15th Reunion",
-    "tagline": "Open Financial Ledger, Alumni Directory & Contributor Audit Trail",
+    "tagline": "Open Financial Ledger, Alumni Directory & Milestone Planning Board",
     "institution": "Himalayan Institute of Medical Sciences (HIMS), Dehradun",
     "batch_name": "MBBS Batch of 2012",
     "reunion_milestone": "15th Anniversary Reunion",
@@ -15,8 +15,8 @@
     "currency_code": "INR",
     "github_repo_url": "https://github.com/Dr-VarunAgarwal/hims2012",
     "upi_id": "hims2012reunion@okaxis",
-    "treasury_team": "Dr. Varun Agarwal, Dr. Karan Arora, Dr. Kushal Markanday, Dr. Sahil Verma, Dr. Ashit Bhatia, Dr. Divyanshu Joshi",
-    "last_updated": "2026-08-26"
+    "treasury_team": "Dr. Varun Agarwal, Dr. Karan Arora, Dr. Kushal Markanday, Dr. Sahil Verma, Dr. Ashit Bhatia, Dr. Divyanshu Joshi, Dr. Pranjal Mamgain, Dr. Akshat Kuchhal",
+    "last_updated": "2026-08-27"
   },
   "contributors": [
     "Dr. Varun Agarwal",
@@ -24,7 +24,83 @@
     "Dr. Kushal Markanday",
     "Dr. Sahil Verma",
     "Dr. Ashit Bhatia",
-    "Dr. Divyanshu Joshi"
+    "Dr. Divyanshu Joshi",
+    "Dr. Pranjal Mamgain",
+    "Dr. Akshat Kuchhal"
+  ],
+  "milestones": [
+    {
+      "category": "Venue & Hall",
+      "item": "Resort Shortlisting & Lawn/Banquet Booking",
+      "status": "In Progress",
+      "badge_class": "bg-amber-100 text-amber-800 border border-amber-200",
+      "icon": "\ud83c\udfe8",
+      "target_date": "Sept 2026",
+      "notes": "Shortlisted foothill resort options under review in Dehradun / Jolly Grant area."
+    },
+    {
+      "category": "Rooms & Stays",
+      "item": "Resort Room Block Allocation (2 Nights - March 26-28)",
+      "status": "Pending Decision",
+      "badge_class": "bg-slate-100 text-slate-700 border border-slate-200",
+      "icon": "\ud83d\udecf\ufe0f",
+      "target_date": "Oct 2026",
+      "notes": "Gathering attendee room requirements via portal before locking room block."
+    },
+    {
+      "category": "Catering & Meals",
+      "item": "Banquet Buffet Menu (2 Dinners, 2 Lunches, High Teas, Breakfasts)",
+      "status": "In Progress",
+      "badge_class": "bg-amber-100 text-amber-800 border border-amber-200",
+      "icon": "\ud83c\udf7d\ufe0f",
+      "target_date": "Nov 2026",
+      "notes": "Drafting multi-cuisine menu with Jain, Veg, and Non-Veg counters."
+    },
+    {
+      "category": "Souvenirs & Merch",
+      "item": "Custom 15th Fleece Hoodie, Lapel Pin, Mug & Lanyard",
+      "status": "Design Finalized",
+      "badge_class": "bg-blue-100 text-blue-800 border border-blue-200",
+      "icon": "\ud83e\udde5",
+      "target_date": "Dec 2026",
+      "notes": "Batch crest embroidery sampled. Sizing collection active in portal."
+    },
+    {
+      "category": "Printed Memory Book",
+      "item": "Commemorative Hardcover Alumni Directory & Yearbook",
+      "status": "Collecting Data",
+      "badge_class": "bg-indigo-100 text-indigo-800 border border-indigo-200",
+      "icon": "\ud83d\udcd6",
+      "target_date": "Jan 2027",
+      "notes": "Collecting doctor career profiles, portrait photos, and old batch photos."
+    },
+    {
+      "category": "Entertainment & DJ",
+      "item": "DJ Sonic Night, Dual Sub Stage Setup & Laser Lights",
+      "status": "Pending Decision",
+      "badge_class": "bg-slate-100 text-slate-700 border border-slate-200",
+      "icon": "\ud83c\udfb5",
+      "target_date": "Jan 2027",
+      "notes": "Compiling 2007-2017 nostalgia batch playlist and DJ quotes."
+    },
+    {
+      "category": "Photography & Video",
+      "item": "2-Shooter Candid Photography, Drone Shoot & Aftermovie",
+      "status": "In Progress",
+      "badge_class": "bg-amber-100 text-amber-800 border border-amber-200",
+      "icon": "\ud83d\udcf8",
+      "target_date": "Feb 2027",
+      "notes": "Drone pilot and event videographer quotes under review."
+    },
+    {
+      "category": "Decor & Nostalgia Wall",
+      "item": "Campus Nostalgia Photo Wall, Photo Booth & Entry Arch",
+      "status": "Pending Decision",
+      "badge_class": "bg-slate-100 text-slate-700 border border-slate-200",
+      "icon": "\ud83c\udfa8",
+      "target_date": "Feb 2027",
+      "notes": "Photo booth props, batch banners, and memory standees."
+    }
   ],
   "pricing_tiers": {
     "alumni": 6000,
@@ -3825,11 +3901,11 @@
     },
     {
       "id": "LOG-003",
-      "timestamp": "2026-08-26 10:30 PM",
+      "timestamp": "2026-08-27 12:15 AM",
       "author": "Dr. Varun Agarwal",
-      "action": "Updated Database Model",
-      "entity": "98 Dormant Batchmate Profiles",
-      "details": "Configured 98 doctor profiles with spouse background schema and updated committee logging permissions"
+      "action": "Updated Planning Board",
+      "entity": "Event Milestones & Committee List",
+      "details": "Configured event milestone status board and expanded committee with Dr. Pranjal Mamgain & Dr. Akshat Kuchhal"
     }
   ]
 }
