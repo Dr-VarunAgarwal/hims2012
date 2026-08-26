@@ -1,9 +1,1 @@
-Log ID,Timestamp,Author,Action Type,Affected Entity,Details
-LOG-001,2026-06-15 10:30 AM,Dr. Varun Agarwal,Logged Expense,EXP-001 (Resort Booking Advance),Added 50% advance deposit of ₹95000 to Foothills Resort for March 26-27 2027 (UTR #9928172615)
-LOG-002,2026-07-02 02:15 PM,Dr. ABC 1,Logged Expense,EXP-002 (Hoodie Manufacturer Advance),Added ₹38000 advance payment for 100 customized HIMS MBBS 2012 fleece hoodies with batch crest
-LOG-003,2026-07-09 05:40 PM,Dr. XYZ 1,Verified Payment,ATT-010 (Dr. XYZ 1),Verified UPI registration contribution of ₹6000 for Alumni Solo pass
-LOG-004,2026-07-20 11:20 AM,Dr. Varun Agarwal,Logged Expense,EXP-003 (DJ & Audio Stage Booking),Logged ₹20000 advance payment to SonicPulse Audio Dehradun for 2 nights audio-visual setup
-LOG-005,2026-08-05 04:30 PM,Dr. XYZ 1,Logged Expense,EXP-004 (Photo Booth & Standees),Logged ₹9500 advance paid out-of-pocket to PrintCraft Media; marked for central treasury reimbursement
-LOG-006,2026-08-18 01:10 PM,Dr. ABC 2,Logged Expense,EXP-005 (Photographer & Drone Pilot),Logged ₹15000 token advance to Lumiere Visuals for drone and 2-shooter photo/video coverage
-LOG-007,2026-08-20 06:45 PM,Dr. Varun Agarwal,Verified Payment,ATT-018 (Dr. XYZ 9),Recorded full UPI payment of ₹6000 for solo registration pass (Hoodie size S)
-LOG-008,2026-08-26 08:30 PM,Dr. Varun Agarwal,Updated Governance System,Ledger & Audit Trail,Activated contributor attribution picker and transparent change audit log for MBBS 2012 Reunion
+Log ID,Timestamp,Author,Action Type,Affected Entity,Details\n"LOG-001","2026-06-15 10:30 AM","Dr. Varun Agarwal","Logged Budget","EXP-001 (Resort Advance Allocation)","Initialized 50% advance allocation of ₹95,000 for March 26-27, 2027 resort booking (Venue TBD)"\n"LOG-002","2026-07-02 02:15 PM","Dr. Karan Arora","Logged Budget","EXP-002 (Hoodie & Souvenirs Allocation)","Allocated ₹38,000 for 100 customized HIMS MBBS 2012 fleece hoodies with batch crest"\n"LOG-003","2026-08-26 10:30 PM","Dr. Varun Agarwal","Updated Database Model","98 Dormant Batchmate Profiles","Configured 98 doctor profiles with spouse background schema and updated committee logging permissions"\n
