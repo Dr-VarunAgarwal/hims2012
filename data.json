@@ -1,7 +1,7 @@
 {
   "config": {
-    "event_name": "HIMS MBBS Batch of 2012 \u2014 15th Reunion",
-    "tagline": "Open Financial Ledger, Alumni Directory & Milestone Planning Board",
+    "event_name": "The 15-Year Reunion of MBBS Batch of 2012 (Batch 18) of HIMS",
+    "tagline": "We look forward to meeting at Dehradun Foothills (Venue TBD) \u2022 March 26 \u2013 27, 2027",
     "institution": "Himalayan Institute of Medical Sciences (HIMS), Dehradun",
     "batch_name": "MBBS Batch of 2012",
     "reunion_milestone": "15th Anniversary Reunion",
@@ -16,7 +16,9 @@
     "github_repo_url": "https://github.com/Dr-VarunAgarwal/hims2012",
     "upi_id": "hims2012reunion@okaxis",
     "treasury_team": "Dr. Varun Agarwal, Dr. Karan Arora, Dr. Kushal Markanday, Dr. Sahil Verma, Dr. Ashit Bhatia, Dr. Divyanshu Joshi, Dr. Pranjal Mamgain, Dr. Akshat Kuchhal",
-    "last_updated": "2026-08-27"
+    "last_updated": "2026-08-27",
+    "total_batch_intake": 100,
+    "latest_registration": "Dr. Varun Agarwal"
   },
   "contributors": [
     "Dr. Varun Agarwal",
@@ -251,43 +253,17 @@
   },
   "expenses": [
     {
-      "id": "EXP-001",
-      "date": "2026-06-15",
-      "category": "Venue & Booking",
-      "title": "Resort Booking Advance Deposit (50% Estimate)",
-      "vendor": "Venue TBD (Shortlisted Foothills Resort)",
-      "amount": 95000,
+      "id": "EXP-005",
+      "date": "2026-08-18",
+      "category": "Photography & Video",
+      "title": "Photographer & Drone Pilot Token Advance",
+      "vendor": "Vendor TBD (Photography Team)",
+      "amount": 15000,
       "status": "Paid",
       "paid_by": "Central Treasury Pool",
-      "added_by": "Dr. Varun Agarwal",
+      "added_by": "Dr. Ashit Bhatia",
       "receipt_url": "https://drive.google.com",
-      "notes": "Held in central treasury allocation for March 26-27 resort dates"
-    },
-    {
-      "id": "EXP-002",
-      "date": "2026-07-02",
-      "category": "Souvenirs & Merch",
-      "title": "Hoodie & Merchandise Advance Allocation",
-      "vendor": "Vendor TBD (Custom Merch & Apparel)",
-      "amount": 38000,
-      "status": "Paid",
-      "paid_by": "Central Treasury Pool",
-      "added_by": "Dr. Karan Arora",
-      "receipt_url": "https://drive.google.com",
-      "notes": "Advance for 100 customized HIMS MBBS 2012 fleece hoodies & crests"
-    },
-    {
-      "id": "EXP-003",
-      "date": "2026-07-20",
-      "category": "Entertainment & AV",
-      "title": "DJ & Sound Stage Booking Advance",
-      "vendor": "Vendor TBD (DJ & AV Setup)",
-      "amount": 20000,
-      "status": "Paid",
-      "paid_by": "Central Treasury Pool",
-      "added_by": "Dr. Kushal Markanday",
-      "receipt_url": "https://drive.google.com",
-      "notes": "Includes dual subs, wireless mics, lasers, and stage setup"
+      "notes": "Media team token advance for March 26-27 coverage"
     },
     {
       "id": "EXP-004",
@@ -303,17 +279,43 @@
       "notes": "Decor and alumni photo display standees"
     },
     {
-      "id": "EXP-005",
-      "date": "2026-08-18",
-      "category": "Photography & Video",
-      "title": "Photographer & Drone Pilot Token Advance",
-      "vendor": "Vendor TBD (Photography Team)",
-      "amount": 15000,
+      "id": "EXP-003",
+      "date": "2026-07-20",
+      "category": "Entertainment & AV",
+      "title": "DJ & Sound Stage Booking Advance",
+      "vendor": "Vendor TBD (DJ & AV Setup)",
+      "amount": 20000,
       "status": "Paid",
       "paid_by": "Central Treasury Pool",
-      "added_by": "Dr. Ashit Bhatia",
+      "added_by": "Dr. Kushal Markanday",
       "receipt_url": "https://drive.google.com",
-      "notes": "Media team token advance for March 26-27 coverage"
+      "notes": "Includes dual subs, wireless mics, lasers, and stage setup"
+    },
+    {
+      "id": "EXP-002",
+      "date": "2026-07-02",
+      "category": "Souvenirs & Merch",
+      "title": "Hoodie & Merchandise Advance Allocation",
+      "vendor": "Vendor TBD (Custom Merch & Apparel)",
+      "amount": 38000,
+      "status": "Paid",
+      "paid_by": "Central Treasury Pool",
+      "added_by": "Dr. Karan Arora",
+      "receipt_url": "https://drive.google.com",
+      "notes": "Advance for 100 customized HIMS MBBS 2012 fleece hoodies & crests"
+    },
+    {
+      "id": "EXP-001",
+      "date": "2026-06-15",
+      "category": "Venue & Booking",
+      "title": "Resort Booking Advance Deposit (50% Estimate)",
+      "vendor": "Venue TBD (Shortlisted Foothills Resort)",
+      "amount": 95000,
+      "status": "Paid",
+      "paid_by": "Central Treasury Pool",
+      "added_by": "Dr. Varun Agarwal",
+      "receipt_url": "https://drive.google.com",
+      "notes": "Held in central treasury allocation for March 26-27 resort dates"
     }
   ],
   "attendees": [
@@ -321,6 +323,7 @@
       "id": "ATT-000",
       "doctor_no": 0,
       "name": "Doctor #000 (Test / Demo Profile)",
+      "is_female": true,
       "maiden_name": "Demo Maiden Name",
       "batch_no": "HIMS-2012-TEST",
       "email": "test.doctor@example.com",
@@ -340,6 +343,10 @@
       "added_by": "Dr. Varun Agarwal",
       "is_dormant": false,
       "qualifications": "MBBS, MD (General Medicine)",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)",
+        "MD General Medicine (2018)"
+      ],
       "working_at": "HIMS / Himalayan Hospital",
       "city_based": "Dehradun, India",
       "prof_contact": "demo.doctor@hospital.org",
@@ -357,12 +364,22 @@
       "spouse_name": "Demo Spouse Name",
       "spouse_is_medico": true,
       "spouse_profession_details": "MD Pathology, Associate Professor",
-      "notes": "Demo profile for testing forms"
+      "children_details": [
+        {
+          "name": "Aarav",
+          "age": 4,
+          "unit": "years",
+          "tier": "Complimentary"
+        }
+      ],
+      "notes": "Demo profile for testing forms",
+      "pin": "0000"
     },
     {
       "id": "ATT-001",
       "doctor_no": 1,
       "name": "Dr. Aakriti Soni",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-001",
       "email": "",
@@ -381,7 +398,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -399,12 +419,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Aakriti Soni; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Aakriti Soni; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-002",
       "doctor_no": 2,
       "name": "Dr. Aastha Kalra",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-002",
       "email": "",
@@ -423,7 +446,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -441,12 +467,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Aastha Kalra; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Aastha Kalra; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-003",
       "doctor_no": 3,
       "name": "Dr. Aastha Yadav",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-003",
       "email": "",
@@ -465,7 +494,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -483,12 +515,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Aastha Yadav; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Aastha Yadav; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-004",
       "doctor_no": 4,
       "name": "Dr. Abhimanyu Sharma",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-004",
       "email": "",
@@ -507,7 +542,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -525,12 +563,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Abhimanyu Sharma; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Abhimanyu Sharma; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-005",
       "doctor_no": 5,
       "name": "Dr. Aditya Chauhan",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-005",
       "email": "",
@@ -549,7 +590,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -567,12 +611,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Aditya Chauhan; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Aditya Chauhan; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-006",
       "doctor_no": 6,
-      "name": "Dr. Akash Rana",
+      "name": "Dr. Aishwarya Tyagi",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-006",
       "email": "",
@@ -591,7 +638,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -604,17 +654,20 @@
       "food_pref": "Pending",
       "shuttle_request": "Pending",
       "room_booking": "Pending",
-      "is_intra_batch_couple": false,
-      "linked_batch_spouse_id": "",
-      "spouse_name": "",
-      "spouse_is_medico": false,
-      "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Akash Rana; select to furnish details"
+      "is_intra_batch_couple": true,
+      "linked_batch_spouse_id": "ATT-088",
+      "spouse_name": "Dr. Shrey Singhal",
+      "spouse_is_medico": true,
+      "spouse_profession_details": "MBBS 2012 Batchmate Doctor",
+      "children_details": [],
+      "notes": "Batchmate Dr. Aishwarya Tyagi; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-007",
       "doctor_no": 7,
-      "name": "Dr. Akriti Jaiswal",
+      "name": "Dr. Akash Rana",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-007",
       "email": "",
@@ -633,7 +686,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -651,12 +707,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Akriti Jaiswal; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Akash Rana; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-008",
       "doctor_no": 8,
-      "name": "Dr. Akshat Kuchhal",
+      "name": "Dr. Akriti Jaiswal",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-008",
       "email": "",
@@ -675,7 +734,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -693,12 +755,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Akshat Kuchhal; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Akriti Jaiswal; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-009",
       "doctor_no": 9,
-      "name": "Dr. Akul Mohan Gupta",
+      "name": "Dr. Akshat Kuchhal",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-009",
       "email": "",
@@ -717,7 +782,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -735,12 +803,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Akul Mohan Gupta; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Akshat Kuchhal; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-010",
       "doctor_no": 10,
-      "name": "Dr. Anmol Dewan",
+      "name": "Dr. Akul Mohan Gupta",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-010",
       "email": "",
@@ -759,7 +830,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -777,12 +851,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Anmol Dewan; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Akul Mohan Gupta; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-011",
       "doctor_no": 11,
-      "name": "Dr. Anmol Taneja",
+      "name": "Dr. Amit Singh Bisht",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-011",
       "email": "",
@@ -801,7 +878,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -819,12 +899,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Anmol Taneja; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Amit Singh Bisht; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-012",
       "doctor_no": 12,
-      "name": "Dr. Anugya Agarwal",
+      "name": "Dr. Anmol Dewan",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-012",
       "email": "",
@@ -843,7 +926,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -861,12 +947,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Anugya Agarwal; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Anmol Dewan; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-013",
       "doctor_no": 13,
-      "name": "Dr. Anupam Singh Chauhan",
+      "name": "Dr. Anmol Taneja",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-013",
       "email": "",
@@ -885,7 +974,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -903,12 +995,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Anupam Singh Chauhan; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Anmol Taneja; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-014",
       "doctor_no": 14,
-      "name": "Dr. Aprajita Lohan",
+      "name": "Dr. Anugya Agarwal",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-014",
       "email": "",
@@ -927,7 +1022,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -945,12 +1043,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Aprajita Lohan; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Anugya Agarwal; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-015",
       "doctor_no": 15,
-      "name": "Dr. Artham Sabharwal",
+      "name": "Dr. Anupam Singh Chauhan",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-015",
       "email": "",
@@ -969,7 +1070,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -987,12 +1091,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Artham Sabharwal; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Anupam Singh Chauhan; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-016",
       "doctor_no": 16,
-      "name": "Dr. Ashit Bhatia",
+      "name": "Dr. Aprajita Lohan",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-016",
       "email": "",
@@ -1011,7 +1118,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1029,12 +1139,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Ashit Bhatia; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Aprajita Lohan; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-017",
       "doctor_no": 17,
-      "name": "Dr. Ayush Gupta",
+      "name": "Dr. Artham Sabharwal",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-017",
       "email": "",
@@ -1053,7 +1166,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1066,17 +1182,20 @@
       "food_pref": "Pending",
       "shuttle_request": "Pending",
       "room_booking": "Pending",
-      "is_intra_batch_couple": false,
-      "linked_batch_spouse_id": "",
-      "spouse_name": "",
-      "spouse_is_medico": false,
-      "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Ayush Gupta; select to furnish details"
+      "is_intra_batch_couple": true,
+      "linked_batch_spouse_id": "ATT-086",
+      "spouse_name": "Dr. Shivangi Shahi",
+      "spouse_is_medico": true,
+      "spouse_profession_details": "MBBS 2012 Batchmate Doctor",
+      "children_details": [],
+      "notes": "Batchmate Dr. Artham Sabharwal; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-018",
       "doctor_no": 18,
-      "name": "Dr. Ayush Singhal",
+      "name": "Dr. Ashit Bhatia",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-018",
       "email": "",
@@ -1095,7 +1214,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1113,12 +1235,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Ayush Singhal; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Ashit Bhatia; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-019",
       "doctor_no": 19,
-      "name": "Doctor #019 (Open Slot)",
+      "name": "Dr. Ayush Gupta",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-019",
       "email": "",
@@ -1137,7 +1262,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1155,12 +1283,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #019"
+      "children_details": [],
+      "notes": "Batchmate Dr. Ayush Gupta; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-020",
       "doctor_no": 20,
-      "name": "Doctor #020 (Open Slot)",
+      "name": "Dr. Ayush Singhal",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-020",
       "email": "",
@@ -1179,7 +1310,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1197,12 +1331,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #020"
+      "children_details": [],
+      "notes": "Batchmate Dr. Ayush Singhal; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-021",
       "doctor_no": 21,
       "name": "Dr. Chaitanya Modgil",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-021",
       "email": "",
@@ -1221,7 +1358,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1239,12 +1379,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Chaitanya Modgil; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Chaitanya Modgil; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-022",
       "doctor_no": 22,
       "name": "Dr. Divaker Mishra",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-022",
       "email": "",
@@ -1263,7 +1406,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1281,12 +1427,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Divaker Mishra; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Divaker Mishra; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-023",
       "doctor_no": 23,
       "name": "Dr. Divyanshu Joshi",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-023",
       "email": "",
@@ -1305,7 +1454,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1323,12 +1475,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Divyanshu Joshi; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Divyanshu Joshi; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-024",
       "doctor_no": 24,
       "name": "Doctor #024 (Open Slot)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-024",
       "email": "",
@@ -1347,7 +1502,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1365,12 +1523,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #024"
+      "children_details": [],
+      "notes": "Open alphabetical slot #024",
+      "pin": ""
     },
     {
       "id": "ATT-025",
       "doctor_no": 25,
       "name": "Dr. Gunjan Kochhar",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-025",
       "email": "",
@@ -1389,7 +1550,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1407,12 +1571,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Gunjan Kochhar; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Gunjan Kochhar; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-026",
       "doctor_no": 26,
       "name": "Doctor #026 (Open Slot)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-026",
       "email": "",
@@ -1431,7 +1598,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1449,12 +1619,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #026"
+      "children_details": [],
+      "notes": "Open alphabetical slot #026",
+      "pin": ""
     },
     {
       "id": "ATT-027",
       "doctor_no": 27,
       "name": "Dr. Himani (1)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-027",
       "email": "",
@@ -1473,7 +1646,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1491,12 +1667,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Himani (1); select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Himani (1); select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-028",
       "doctor_no": 28,
       "name": "Dr. Himani (2)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-028",
       "email": "",
@@ -1515,7 +1694,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1533,12 +1715,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Himani (2); select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Himani (2); select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-029",
       "doctor_no": 29,
       "name": "Dr. Himanshu Anand",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-029",
       "email": "",
@@ -1557,7 +1742,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1575,12 +1763,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Himanshu Anand; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Himanshu Anand; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-030",
       "doctor_no": 30,
       "name": "Dr. Himanshu Chaudhary",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-030",
       "email": "",
@@ -1599,7 +1790,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1617,12 +1811,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Himanshu Chaudhary; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Himanshu Chaudhary; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-031",
       "doctor_no": 31,
       "name": "Doctor #031 (Open Slot)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-031",
       "email": "",
@@ -1641,7 +1838,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1659,12 +1859,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #031"
+      "children_details": [],
+      "notes": "Open alphabetical slot #031",
+      "pin": ""
     },
     {
       "id": "ATT-032",
       "doctor_no": 32,
       "name": "Doctor #032 (Open Slot)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-032",
       "email": "",
@@ -1683,7 +1886,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1701,12 +1907,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #032"
+      "children_details": [],
+      "notes": "Open alphabetical slot #032",
+      "pin": ""
     },
     {
       "id": "ATT-033",
       "doctor_no": 33,
       "name": "Doctor #033 (Open Slot)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-033",
       "email": "",
@@ -1725,7 +1934,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1743,12 +1955,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #033"
+      "children_details": [],
+      "notes": "Open alphabetical slot #033",
+      "pin": ""
     },
     {
       "id": "ATT-034",
       "doctor_no": 34,
       "name": "Dr. Karan Arora",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-034",
       "email": "",
@@ -1767,7 +1982,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1785,12 +2003,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Karan Arora; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Karan Arora; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-035",
       "doctor_no": 35,
       "name": "Dr. Kartik Pannu",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-035",
       "email": "",
@@ -1809,7 +2030,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1827,12 +2051,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Kartik Pannu; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Kartik Pannu; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-036",
       "doctor_no": 36,
       "name": "Dr. Khushboo Khanna",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-036",
       "email": "",
@@ -1851,7 +2078,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1869,12 +2099,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Khushboo Khanna; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Khushboo Khanna; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-037",
       "doctor_no": 37,
       "name": "Dr. Khyati Sharma",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-037",
       "email": "",
@@ -1893,7 +2126,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1911,12 +2147,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Khyati Sharma; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Khyati Sharma; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-038",
       "doctor_no": 38,
       "name": "Dr. Koshinder Vats",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-038",
       "email": "",
@@ -1935,7 +2174,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1953,12 +2195,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Koshinder Vats; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Koshinder Vats; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-039",
       "doctor_no": 39,
       "name": "Dr. Kriti Joshi",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-039",
       "email": "",
@@ -1977,7 +2222,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -1995,12 +2243,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Kriti Joshi; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Kriti Joshi; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-040",
       "doctor_no": 40,
       "name": "Dr. Kriti Shekhar",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-040",
       "email": "",
@@ -2019,7 +2270,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2037,12 +2291,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Kriti Shekhar; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Kriti Shekhar; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-041",
       "doctor_no": 41,
       "name": "Dr. Kushal Markanday",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-041",
       "email": "",
@@ -2061,7 +2318,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2079,12 +2339,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Kushal Markanday; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Kushal Markanday; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-042",
       "doctor_no": 42,
       "name": "Doctor #042 (Open Slot)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-042",
       "email": "",
@@ -2103,7 +2366,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2121,12 +2387,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #042"
+      "children_details": [],
+      "notes": "Open alphabetical slot #042",
+      "pin": ""
     },
     {
       "id": "ATT-043",
       "doctor_no": 43,
       "name": "Doctor #043 (Open Slot)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-043",
       "email": "",
@@ -2145,7 +2414,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2163,12 +2435,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #043"
+      "children_details": [],
+      "notes": "Open alphabetical slot #043",
+      "pin": ""
     },
     {
       "id": "ATT-044",
       "doctor_no": 44,
       "name": "Doctor #044 (Open Slot)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-044",
       "email": "",
@@ -2187,7 +2462,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2205,12 +2483,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #044"
+      "children_details": [],
+      "notes": "Open alphabetical slot #044",
+      "pin": ""
     },
     {
       "id": "ATT-045",
       "doctor_no": 45,
       "name": "Dr. Mallika Goel",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-045",
       "email": "",
@@ -2229,7 +2510,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2247,12 +2531,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Mallika Goel; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Mallika Goel; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-046",
       "doctor_no": 46,
       "name": "Dr. Manika Agarwal",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-046",
       "email": "",
@@ -2271,7 +2558,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2289,12 +2579,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Manika Agarwal; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Manika Agarwal; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-047",
       "doctor_no": 47,
       "name": "Dr. Meghna Chaudhary",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-047",
       "email": "",
@@ -2313,7 +2606,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2331,12 +2627,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Meghna Chaudhary; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Meghna Chaudhary; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-048",
       "doctor_no": 48,
       "name": "Dr. Meghna Singh",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-048",
       "email": "",
@@ -2355,7 +2654,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2373,12 +2675,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Meghna Singh; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Meghna Singh; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-049",
       "doctor_no": 49,
       "name": "Dr. Mehak Raheja",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-049",
       "email": "",
@@ -2397,7 +2702,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2415,12 +2723,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Mehak Raheja; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Mehak Raheja; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-050",
       "doctor_no": 50,
       "name": "Dr. Mohammed Bilal",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-050",
       "email": "",
@@ -2439,7 +2750,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2457,12 +2771,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Mohammed Bilal; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Mohammed Bilal; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-051",
       "doctor_no": 51,
       "name": "Doctor #051 (Open Slot)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-051",
       "email": "",
@@ -2481,7 +2798,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2499,12 +2819,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #051"
+      "children_details": [],
+      "notes": "Open alphabetical slot #051",
+      "pin": ""
     },
     {
       "id": "ATT-052",
       "doctor_no": 52,
       "name": "Doctor #052 (Open Slot)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-052",
       "email": "",
@@ -2523,7 +2846,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2541,12 +2867,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #052"
+      "children_details": [],
+      "notes": "Open alphabetical slot #052",
+      "pin": ""
     },
     {
       "id": "ATT-053",
       "doctor_no": 53,
-      "name": "Doctor #053 (Open Slot)",
+      "name": "Dr. Naina",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-053",
       "email": "",
@@ -2565,7 +2894,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2583,12 +2915,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #053"
+      "children_details": [],
+      "notes": "Batchmate Dr. Naina; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-054",
       "doctor_no": 54,
-      "name": "Dr. Naina",
+      "name": "Dr. Naina Gupta",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-054",
       "email": "",
@@ -2607,7 +2942,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2625,12 +2963,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Naina; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Naina Gupta; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-055",
       "doctor_no": 55,
-      "name": "Dr. Naina Gupta",
+      "name": "Dr. Naina Gupta (2)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-055",
       "email": "",
@@ -2649,7 +2990,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2667,12 +3011,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Naina Gupta; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Naina Gupta (2); select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-056",
       "doctor_no": 56,
-      "name": "Dr. Naina Gupta (2)",
+      "name": "Dr. Nancy Joshi",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-056",
       "email": "",
@@ -2691,7 +3038,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2709,12 +3059,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Naina Gupta (2); select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Nancy Joshi; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-057",
       "doctor_no": 57,
-      "name": "Dr. Nancy Joshi",
+      "name": "Dr. Neha Panwar",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-057",
       "email": "",
@@ -2733,7 +3086,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2751,12 +3107,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Nancy Joshi; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Neha Panwar; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-058",
       "doctor_no": 58,
-      "name": "Dr. Neha Panwar",
+      "name": "Dr. Nikhil Parashar",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-058",
       "email": "",
@@ -2775,7 +3134,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2793,12 +3155,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Neha Panwar; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Nikhil Parashar; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-059",
       "doctor_no": 59,
-      "name": "Dr. Nimisha Singh",
+      "name": "Dr. Nikhil Singh",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-059",
       "email": "",
@@ -2817,7 +3182,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2835,12 +3203,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Nimisha Singh; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Nikhil Singh; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-060",
       "doctor_no": 60,
-      "name": "Dr. Nishant Singla",
+      "name": "Dr. Nimisha Singh",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-060",
       "email": "",
@@ -2859,7 +3230,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2877,12 +3251,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Nishant Singla; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Nimisha Singh; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-061",
       "doctor_no": 61,
-      "name": "Dr. Nitish Batra",
+      "name": "Dr. Nishant Singla",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-061",
       "email": "",
@@ -2901,7 +3278,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2919,12 +3299,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Nitish Batra; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Nishant Singla; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-062",
       "doctor_no": 62,
-      "name": "Doctor #062 (Open Slot)",
+      "name": "Dr. Nitish Batra",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-062",
       "email": "",
@@ -2943,7 +3326,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -2961,12 +3347,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #062"
+      "children_details": [],
+      "notes": "Batchmate Dr. Nitish Batra; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-063",
       "doctor_no": 63,
       "name": "Doctor #063 (Open Slot)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-063",
       "email": "",
@@ -2985,7 +3374,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3003,12 +3395,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #063"
+      "children_details": [],
+      "notes": "Open alphabetical slot #063",
+      "pin": ""
     },
     {
       "id": "ATT-064",
       "doctor_no": 64,
       "name": "Doctor #064 (Open Slot)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-064",
       "email": "",
@@ -3027,7 +3422,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3045,12 +3443,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #064"
+      "children_details": [],
+      "notes": "Open alphabetical slot #064",
+      "pin": ""
     },
     {
       "id": "ATT-065",
       "doctor_no": 65,
-      "name": "Dr. Ozair",
+      "name": "Dr. Ozair Ali",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-065",
       "email": "",
@@ -3069,7 +3470,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3087,12 +3491,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Ozair; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Ozair Ali; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-066",
       "doctor_no": 66,
       "name": "Doctor #066 (Open Slot)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-066",
       "email": "",
@@ -3111,7 +3518,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3129,12 +3539,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #066"
+      "children_details": [],
+      "notes": "Open alphabetical slot #066",
+      "pin": ""
     },
     {
       "id": "ATT-067",
       "doctor_no": 67,
       "name": "Dr. Pooja Hatwal",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-067",
       "email": "",
@@ -3153,7 +3566,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3171,12 +3587,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Pooja Hatwal; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Pooja Hatwal; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-068",
       "doctor_no": 68,
       "name": "Dr. Prachi Jain",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-068",
       "email": "",
@@ -3195,7 +3614,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3213,12 +3635,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Prachi Jain; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Prachi Jain; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-069",
       "doctor_no": 69,
       "name": "Dr. Prachi Kalra",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-069",
       "email": "",
@@ -3237,7 +3662,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3255,12 +3683,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Prachi Kalra; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Prachi Kalra; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-070",
       "doctor_no": 70,
       "name": "Dr. Pranjal Mamgain",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-070",
       "email": "",
@@ -3279,7 +3710,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3297,12 +3731,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Pranjal Mamgain; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Pranjal Mamgain; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-071",
       "doctor_no": 71,
       "name": "Dr. Pratibha Rawat",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-071",
       "email": "",
@@ -3321,7 +3758,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3339,12 +3779,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Pratibha Rawat; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Pratibha Rawat; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-072",
       "doctor_no": 72,
       "name": "Doctor #072 (Open Slot)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-072",
       "email": "",
@@ -3363,7 +3806,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3381,12 +3827,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #072"
+      "children_details": [],
+      "notes": "Open alphabetical slot #072",
+      "pin": ""
     },
     {
       "id": "ATT-073",
       "doctor_no": 73,
       "name": "Doctor #073 (Open Slot)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-073",
       "email": "",
@@ -3405,7 +3854,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3423,12 +3875,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #073"
+      "children_details": [],
+      "notes": "Open alphabetical slot #073",
+      "pin": ""
     },
     {
       "id": "ATT-074",
       "doctor_no": 74,
-      "name": "Doctor #074 (Open Slot)",
+      "name": "Dr. Raghav Khurana",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-074",
       "email": "",
@@ -3447,7 +3902,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3465,12 +3923,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #074"
+      "children_details": [],
+      "notes": "Batchmate Dr. Raghav Khurana; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-075",
       "doctor_no": 75,
-      "name": "Dr. Raghav Khurana",
+      "name": "Dr. Rohan Ratra",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-075",
       "email": "",
@@ -3489,7 +3950,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3502,17 +3966,20 @@
       "food_pref": "Pending",
       "shuttle_request": "Pending",
       "room_booking": "Pending",
-      "is_intra_batch_couple": false,
-      "linked_batch_spouse_id": "",
-      "spouse_name": "",
-      "spouse_is_medico": false,
-      "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Raghav Khurana; select to furnish details"
+      "is_intra_batch_couple": true,
+      "linked_batch_spouse_id": "ATT-082",
+      "spouse_name": "Dr. Sara Guleria",
+      "spouse_is_medico": true,
+      "spouse_profession_details": "MBBS 2012 Batchmate Doctor",
+      "children_details": [],
+      "notes": "Batchmate Dr. Rohan Ratra; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-076",
       "doctor_no": 76,
-      "name": "Dr. Rohan Ratra",
+      "name": "Dr. Ruchika Joshi",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-076",
       "email": "",
@@ -3531,7 +3998,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3549,12 +4019,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Rohan Ratra; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Ruchika Joshi; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-077",
       "doctor_no": 77,
-      "name": "Dr. Ruchika Joshi",
+      "name": "Doctor #077 (Open Slot)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-077",
       "email": "",
@@ -3573,7 +4046,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3591,12 +4067,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Ruchika Joshi; select to furnish details"
+      "children_details": [],
+      "notes": "Open alphabetical slot #077",
+      "pin": ""
     },
     {
       "id": "ATT-078",
       "doctor_no": 78,
       "name": "Doctor #078 (Open Slot)",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-078",
       "email": "",
@@ -3615,7 +4094,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3633,12 +4115,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #078"
+      "children_details": [],
+      "notes": "Open alphabetical slot #078",
+      "pin": ""
     },
     {
       "id": "ATT-079",
       "doctor_no": 79,
-      "name": "Doctor #079 (Open Slot)",
+      "name": "Dr. Sachin Chaudhary",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-079",
       "email": "",
@@ -3657,7 +4142,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3675,12 +4163,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #079"
+      "children_details": [],
+      "notes": "Batchmate Dr. Sachin Chaudhary; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-080",
       "doctor_no": 80,
-      "name": "Doctor #080 (Open Slot)",
+      "name": "Dr. Sahil Verma",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-080",
       "email": "",
@@ -3699,7 +4190,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3717,12 +4211,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #080"
+      "children_details": [],
+      "notes": "Batchmate Dr. Sahil Verma; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-081",
       "doctor_no": 81,
-      "name": "Dr. Sahil Verma",
+      "name": "Dr. Sanket Joshi",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-081",
       "email": "",
@@ -3741,7 +4238,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3759,12 +4259,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Sahil Verma; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Sanket Joshi; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-082",
       "doctor_no": 82,
-      "name": "Dr. Sanket Joshi",
+      "name": "Dr. Sara Guleria",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-082",
       "email": "",
@@ -3783,7 +4286,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3796,17 +4302,20 @@
       "food_pref": "Pending",
       "shuttle_request": "Pending",
       "room_booking": "Pending",
-      "is_intra_batch_couple": false,
-      "linked_batch_spouse_id": "",
-      "spouse_name": "",
-      "spouse_is_medico": false,
-      "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Sanket Joshi; select to furnish details"
+      "is_intra_batch_couple": true,
+      "linked_batch_spouse_id": "ATT-075",
+      "spouse_name": "Dr. Rohan Ratra",
+      "spouse_is_medico": true,
+      "spouse_profession_details": "MBBS 2012 Batchmate Doctor",
+      "children_details": [],
+      "notes": "Batchmate Dr. Sara Guleria; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-083",
       "doctor_no": 83,
-      "name": "Dr. Sara Guleria",
+      "name": "Dr. Shabool Nafees",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-083",
       "email": "",
@@ -3825,7 +4334,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3843,12 +4355,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Sara Guleria; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Shabool Nafees; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-084",
       "doctor_no": 84,
-      "name": "Dr. Shabool Nafees",
+      "name": "Dr. Shalini Singh",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-084",
       "email": "",
@@ -3867,7 +4382,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3885,12 +4403,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Shabool Nafees; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Shalini Singh; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-085",
       "doctor_no": 85,
-      "name": "Dr. Shalini Singh",
+      "name": "Dr. Shekhar Chhabra",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-085",
       "email": "",
@@ -3909,7 +4430,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3927,12 +4451,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Shalini Singh; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Shekhar Chhabra; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-086",
       "doctor_no": 86,
       "name": "Dr. Shivangi Shahi",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-086",
       "email": "",
@@ -3951,7 +4478,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -3964,17 +4494,20 @@
       "food_pref": "Pending",
       "shuttle_request": "Pending",
       "room_booking": "Pending",
-      "is_intra_batch_couple": false,
-      "linked_batch_spouse_id": "",
-      "spouse_name": "",
-      "spouse_is_medico": false,
-      "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Shivangi Shahi; select to furnish details"
+      "is_intra_batch_couple": true,
+      "linked_batch_spouse_id": "ATT-017",
+      "spouse_name": "Dr. Artham Sabharwal",
+      "spouse_is_medico": true,
+      "spouse_profession_details": "MBBS 2012 Batchmate Doctor",
+      "children_details": [],
+      "notes": "Batchmate Dr. Shivangi Shahi; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-087",
       "doctor_no": 87,
       "name": "Dr. Shivesh Chaudhary",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-087",
       "email": "",
@@ -3993,7 +4526,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -4011,12 +4547,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Shivesh Chaudhary; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Shivesh Chaudhary; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-088",
       "doctor_no": 88,
-      "name": "Dr. Shubh Karman Saini",
+      "name": "Dr. Shrey Singhal",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-088",
       "email": "",
@@ -4035,7 +4574,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -4048,17 +4590,20 @@
       "food_pref": "Pending",
       "shuttle_request": "Pending",
       "room_booking": "Pending",
-      "is_intra_batch_couple": false,
-      "linked_batch_spouse_id": "",
-      "spouse_name": "",
-      "spouse_is_medico": false,
-      "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Shubh Karman Saini; select to furnish details"
+      "is_intra_batch_couple": true,
+      "linked_batch_spouse_id": "ATT-006",
+      "spouse_name": "Dr. Aishwarya Tyagi",
+      "spouse_is_medico": true,
+      "spouse_profession_details": "MBBS 2012 Batchmate Doctor",
+      "children_details": [],
+      "notes": "Batchmate Dr. Shrey Singhal; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-089",
       "doctor_no": 89,
-      "name": "Dr. Sonali Singh",
+      "name": "Dr. Shubh Karman Saini",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-089",
       "email": "",
@@ -4077,7 +4622,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -4095,12 +4643,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Sonali Singh; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Shubh Karman Saini; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-090",
       "doctor_no": 90,
-      "name": "Dr. Sonu Tomar",
+      "name": "Dr. Sonali Singh",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-090",
       "email": "",
@@ -4119,7 +4670,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -4137,12 +4691,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Sonu Tomar; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Sonali Singh; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-091",
       "doctor_no": 91,
-      "name": "Dr. Sunanda Verma",
+      "name": "Dr. Sonu Tomar",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-091",
       "email": "",
@@ -4161,7 +4718,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -4179,12 +4739,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Sunanda Verma; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Sonu Tomar; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-092",
       "doctor_no": 92,
-      "name": "Dr. Surekha",
+      "name": "Dr. Sunanda Verma",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-092",
       "email": "",
@@ -4203,7 +4766,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -4221,12 +4787,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Surekha; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Sunanda Verma; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-093",
       "doctor_no": 93,
-      "name": "Doctor #093 (Open Slot)",
+      "name": "Dr. Surekha",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-093",
       "email": "",
@@ -4245,7 +4814,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -4263,12 +4835,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Open alphabetical slot #093"
+      "children_details": [],
+      "notes": "Batchmate Dr. Surekha; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-094",
       "doctor_no": 94,
       "name": "Dr. Tanya Sharda",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-094",
       "email": "",
@@ -4287,7 +4862,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -4305,12 +4883,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Tanya Sharda; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Tanya Sharda; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-095",
       "doctor_no": 95,
       "name": "Dr. Tripti Dewal",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-095",
       "email": "",
@@ -4329,7 +4910,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -4347,12 +4931,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Tripti Dewal; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Tripti Dewal; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-096",
       "doctor_no": 96,
       "name": "Dr. Utkarsh",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-096",
       "email": "",
@@ -4371,7 +4958,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -4389,12 +4979,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Utkarsh; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Utkarsh; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-097",
       "doctor_no": 97,
       "name": "Dr. Varnika",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-097",
       "email": "",
@@ -4413,7 +5006,10 @@
       "ref": "-",
       "added_by": "Pending Self-Onboarding",
       "is_dormant": true,
-      "qualifications": "",
+      "qualifications": "MBBS",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)"
+      ],
       "working_at": "",
       "city_based": "",
       "prof_contact": "",
@@ -4431,12 +5027,15 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Batchmate Dr. Varnika; select to furnish details"
+      "children_details": [],
+      "notes": "Batchmate Dr. Varnika; select to furnish details",
+      "pin": ""
     },
     {
       "id": "ATT-098",
       "doctor_no": 98,
       "name": "Dr. Varun Agarwal",
+      "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-098",
       "email": "varun@example.com",
@@ -4456,6 +5055,11 @@
       "added_by": "Dr. Varun Agarwal",
       "is_dormant": false,
       "qualifications": "MBBS, MS (General Surgery), MCh (Urology)",
+      "degrees_list": [
+        "MBBS (HIMS, 2012)",
+        "MS General Surgery",
+        "MCh Urology"
+      ],
       "working_at": "Kasturba Medical College, Manipal / Dehradun",
       "city_based": "Manipal / Dehradun, India",
       "prof_contact": "varun.agarwal@example.com",
@@ -4473,7 +5077,9 @@
       "spouse_name": "",
       "spouse_is_medico": false,
       "spouse_profession_details": "",
-      "notes": "Treasury Lead & Organizer"
+      "children_details": [],
+      "notes": "Treasury Lead & Organizer",
+      "pin": "2012"
     }
   ],
   "change_log": [
@@ -4500,6 +5106,16 @@
       "action": "Expanded Profile Schema",
       "entity": "Maiden Name, DOB, Family Photos & Life Statements",
       "details": "Added maiden name, DOB, intra-batch couple cross-linking, family photo drive links, and personal statements for printed yearbook"
+    }
+  ],
+  "in_memoriam": [
+    {
+      "name": "Late Dr. Shubham Bakhetia",
+      "tribute": "In Loving Memory \u2014 Forever an integral part of our batch"
+    },
+    {
+      "name": "Late Dr. Vishvneet Singh",
+      "tribute": "In Loving Memory \u2014 Forever an integral part of our batch"
     }
   ]
 }
