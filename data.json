@@ -19,7 +19,8 @@
     "last_updated": "2026-08-27",
     "total_batch_intake": 100,
     "latest_registration": "Dr. Varun Agarwal",
-    "dates": "March 27 \u2013 28, 2027 (Saturday & Sunday)"
+    "dates": "March 27 \u2013 28, 2027 (Saturday & Sunday)",
+    "version": "v2.4.0 (2026-08-27)"
   },
   "contributors": [
     "Dr. Varun Agarwal",
@@ -4939,7 +4940,7 @@
     {
       "id": "ATT-096",
       "doctor_no": 96,
-      "name": "Dr. Utkarsh",
+      "name": "Dr. Utkarsh Joshi",
       "is_female": false,
       "maiden_name": "",
       "batch_no": "HIMS-2012-096",
@@ -5122,5 +5123,6 @@
       "period": "MBBS 1st Year (2012\u201313)",
       "tribute": "Forever an integral part of our batch."
     }
-  ]
+  ],
+  "in_memoriam_text": "In Loving Memory: Late Dr. Shubham Bakhetia & Late Dr. Vishvneet Singh \u2014 Forever an integral part of our batch"
 }
