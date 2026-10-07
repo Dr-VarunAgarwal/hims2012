@@ -266,7 +266,6 @@
         </div>
 
         <!-- HOME OVERVIEW: at-a-glance tiles, March calendar, schedule snapshot -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 text-xs" id="home-glance-tiles"></div>
 
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
           <div class="lg:col-span-2 bg-white rounded-3xl p-5 border border-slate-200 shadow-sm space-y-3">
@@ -290,11 +289,6 @@
               <li><strong class="text-slate-900">Fri Mar 26:</strong> check-in &amp; welcome kits, campus nostalgia walk, 15th anniversary gala banquet &amp; DJ night.</li>
               <li><strong class="text-slate-900">Sat Mar 27:</strong> batch group portrait &amp; drone shoot, trivia &amp; music jam, foothills barbecue &amp; goodbyes.</li>
             </ul>
-            <div class="pt-2 border-t border-slate-100 flex flex-wrap gap-2 text-[11px] font-bold">
-              <button onclick="switchHomeTab('directory')" class="px-3 py-1.5 rounded-xl bg-indigo-50 text-brand-700 border border-indigo-100">👥 Browse the directory</button>
-              <button onclick="switchHomeTab('souvenirs')" class="px-3 py-1.5 rounded-xl bg-indigo-50 text-brand-700 border border-indigo-100">🎁 See the souvenir kit</button>
-              <button onclick="downloadCalendarICS()" class="px-3 py-1.5 rounded-xl bg-indigo-50 text-brand-700 border border-indigo-100">📅 Add to calendar</button>
-            </div>
           </div>
         </div>
 
@@ -625,7 +619,8 @@
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div>
                 <label class="block font-bold text-slate-700 mb-1">Name *</label>
-                <input type="text" id="onb-name" required placeholder="Doctor Full Name" class="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl bg-white focus:ring-2 focus:ring-brand-500">
+                <input type="text" id="onb-name" required placeholder="Doctor Full Name" class="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl bg-white placeholder-slate-400 focus:ring-2 focus:ring-brand-500">
+                <label id="name-ok-row" class="inline-flex items-center mt-1.5 text-[11px] font-semibold text-emerald-700 cursor-pointer"><input type="checkbox" id="onb-name-ok" onchange="syncKeepName('onb-name','onb-name-ok')" class="mr-1.5 rounded text-emerald-600"> The name shown above is correct &mdash; keep it</label>
               </div>
 
               <div>
@@ -646,7 +641,8 @@
             <!-- Maiden Name for Women Only -->
             <div id="box-maiden-name" class="p-3 bg-pink-50/70 border border-pink-200 rounded-xl hidden">
               <label class="block font-bold text-pink-950 mb-1">Name during MBBS / Maiden Name (For Women Batchmates)</label>
-              <input type="text" id="onb-maiden-name" placeholder="e.g. Pooja Verma (Name during college days)" class="w-full px-3 py-2 border border-pink-300 rounded-lg bg-white text-xs">
+              <input type="text" id="onb-maiden-name" placeholder="e.g. Pooja Verma (Name during college days)" class="w-full px-3 py-2 border border-pink-300 rounded-lg bg-white text-xs placeholder-slate-400">
+              <label id="maiden-ok-row" class="inline-flex items-center mt-1.5 text-[11px] font-semibold text-emerald-700 cursor-pointer"><input type="checkbox" id="onb-maiden-ok" onchange="syncKeepName('onb-maiden-name','onb-maiden-ok')" class="mr-1.5 rounded text-emerald-600"> The name shown above is correct &mdash; keep it</label>
               <span class="text-[10px] text-pink-800">Enter your college name here if your surname changed after marriage so batchmates recognize you!</span>
             </div>
 
@@ -1458,7 +1454,7 @@
       const el = document.getElementById('march-calendar'); if (!el) return;
       const mine = loadMyPlanDays();
       const lead = new Date(2027, 2, 1).getDay();
-      let cells = ['S','M','T','W','T','F','S'].map(d => `<div class="text-[10px] font-bold text-slate-400 text-center">${d}</div>`);
+      let cells = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(d => `<div class="text-[10px] font-bold text-slate-400 text-center">${d}</div>`);
       for (let i = 0; i < lead; i++) cells.push('<div></div>');
       for (let d = 1; d <= 31; d++) {
         let cls = 'text-slate-700 hover:bg-slate-100';
@@ -1472,15 +1468,7 @@
 
     function renderHomeOverview() {
       renderMarchCalendar();
-      const t = document.getElementById('home-glance-tiles'); if (!t) return;
-      const att = APP_DATA.attendees.filter(a => a.attendance_status === 'Confirmed Attending').length;
-      const filled = APP_DATA.attendees.filter(a => !a.is_dormant && a.id !== 'ATT-000').length;
-      const tile = (icon, k, v, sub, tab) => `<button onclick="switchHomeTab('${tab}')" class="text-left p-4 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition"><div class="text-xl">${icon}</div><div class="text-[10px] uppercase tracking-wider font-bold text-slate-400 mt-1">${k}</div><div class="text-sm font-extrabold text-slate-900">${v}</div><div class="text-[11px] text-slate-500">${sub}</div></button>`;
-      t.innerHTML = tile('🗓️','When','Mar 26 – 27, 2027','Friday &amp; Saturday','itinerary')
-        + tile('📍','Where','Dehradun Foothills','Venue to be announced','itinerary')
-        + tile('👥','Who',`${att} attending`,`${filled} of 98 profiles filled`,'directory')
-        + tile('🎁','What you get','5-piece souvenir kit','Hoodie, pin, ID, mug, book','souvenirs');
-    }
+}
 
     function switchAdminTab(tabName) {
       document.querySelectorAll('.admin-pane').forEach(el => el.classList.add('hidden'));
@@ -1548,6 +1536,15 @@
       } else {
         alert("❌ Incorrect PIN. Please try again or contact the committee on WhatsApp.");
       }
+    }
+
+    // "Keep as shown": the grey placeholder is the name on record; ticking the box accepts it without retyping
+    function syncKeepName(inputId, okId) {
+      const inp = document.getElementById(inputId), ok = document.getElementById(okId).checked;
+      if (ok) inp.value = '';
+      inp.disabled = ok;
+      if (inputId === 'onb-name') inp.required = !ok;
+      inp.classList.toggle('bg-slate-100', ok);
     }
 
     function toggleMaidenNameField() {
@@ -1745,12 +1742,12 @@
         pill.className = "px-3 py-1 rounded-full text-xs font-bold font-mono bg-slate-100 text-slate-600";
         pill.textContent = "DORMANT";
         stText.textContent = "Profile Dormant • Please furnish your details below";
-        document.getElementById('onb-name').value = cleanDocName.startsWith("Doctor #") ? "" : cleanDocName;
+        document.getElementById('onb-name').value = "";
       } else {
         pill.className = "px-3 py-1 rounded-full text-xs font-bold font-mono bg-emerald-100 text-emerald-800";
         pill.textContent = att.attendance_status.toUpperCase();
         stText.textContent = `Active Profile • ${att.working_at || 'Details Furnished'}`;
-        document.getElementById('onb-name').value = att.name;
+        document.getElementById('onb-name').value = "";
       }
 
       // Gender radio selection
@@ -1761,7 +1758,12 @@
       }
       toggleMaidenNameField();
 
-      document.getElementById('onb-maiden-name').value = att.maiden_name || "";
+      const mi = document.getElementById('onb-maiden-name');
+      mi.value = ""; if (att.maiden_name) mi.placeholder = att.maiden_name;
+      document.getElementById('maiden-ok-row').classList.toggle('hidden', !att.maiden_name);
+      document.getElementById('name-ok-row').classList.toggle('hidden', cleanDocName.startsWith("Doctor #"));
+      ['onb-name-ok','onb-maiden-ok'].forEach(id => { document.getElementById(id).checked = false; });
+      syncKeepName('onb-name','onb-name-ok'); syncKeepName('onb-maiden-name','onb-maiden-ok');
       document.getElementById('onb-dob').value = att.dob || "";
       document.getElementById('onb-working').value = att.working_at || "";
       document.getElementById('onb-city').value = att.city_based || "";
@@ -1867,7 +1869,8 @@
 
       const name = document.getElementById('onb-name').value || document.getElementById('onb-name').placeholder;
       const isFemale = document.querySelector('input[name="onb-gender"]:checked').value === 'female';
-      const maiden = isFemale ? document.getElementById('onb-maiden-name').value : "";
+      const maidenEl0 = document.getElementById('onb-maiden-name');
+      const maiden = isFemale ? (maidenEl0.value || (document.getElementById('onb-maiden-ok').checked ? maidenEl0.placeholder : "")) : "";
       const dob = document.getElementById('onb-dob').value;
       const work = document.getElementById('onb-working').value;
       const city = document.getElementById('onb-city').value;
