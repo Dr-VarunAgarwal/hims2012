@@ -79,13 +79,10 @@
             🌟 Home
           </button>
           <button onclick="switchHomeTab('itinerary')" class="home-tab-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold transition text-slate-600 hover:text-slate-900" data-tab="itinerary">
-            🗓️ Itinerary
+            🗓️ Itinerary & Souvenirs
           </button>
           <button onclick="switchHomeTab('directory')" class="home-tab-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold transition text-slate-600 hover:text-slate-900" data-tab="directory">
-            👥 Alumni Directory
-          </button>
-          <button onclick="switchHomeTab('souvenirs')" class="home-tab-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold transition text-slate-600 hover:text-slate-900" data-tab="souvenirs">
-            🎁 Souvenirs
+            👥 Directory & Registration
           </button>
         </nav>
 
@@ -165,7 +162,6 @@
         <button onclick="switchHomeTab('welcome')" class="home-tab-btn flex-1 py-1.5 text-center text-xs font-bold rounded-lg bg-white text-brand-700" data-tab="welcome">🌟 Home</button>
         <button onclick="switchHomeTab('itinerary')" class="home-tab-btn flex-1 py-1.5 text-center text-xs font-medium rounded-lg text-slate-600" data-tab="itinerary">🗓️ Itinerary</button>
         <button onclick="switchHomeTab('directory')" class="home-tab-btn flex-1 py-1.5 text-center text-xs font-medium rounded-lg text-slate-600" data-tab="directory">👥 Directory</button>
-        <button onclick="switchHomeTab('souvenirs')" class="home-tab-btn flex-1 py-1.5 text-center text-xs font-medium rounded-lg text-slate-600" data-tab="souvenirs">🎁 Souvenirs</button>
       </div>
 
     <div id="view-home" class="space-y-6">
@@ -264,22 +260,6 @@
             </select>
           </div>
         </div>
-
-        <!-- HOME OVERVIEW: at-a-glance tiles, March calendar, schedule snapshot -->
-
-        <div class="grid grid-cols-1 gap-6">
-          <div class="lg:col-span-3 bg-white rounded-3xl p-5 border border-slate-200 shadow-sm space-y-3">
-            <div class="flex justify-between items-center">
-              <h3 class="text-sm font-extrabold text-slate-900">✨ The weekend in brief</h3>
-              <button onclick="switchHomeTab('itinerary')" class="text-[11px] font-bold text-brand-600 hover:underline">Full itinerary &rarr;</button>
-            </div>
-            <ul class="text-xs text-slate-600 space-y-2">
-              <li><strong class="text-slate-900">Fri Mar 26:</strong> check-in &amp; welcome kits, campus nostalgia walk, 15th anniversary gala banquet &amp; DJ night.</li>
-              <li><strong class="text-slate-900">Sat Mar 27:</strong> batch group portrait &amp; drone shoot, trivia &amp; music jam, foothills barbecue &amp; goodbyes.</li>
-            </ul>
-          </div>
-        </div>
-
       </div>
 
       <!-- TAB H2: ITINERARY -->
@@ -300,10 +280,11 @@
           <div class="grid grid-cols-1 lg:grid-cols-3 items-start gap-6">
       <div class="bg-slate-50 rounded-3xl p-5 border border-slate-200 shadow-sm space-y-3">
         <div class="flex justify-between items-center">
-          <h3 class="text-sm font-extrabold text-slate-900">🗓️ March 2027 — plan around it</h3>
-          <button onclick="clearMyPlanDays()" class="text-[10px] font-bold text-slate-400 hover:text-slate-700">clear my days</button>
+          <h3 class="text-sm font-extrabold text-slate-900">🗓️ March 2027 — tap arrival, then departure</h3>
+          <button onclick="clearTrip()" class="text-[10px] font-bold text-slate-400 hover:text-slate-700">clear</button>
         </div>
         <div id="march-calendar"></div>
+            <p id="trip-summary" class="text-[11px] font-semibold text-emerald-700"></p>
         <div class="flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-slate-500">
           <span><span class="inline-block w-2.5 h-2.5 rounded bg-brand-600 mr-1 align-middle"></span>Reunion</span>
           <span><span class="inline-block w-2.5 h-2.5 rounded bg-amber-200 mr-1 align-middle"></span>Suggested travel</span>
@@ -357,53 +338,9 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- TAB H3: DIRECTORY BROWSER (WITH IN MEMORIAM FOOTNOTE ON THIS PAGE ONLY) -->
-      <div id="home-pane-directory" class="home-pane hidden space-y-6">
-        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
-          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 pb-3 border-b border-slate-100">
-            <div>
-              <h3 class="text-lg font-extrabold text-slate-900 flex items-center">
-                <span class="mr-2">👥</span> Batch Directory & Attendance Tracker
-              </h3>
-              <p class="text-xs text-slate-500">Search batchmate career profiles and see who is attending in-person vs remote</p>
-            </div>
-
-            <!-- Filter Buttons -->
-            <div class="flex flex-wrap items-center gap-1.5 text-xs font-semibold">
-              <button onclick="filterDirectoryCards('all')" class="dir-filter-btn px-3 py-1.5 rounded-xl bg-brand-50 text-brand-700 font-bold" data-filter="all">All (98)</button>
-              <button onclick="filterDirectoryCards('attending')" class="dir-filter-btn px-3 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200" data-filter="attending">Attending</button>
-              <button onclick="filterDirectoryCards('furnished')" class="dir-filter-btn px-3 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200" data-filter="furnished">Details Filled</button>
-            </div>
-          </div>
-
-          <!-- Search in Cards -->
-          <div class="max-w-md">
-            <input type="text" id="dir-search-input" oninput="renderDirectoryCards()" placeholder="Search by name, maiden name, city, specialty..." class="w-full px-3.5 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:ring-2 focus:ring-brand-500">
-          </div>
-
-          <!-- Directory Cards Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="directory-cards-grid">
-            <!-- Rendered dynamically via JS -->
-          </div>
-
-          <!-- ==================== IN MEMORIAM FOOTNOTE (ALUMNI LIST ONLY) ==================== -->
-          <div class="pt-8 border-t border-slate-200/80 text-center space-y-1">
-            <div class="text-xs font-semibold text-slate-700 flex items-center justify-center space-x-1.5">
-              <span>🕊️</span>
-              <span>In Loving Memory: <strong class="text-slate-900 font-bold">Late Dr. Shubham Bakhetia</strong> & <strong class="text-slate-900 font-bold">Late Dr. Vishvneet Singh</strong></span>
-            </div>
-            <p class="text-[11px] text-slate-500 font-medium">
-              Forever an integral part of our batch
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- TAB H4: SOUVENIRS -->
-      <div id="home-pane-souvenirs" class="home-pane hidden space-y-6">
+      <!-- Souvenirs (merged into Itinerary tab) -->
+      <div class="space-y-6">
         <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
           <div class="text-center max-w-xl mx-auto space-y-1">
             <div class="text-[11px] font-bold uppercase tracking-wider text-brand-600 font-mono">15th Anniversary Commemorative Mementos</div>
@@ -460,6 +397,51 @@
     <!-- READ-ONLY PROFILE VIEW (directory card click) -->
     <div id="view-profile" class="hidden max-w-3xl mx-auto space-y-4">
       <div id="profile-detail-body"></div>
+      </div>
+
+      <!-- TAB H3: DIRECTORY BROWSER (WITH IN MEMORIAM FOOTNOTE ON THIS PAGE ONLY) -->
+      <div id="home-pane-directory" class="home-pane hidden space-y-6">
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 pb-3 border-b border-slate-100">
+            <div>
+              <h3 class="text-lg font-extrabold text-slate-900 flex items-center">
+                <span class="mr-2">👥</span> Directory & Registration
+              </h3>
+              <p class="text-xs text-slate-500">Find your name to register or update your details, and see who is coming</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap items-center gap-1.5 text-xs font-semibold">
+              <button onclick="filterDirectoryCards('all')" class="dir-filter-btn px-3 py-1.5 rounded-xl bg-brand-50 text-brand-700 font-bold" data-filter="all">All (98)</button>
+              <button onclick="filterDirectoryCards('attending')" class="dir-filter-btn px-3 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200" data-filter="attending">Attending</button>
+              <button onclick="filterDirectoryCards('furnished')" class="dir-filter-btn px-3 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200" data-filter="furnished">Details Filled</button>
+            </div>
+          </div>
+
+          <!-- Search in Cards -->
+          <div class="max-w-md">
+            <input type="text" id="dir-search-input" oninput="renderDirectoryCards()" placeholder="Search by name, maiden name, city, specialty..." class="w-full px-3.5 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:ring-2 focus:ring-brand-500">
+          </div>
+
+          <!-- Directory Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="directory-cards-grid">
+            <!-- Rendered dynamically via JS -->
+          </div>
+
+          <!-- ==================== IN MEMORIAM FOOTNOTE (ALUMNI LIST ONLY) ==================== -->
+          <div class="pt-8 border-t border-slate-200/80 text-center space-y-1">
+            <div class="text-xs font-semibold text-slate-700 flex items-center justify-center space-x-1.5">
+              <span>🕊️</span>
+              <span>In Loving Memory: <strong class="text-slate-900 font-bold">Late Dr. Shubham Bakhetia</strong> & <strong class="text-slate-900 font-bold">Late Dr. Vishvneet Singh</strong></span>
+            </div>
+            <p class="text-[11px] text-slate-500 font-medium">
+              Forever an integral part of our batch
+            </p>
+          </div>
+
+        </div>
+      </div>
+
     </div>
 
     <!-- ################################################################## -->
@@ -1442,29 +1424,38 @@
 
     // ---- Home overview (tiles + March calendar) ----
     const EVENT_DAYS = [26, 27], TRAVEL_DAYS = [25, 28];
-    function loadMyPlanDays() { try { return JSON.parse(localStorage.getItem('hims2012_myplan') || '[]'); } catch (e) { return []; } }
-    function toggleMyPlanDay(d) {
-      const days = loadMyPlanDays(); const i = days.indexOf(d);
-      if (i >= 0) days.splice(i, 1); else days.push(d);
-      try { localStorage.setItem('hims2012_myplan', JSON.stringify(days)); } catch (e) {}
-      renderMarchCalendar();
+    let tripMem = {};
+    function loadTrip() { try { return JSON.parse(localStorage.getItem('hims2012_trip') || '{}'); } catch (e) { return tripMem; } }
+    function saveTrip(t) { tripMem = t; try { localStorage.setItem('hims2012_trip', JSON.stringify(t)); } catch (e) {} renderMarchCalendar(); }
+    // 1st tap = arrival, 2nd tap (later day) = departure; tapping again starts over
+    function pickTripDay(d) {
+      const t = loadTrip();
+      if (!t.inbound || t.outbound) saveTrip({ inbound: d });
+      else if (d < t.inbound) saveTrip({ inbound: d });
+      else saveTrip({ inbound: t.inbound, outbound: d });
     }
-    function clearMyPlanDays() { try { localStorage.removeItem('hims2012_myplan'); } catch (e) {} renderMarchCalendar(); }
+    function clearTrip() { saveTrip({}); }
+    const DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    function dayLabel(d) { return `${DOW[new Date(2027, 2, d).getDay()]} ${d} Mar`; }
 
     function renderMarchCalendar() {
       const el = document.getElementById('march-calendar'); if (!el) return;
-      const mine = loadMyPlanDays();
+      const t = loadTrip();
       const lead = new Date(2027, 2, 1).getDay();
-      let cells = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(d => `<div class="text-[10px] font-bold text-slate-400 text-center">${d}</div>`);
+      let cells = DOW.map(d => `<div class="text-[10px] font-bold text-slate-400 text-center">${d}</div>`);
       for (let i = 0; i < lead; i++) cells.push('<div></div>');
       for (let d = 1; d <= 31; d++) {
         let cls = 'text-slate-700 hover:bg-slate-100';
         if (EVENT_DAYS.includes(d)) cls = 'bg-brand-600 text-white font-black';
         else if (TRAVEL_DAYS.includes(d)) cls = 'bg-amber-200 text-amber-900 font-bold';
-        if (mine.includes(d)) cls += ' ring-2 ring-emerald-500';
-        cells.push(`<button onclick="toggleMyPlanDay(${d})" class="aspect-square rounded-lg text-xs ${cls}">${d}</button>`);
+        if (t.inbound && t.outbound && d > t.inbound && d < t.outbound) cls += ' ring-2 ring-emerald-300';
+        if (d === t.inbound || d === t.outbound) cls += ' ring-4 ring-emerald-500';
+        cells.push(`<button onclick="pickTripDay(${d})" class="aspect-square rounded-lg text-xs ${cls}">${d}</button>`);
       }
       el.innerHTML = `<div class="grid grid-cols-7 gap-1">${cells.join('')}</div>`;
+      const sum = document.getElementById('trip-summary');
+      if (sum) sum.textContent = !t.inbound ? '' : !t.outbound ? `Arriving ${dayLabel(t.inbound)} — now tap your departure day`
+        : `Arrive ${dayLabel(t.inbound)} → leave ${dayLabel(t.outbound)} (${t.outbound - t.inbound} night${t.outbound - t.inbound === 1 ? '' : 's'})`;
     }
 
     function renderHomeOverview() {
