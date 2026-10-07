@@ -267,19 +267,7 @@
 
         <!-- HOME OVERVIEW: at-a-glance tiles, March calendar, schedule snapshot -->
 
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
-          <div class="lg:col-span-2 bg-white rounded-3xl p-5 border border-slate-200 shadow-sm space-y-3">
-            <div class="flex justify-between items-center">
-              <h3 class="text-sm font-extrabold text-slate-900">🗓️ March 2027 — plan around it</h3>
-              <button onclick="clearMyPlanDays()" class="text-[10px] font-bold text-slate-400 hover:text-slate-700">clear my days</button>
-            </div>
-            <div id="march-calendar"></div>
-            <div class="flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-slate-500">
-              <span><span class="inline-block w-2.5 h-2.5 rounded bg-brand-600 mr-1 align-middle"></span>Reunion</span>
-              <span><span class="inline-block w-2.5 h-2.5 rounded bg-amber-200 mr-1 align-middle"></span>Suggested travel</span>
-              <span><span class="inline-block w-2.5 h-2.5 rounded ring-2 ring-emerald-500 mr-1 align-middle"></span>My plan (tap a day; saved on this device)</span>
-            </div>
-          </div>
+        <div class="grid grid-cols-1 gap-6">
           <div class="lg:col-span-3 bg-white rounded-3xl p-5 border border-slate-200 shadow-sm space-y-3">
             <div class="flex justify-between items-center">
               <h3 class="text-sm font-extrabold text-slate-900">✨ The weekend in brief</h3>
@@ -308,6 +296,19 @@
               📅 Add to Calendar
             </button>
           </div>
+
+      <div class="max-w-sm bg-slate-50 rounded-3xl p-5 border border-slate-200 shadow-sm space-y-3">
+        <div class="flex justify-between items-center">
+          <h3 class="text-sm font-extrabold text-slate-900">🗓️ March 2027 — plan around it</h3>
+          <button onclick="clearMyPlanDays()" class="text-[10px] font-bold text-slate-400 hover:text-slate-700">clear my days</button>
+        </div>
+        <div id="march-calendar"></div>
+        <div class="flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-slate-500">
+          <span><span class="inline-block w-2.5 h-2.5 rounded bg-brand-600 mr-1 align-middle"></span>Reunion</span>
+          <span><span class="inline-block w-2.5 h-2.5 rounded bg-amber-200 mr-1 align-middle"></span>Suggested travel</span>
+          <span><span class="inline-block w-2.5 h-2.5 rounded ring-2 ring-emerald-500 mr-1 align-middle"></span>My plan (tap a day; saved on this device)</span>
+        </div>
+      </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Day 1 Card -->
@@ -1365,6 +1366,7 @@
       if (targetPane) targetPane.classList.remove('hidden');
       if (tabName === 'directory') renderDirectoryCards();
       if (tabName === 'welcome') renderHomeOverview();
+      if (tabName === 'itinerary') renderMarchCalendar();
     }
 
     // Read-only details for ONE person (directory card click)
@@ -1736,7 +1738,7 @@
       const stText = document.getElementById('portal-doc-status-text');
 
       const cleanDocName = att.name.replace(" (Doctor #", "").replace(")", "").replace(" (Open Slot)", "");
-      document.getElementById('onb-name').placeholder = cleanDocName;
+      document.getElementById('onb-name').placeholder = cleanDocName.startsWith('Doctor #') ? 'Full name (no Dr. prefix)' : cleanDocName.replace(/^(Dr\.?\s*)/i, '');
 
       if (att.is_dormant) {
         pill.className = "px-3 py-1 rounded-full text-xs font-bold font-mono bg-slate-100 text-slate-600";
@@ -1867,7 +1869,8 @@
     function handleUnifiedOnboardingSubmit(e) {
       e.preventDefault();
 
-      const name = document.getElementById('onb-name').value || document.getElementById('onb-name').placeholder;
+      const bareName = (document.getElementById('onb-name').value || document.getElementById('onb-name').placeholder).replace(/^(Dr\.?\s*)/i, '').trim();
+      const name = 'Dr. ' + bareName; // everyone is a doctor: prefix added automatically
       const isFemale = document.querySelector('input[name="onb-gender"]:checked').value === 'female';
       const maidenEl0 = document.getElementById('onb-maiden-name');
       const maiden = isFemale ? (maidenEl0.value || (document.getElementById('onb-maiden-ok').checked ? maidenEl0.placeholder : "")) : "";
