@@ -130,6 +130,12 @@
           <button onclick="switchAdminTab('ledger')" class="admin-tab-btn px-3 py-1.5 text-xs font-medium rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100" data-tab="ledger">
             🧾 Open Ledger
           </button>
+          <button onclick="switchAdminTab('vendors')" class="admin-tab-btn px-3 py-1.5 text-xs font-medium rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100" data-tab="vendors">
+            🤝 Vendors
+          </button>
+          <button onclick="switchAdminTab('committee')" class="admin-tab-btn px-3 py-1.5 text-xs font-medium rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100" data-tab="committee">
+            🧑‍💼 Committee Roles
+          </button>
           <!-- 3. Alumni List -->
           <button onclick="switchAdminTab('roster')" class="admin-tab-btn px-3 py-1.5 text-xs font-medium rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100" data-tab="roster">
             👥 Alumni List
@@ -260,6 +266,22 @@
             </select>
           </div>
         </div>
+        <!-- Contribute old photos -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm max-w-2xl mx-auto space-y-4">
+          <div class="text-center">
+            <div class="text-2xl">📸</div>
+            <h3 class="text-lg font-extrabold text-slate-900">Share your old batch photos</h3>
+            <p class="text-xs text-slate-500 mt-1">Hostel nights, wards, fests, exams. Paste a Google Drive / Google Photos link and we'll collect them for the memories reel and the printed book.</p>
+          </div>
+          <form onsubmit="submitPhotoContribution(event)" class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <select id="ph-who" required class="px-3 py-2 border border-slate-300 rounded-xl bg-slate-50"></select>
+            <input type="text" id="ph-caption" required placeholder="What / when? e.g. Freshers' night, 2013" class="px-3 py-2 border border-slate-300 rounded-xl bg-slate-50">
+            <input type="url" id="ph-link" required placeholder="https://drive.google.com/... (set sharing to 'anyone with the link')" class="sm:col-span-2 px-3 py-2 border border-slate-300 rounded-xl bg-slate-50">
+            <label class="sm:col-span-2 flex items-start gap-2 text-[11px] text-slate-600"><input type="checkbox" id="ph-ok" required class="mt-0.5 rounded text-brand-600"> I own these photos or have the right to share them, and I'm happy for batchmates to see them.</label>
+            <button class="sm:col-span-2 px-4 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold">Submit photos</button>
+          </form>
+          <p id="ph-thanks" class="hidden text-center text-xs font-semibold text-emerald-700">Thank you! The committee has your link.</p>
+        </div>
       </div>
 
       <!-- TAB H2: ITINERARY -->
@@ -284,11 +306,14 @@
           <button onclick="clearTrip()" class="text-[10px] font-bold text-slate-400 hover:text-slate-700">clear</button>
         </div>
         <div id="march-calendar"></div>
+            <p class="text-[10px] text-slate-500 leading-relaxed">Holidays: Mar 6 Maha Shivaratri &middot; Mar 10 Eid (tentative) &middot; Mar 22 Holi &middot; <strong class="text-rose-600">Mar 26 Good Friday</strong> (day 1 of the reunion). From third-party calendars; confirm with the state gazette.</p>
             <p id="trip-summary" class="text-[11px] font-semibold text-emerald-700"></p>
         <div class="flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-slate-500">
           <span><span class="inline-block w-2.5 h-2.5 rounded bg-brand-600 mr-1 align-middle"></span>Reunion</span>
           <span><span class="inline-block w-2.5 h-2.5 rounded bg-amber-200 mr-1 align-middle"></span>Suggested travel</span>
-          <span><span class="inline-block w-2.5 h-2.5 rounded ring-2 ring-emerald-500 mr-1 align-middle"></span>My plan (tap a day; saved on this device)</span>
+          <span><span class="inline-block w-2.5 h-2.5 rounded bg-emerald-500 mr-1 align-middle"></span>Your trip (saved on this device)</span>
+              <span class="text-rose-600 font-bold">Sundays</span>
+              <span><span class="inline-block w-1.5 h-1.5 rounded-full bg-rose-500 mr-1 align-middle"></span>Holiday</span>
         </div>
       </div>
             <!-- Day 1 Card -->
@@ -338,6 +363,15 @@
             </div>
           </div>
         </div>
+
+      <!-- Where to stay -->
+      <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+        <div>
+          <h3 class="text-lg font-extrabold text-slate-900 flex items-center"><span class="mr-2">🏨</span> Where to stay</h3>
+          <p class="text-xs text-slate-500">Booked common properties, with check-in / check-out and distance from the university. Details will be filled in as bookings are confirmed.</p>
+        </div>
+        <div id="stays-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+      </div>
 
       <!-- Souvenirs (merged into Itinerary tab) -->
       <div class="space-y-6">
@@ -420,7 +454,7 @@
 
           <!-- Search in Cards -->
           <div class="max-w-md">
-            <input type="text" id="dir-search-input" oninput="renderDirectoryCards()" placeholder="Search by name, maiden name, city, specialty..." class="w-full px-3.5 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:ring-2 focus:ring-brand-500">
+            <input type="text" id="dir-search-input" oninput="renderDirectoryCards()" placeholder="Search by name, city, workplace, specialty..." class="w-full px-3.5 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:ring-2 focus:ring-brand-500">
           </div>
 
           <!-- Directory Cards Grid -->
@@ -906,6 +940,12 @@
             </div>
           </div>
 
+          <!-- Consent -->
+          <label class="flex items-start gap-3 p-4 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-900 cursor-pointer">
+            <input type="checkbox" id="onb-consent" required class="mt-0.5 h-4 w-4 rounded text-brand-600">
+            <span><strong>I understand this is a shared directory.</strong> My name, qualifications, workplace, city, photo and personal statement will be visible to other batchmates on this site. My phone, email, PIN and payment details stay private to the committee.</span>
+          </label>
+
           <!-- Submit Button -->
           <div class="pt-2 flex justify-end space-x-3">
             <button type="button" onclick="showHomeView()" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 rounded-xl font-bold text-slate-700">Cancel</button>
@@ -1041,6 +1081,36 @@
       </div>
 
       <!-- TAB A2: OPEN LEDGER (LATEST TO OLDEST) -->
+      <div id="admin-tab-vendors" class="admin-pane hidden space-y-4">
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-3">
+          <h3 class="text-sm font-bold text-slate-900">Vendor list</h3>
+          <form onsubmit="addVendor(event)" class="grid grid-cols-2 lg:grid-cols-6 gap-2 text-xs">
+            <input id="v-name" required placeholder="Vendor name" class="px-3 py-1.5 border rounded-lg">
+            <select id="v-cat" class="px-3 py-1.5 border rounded-lg"></select>
+            <input id="v-contact" placeholder="Contact / phone" class="px-3 py-1.5 border rounded-lg">
+            <input id="v-quote" type="number" placeholder="Quote ₹" class="px-3 py-1.5 border rounded-lg font-mono">
+            <select id="v-status" class="px-3 py-1.5 border rounded-lg"><option>Shortlisted</option><option>Quote received</option><option>Booked</option><option>Paid</option></select>
+            <button class="px-3 py-1.5 bg-brand-600 text-white font-bold rounded-lg">+ Add vendor</button>
+          </form>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-x-auto">
+          <table class="w-full text-left text-xs divide-y divide-slate-200">
+            <thead class="bg-slate-50 text-slate-500 uppercase text-[10px] font-bold"><tr><th class="px-4 py-3">Vendor</th><th class="px-4 py-3">Category</th><th class="px-4 py-3">Contact</th><th class="px-4 py-3 text-right">Budget / Quote</th><th class="px-4 py-3">Status</th><th class="px-4 py-3"></th></tr></thead>
+            <tbody class="divide-y divide-slate-100" id="vendors-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="admin-tab-committee" class="admin-pane hidden space-y-4">
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-x-auto">
+          <div class="p-4 border-b"><h3 class="text-sm font-bold text-slate-900">Allotted roles</h3><p class="text-[11px] text-slate-500">Pick who owns each area. Saved on this device until the database is connected.</p></div>
+          <table class="w-full text-left text-xs divide-y divide-slate-200">
+            <thead class="bg-slate-50 text-slate-500 uppercase text-[10px] font-bold"><tr><th class="px-4 py-3">Role</th><th class="px-4 py-3">What they own</th><th class="px-4 py-3">Allotted to</th></tr></thead>
+            <tbody class="divide-y divide-slate-100" id="roles-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
       <div id="admin-tab-ledger" class="admin-pane hidden space-y-4">
         <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex justify-between items-center">
           <input type="text" id="expense-search" oninput="filterExpenses()" placeholder="Search description, author..." class="px-3 py-1.5 text-xs border rounded-lg w-64">
@@ -1158,7 +1228,7 @@
                 <div class="text-2xl font-black font-mono mt-1" id="sim-res-margin">₹0</div>
               </div>
             </div>
-            <div class="space-y-1" id="sim-breakdown-list"></div>
+            <div class="space-y-1 text-xs font-mono text-slate-600 bg-slate-50 rounded-xl p-4 border border-slate-200" id="sim-breakdown-list"></div>
           </div>
         </div>
       </div>
@@ -1259,6 +1329,10 @@
             <input type="number" id="modal-exp-amount" required placeholder="25000" class="w-full px-3 py-2 border rounded-xl font-mono">
           </div>
         </div>
+        <div>
+          <label class="block font-medium mb-1">Attach bill / receipt <span class="font-normal text-slate-400">(photo or PDF, up to 1 MB, optional)</span></label>
+          <input type="file" id="modal-exp-bill" accept="image/*,.pdf" class="w-full text-xs">
+        </div>
         <div class="pt-3 flex justify-end space-x-2 border-t">
           <button type="button" onclick="closeAddExpenseModal()" class="px-4 py-2 bg-slate-100 rounded-xl font-bold">Cancel</button>
           <button type="submit" class="px-5 py-2 bg-brand-600 text-white rounded-xl font-bold">Save to Ledger</button>
@@ -1275,7 +1349,7 @@
     const STATE_KEY = 'hims2012_state_v1';
     function persistState() {
       try {
-        localStorage.setItem(STATE_KEY, JSON.stringify({ attendees: APP_DATA.attendees, change_log: APP_DATA.change_log, expenses: APP_DATA.expenses, latest: APP_DATA.config.latest_registration }));
+        localStorage.setItem(STATE_KEY, JSON.stringify({ attendees: APP_DATA.attendees, change_log: APP_DATA.change_log, expenses: APP_DATA.expenses, vendors: APP_DATA.vendors, roles: APP_DATA.roles, photo_submissions: APP_DATA.photo_submissions, latest: APP_DATA.config.latest_registration }));
       } catch (e) {}
     }
     function restoreState() {
@@ -1283,6 +1357,8 @@
         const st = JSON.parse(localStorage.getItem(STATE_KEY) || 'null');
         if (!st) return;
         APP_DATA.attendees = st.attendees; APP_DATA.change_log = st.change_log; APP_DATA.expenses = st.expenses;
+        if (st.vendors) APP_DATA.vendors = st.vendors; if (st.roles) APP_DATA.roles = st.roles; if (st.photo_submissions) APP_DATA.photo_submissions = st.photo_submissions;
+        try { BILLS = JSON.parse(localStorage.getItem('hims2012_bills') || '{}'); } catch (e) {}
         if (st.latest) APP_DATA.config.latest_registration = st.latest;
       } catch (e) {}
     }
@@ -1347,7 +1423,7 @@
       if (targetPane) targetPane.classList.remove('hidden');
       if (tabName === 'directory') renderDirectoryCards();
       if (tabName === 'welcome') renderHomeOverview();
-      if (tabName === 'itinerary') renderMarchCalendar();
+      if (tabName === 'itinerary') { renderMarchCalendar(); renderStays(); }
     }
 
     // Read-only details for ONE person (directory card click)
@@ -1424,6 +1500,8 @@
 
     // ---- Home overview (tiles + March calendar) ----
     const EVENT_DAYS = [26, 27], TRAVEL_DAYS = [25, 28];
+    // Third-party calendar listings, NOT a gazette: confirm against your state's notified list.
+    const HOLIDAYS = { 6: 'Maha Shivaratri', 10: 'Eid-ul-Fitr (tentative, moon-sighting)', 22: 'Holi', 26: 'Good Friday' };
     let tripMem = {};
     function loadTrip() { try { return JSON.parse(localStorage.getItem('hims2012_trip') || '{}'); } catch (e) { return tripMem; } }
     function saveTrip(t) { tripMem = t; try { localStorage.setItem('hims2012_trip', JSON.stringify(t)); } catch (e) {} renderMarchCalendar(); }
@@ -1448,14 +1526,81 @@
         let cls = 'text-slate-700 hover:bg-slate-100';
         if (EVENT_DAYS.includes(d)) cls = 'bg-brand-600 text-white font-black';
         else if (TRAVEL_DAYS.includes(d)) cls = 'bg-amber-200 text-amber-900 font-bold';
+        else if (new Date(2027, 2, d).getDay() === 0) cls = 'text-rose-600 font-black hover:bg-rose-50';
         if (t.inbound && t.outbound && d > t.inbound && d < t.outbound) cls += ' ring-2 ring-emerald-300';
         if (d === t.inbound || d === t.outbound) cls += ' ring-4 ring-emerald-500';
-        cells.push(`<button onclick="pickTripDay(${d})" class="aspect-square rounded-lg text-xs ${cls}">${d}</button>`);
+        const hol = HOLIDAYS[d];
+        cells.push(`<button onclick="pickTripDay(${d})" title="${hol || ''}" class="relative aspect-square rounded-lg text-xs ${cls}">${d}${hol ? '<span class="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-rose-500"></span>' : ''}</button>`);
       }
       el.innerHTML = `<div class="grid grid-cols-7 gap-1">${cells.join('')}</div>`;
       const sum = document.getElementById('trip-summary');
       if (sum) sum.textContent = !t.inbound ? '' : !t.outbound ? `Arriving ${dayLabel(t.inbound)} — now tap your departure day`
         : `Arrive ${dayLabel(t.inbound)} → leave ${dayLabel(t.outbound)} (${t.outbound - t.inbound} night${t.outbound - t.inbound === 1 ? '' : 's'})`;
+    }
+
+
+    // ---- Stays (placeholders until bookings are confirmed) ----
+    const STAYS = [
+      { name: 'Main venue / resort', note: 'Reunion venue (TBD)', checkIn: '', checkOut: '', km: '' },
+      { name: 'Partner hotel 1', note: 'Common block booking (TBD)', checkIn: '', checkOut: '', km: '' },
+      { name: 'Partner hotel 2', note: 'Budget option (TBD)', checkIn: '', checkOut: '', km: '' }
+    ];
+    function renderStays() {
+      const g = document.getElementById('stays-grid'); if (!g) return;
+      const f = (label, v, ph) => `<div class="flex justify-between text-xs py-1.5 border-t border-slate-100"><span class="text-slate-500">${label}</span><span class="${v ? 'font-bold text-slate-900' : 'text-slate-300 italic'}">${esc(v || ph)}</span></div>`;
+      g.innerHTML = STAYS.map(h => `<div class="p-4 rounded-2xl bg-slate-50 border border-slate-200"><div class="font-extrabold text-sm text-slate-900">${esc(h.name)}</div><div class="text-[11px] text-slate-400 mb-2">${esc(h.note)}</div>${f('Check-in', h.checkIn, 'time TBD')}${f('Check-out', h.checkOut, 'time TBD')}${f('From HIMS', h.km && h.km + ' km', 'distance TBD')}</div>`).join('');
+    }
+
+    // ---- Vendors & committee roles (admin) ----
+    const ROLE_LIST = [
+      ['Convenor', 'Overall coordination, final calls'], ['Treasurer', 'Collections, payments, ledger'], ['Registration & Data', 'Profiles, RSVPs, this website'],
+      ['Venue & Stay', 'Resort, hotels, room blocks'], ['Food & Beverage', 'Menus, caterer, bar'], ['Souvenirs & Merch', 'Hoodies, kits, alumni book'],
+      ['Entertainment & AV', 'DJ, music jam, trivia'], ['Photo & Video', 'Photographer, drone, memories reel'], ['Travel & Transport', 'Shuttles, airport / station pickups'], ['Outreach', 'Reaching dormant batchmates']
+    ];
+    function ensureAdminData() {
+      if (!APP_DATA.vendors) {
+        APP_DATA.vendors = (APP_DATA.budget_projections.fixed_costs || []).map(c => ({ name: 'TBD', category: c.category, contact: '', quote: c.amount, status: 'To shortlist' }));
+      }
+      if (!APP_DATA.roles) APP_DATA.roles = {};
+      if (!APP_DATA.photo_submissions) APP_DATA.photo_submissions = [];
+    }
+    function renderVendors() {
+      const cats = [...new Set(APP_DATA.expenses.map(e => e.category).concat(['Venue & Booking','Catering & Dining','Souvenirs & Merch','Entertainment & AV','Decor & Signage','Photography & Video','Logistics & Transport']))];
+      const sel = document.getElementById('v-cat'); if (sel && !sel.options.length) sel.innerHTML = cats.map(c => `<option>${esc(c)}</option>`).join('');
+      document.getElementById('vendors-tbody').innerHTML = APP_DATA.vendors.map((v, i) => `<tr class="hover:bg-slate-50"><td class="px-4 py-3 font-bold ${v.name === 'TBD' ? 'text-slate-300 italic' : 'text-slate-900'}">${esc(v.name)}</td><td class="px-4 py-3">${esc(v.category)}</td><td class="px-4 py-3 text-slate-500">${esc(v.contact || '—')}</td><td class="px-4 py-3 text-right font-mono font-bold">${v.quote ? formatMoney(v.quote) : '—'}</td><td class="px-4 py-3"><span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-600">${esc(v.status)}</span></td><td class="px-4 py-3 text-right"><button onclick="removeVendor(${i})" class="text-[10px] text-slate-400 hover:text-rose-600">remove</button></td></tr>`).join('');
+    }
+    function addVendor(e) {
+      e.preventDefault();
+      APP_DATA.vendors.push({ name: document.getElementById('v-name').value.trim(), category: document.getElementById('v-cat').value, contact: document.getElementById('v-contact').value.trim(), quote: Number(document.getElementById('v-quote').value) || 0, status: document.getElementById('v-status').value });
+      e.target.reset(); persistState(); renderVendors();
+    }
+    function removeVendor(i) { if (confirm('Remove this vendor row?')) { APP_DATA.vendors.splice(i, 1); persistState(); renderVendors(); } }
+    function renderRoles() {
+      const opts = ['<option value="">— unassigned —</option>'].concat(APP_DATA.contributors.map(c => `<option>${esc(c)}</option>`)).join('');
+      document.getElementById('roles-tbody').innerHTML = ROLE_LIST.map(([r, d]) => `<tr><td class="px-4 py-3 font-bold text-slate-900">${r}</td><td class="px-4 py-3 text-slate-500">${d}</td><td class="px-4 py-3"><select onchange="setRole('${r}', this.value)" class="px-2 py-1 border rounded-lg text-xs">${opts.replace(`<option>${esc(APP_DATA.roles[r] || '')}</option>`, `<option selected>${esc(APP_DATA.roles[r] || '')}</option>`)}</select></td></tr>`).join('');
+    }
+    function setRole(r, who) { APP_DATA.roles[r] = who; persistState(); }
+
+    // ---- Old-photo contributions ----
+    function populatePhotoWho() {
+      const el = document.getElementById('ph-who'); if (!el) return;
+      el.innerHTML = '<option value="">Your name…</option>' + APP_DATA.attendees.filter(a => a.id !== 'ATT-000').map(a => `<option>${esc(a.name)}</option>`).join('');
+    }
+    function submitPhotoContribution(e) {
+      e.preventDefault();
+      const who = document.getElementById('ph-who').value, link = document.getElementById('ph-link').value, cap = document.getElementById('ph-caption').value;
+      APP_DATA.photo_submissions.push({ who, link, caption: cap, at: new Date().toISOString() });
+      APP_DATA.change_log.push({ id: 'LOG-' + String(APP_DATA.change_log.length + 1).padStart(3, '0'), timestamp: new Date().toLocaleDateString('en-GB') + ' ' + new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}), author: who, action: 'Photo Contribution', entity: cap, details: link });
+      persistState(); renderChangeLog();
+      e.target.reset(); document.getElementById('ph-thanks').classList.remove('hidden');
+    }
+
+    // ---- Expense bills (kept in a separate storage key so a big file can't break the main save) ----
+    let BILLS = {};
+    function persistBills() { try { localStorage.setItem('hims2012_bills', JSON.stringify(BILLS)); } catch (e) { alert('Bill attached for this session only (browser storage is full).'); } }
+    function viewBill(id) {
+      const d = BILLS[id]; if (!d) { alert('Bill file is not stored on this device.'); return; }
+      const w = window.open(); if (w) w.document.write(`<iframe src="${d}" style="border:0;width:100%;height:100vh"></iframe>`);
     }
 
     function renderHomeOverview() {
@@ -1754,7 +1899,7 @@
       mi.value = ""; if (att.maiden_name) mi.placeholder = att.maiden_name;
       document.getElementById('maiden-ok-row').classList.toggle('hidden', !att.maiden_name);
       document.getElementById('name-ok-row').classList.toggle('hidden', cleanDocName.startsWith("Doctor #"));
-      ['onb-name-ok','onb-maiden-ok'].forEach(id => { document.getElementById(id).checked = false; });
+      ['onb-name-ok','onb-maiden-ok','onb-consent'].forEach(id => { document.getElementById(id).checked = false; });
       syncKeepName('onb-name','onb-name-ok'); syncKeepName('onb-maiden-name','onb-maiden-ok');
       document.getElementById('onb-dob').value = att.dob || "";
       document.getElementById('onb-working').value = att.working_at || "";
@@ -2115,7 +2260,8 @@
 
     function initApp() {
       restoreState();
-      renderHomeOverview();
+      ensureAdminData();
+      renderHomeOverview(); renderStays(); renderVendors(); renderRoles(); populatePhotoWho();
       populateHomeDoctorSelect();
       populateContributorPicker();
       updateAdminKPIs();
@@ -2182,7 +2328,7 @@
 
       // Nomenclature
       document.getElementById('kpi-admin-inflow').textContent = formatMoney(totalCollected);
-      document.getElementById('kpi-admin-inflow-sub').textContent = `Budget Goal: ${formatMoney(targetRev)}`;
+      document.getElementById('kpi-admin-inflow-sub').textContent = `Goal ${formatMoney(targetRev)} = 70×₹6,000 + 25×₹4,000 + 15×₹2,000`;
       document.getElementById('kpi-admin-spent').textContent = formatMoney(totalSpentActual);
       document.getElementById('kpi-admin-treasury').textContent = formatMoney(treasuryBalance);
       document.getElementById('kpi-admin-margin').textContent = formatMoney(projectedNetMargin);
@@ -2194,7 +2340,7 @@
       document.getElementById('expenses-tbody').innerHTML = sortedExpenses.map(e => `
         <tr class="hover:bg-slate-50">
           <td class="px-4 py-3 font-mono text-[11px]">${e.id}<div class="text-slate-400 font-semibold">${e.date}</div></td>
-          <td class="px-4 py-3 font-bold text-slate-900">${e.title}</td>
+          <td class="px-4 py-3 font-bold text-slate-900">${esc(e.title)}${e.bill_name ? ` <button onclick="viewBill('${e.id}')" class="ml-1 text-[10px] font-bold text-brand-600 underline">📎 ${esc(e.bill_name)}</button>` : ''}</td>
           <td class="px-4 py-3"><span class="px-2 py-0.5 rounded bg-slate-100 text-[10px] font-semibold">${e.category}</span></td>
           <td class="px-4 py-3 text-slate-500 font-medium">${e.vendor || 'Vendor TBD'}</td>
           <td class="px-4 py-3 font-bold text-indigo-700">${e.added_by}</td>
@@ -2287,6 +2433,17 @@
       document.getElementById('sim-res-revenue').textContent = formatMoney(rev);
       document.getElementById('sim-res-cost').textContent = formatMoney(total);
       document.getElementById('sim-res-margin').textContent = formatMoney(margin);
+      const L = (label, a, b) => `<div class="flex justify-between gap-3"><span>${label}</span><span>${a}</span><strong class="text-slate-900">${b}</strong></div>`;
+      document.getElementById('sim-breakdown-list').innerHTML =
+        '<div class="font-sans font-bold text-slate-900 mb-1">How the projection is built</div>'
+        + L('Alumni', `${alumni} × ${formatMoney(6000)}`, formatMoney(alumni * 6000))
+        + L('Spouses', `${spouses} × ${formatMoney(4000)}`, formatMoney(spouses * 4000))
+        + L('Children (above 5)', `${kids} × ${formatMoney(2000)}`, formatMoney(kids * 2000))
+        + `<div class="border-t border-slate-300 my-1"></div>` + L('Projected collections', 'sum of the three', formatMoney(rev))
+        + `<div class="pt-2 font-sans font-bold text-slate-900">Outflow</div>`
+        + L('Fixed costs', 'venue, AV, photo, decor, buffer', formatMoney(fix))
+        + L('Per-head costs', `${alumni}×${formatMoney(4450)} + ${spouses}×${formatMoney(3100)} + ${kids}×${formatMoney(1650)}`, formatMoney(varCost))
+        + `<div class="border-t border-slate-300 my-1"></div>` + L('Net reserve', 'collections − outflow', formatMoney(margin));
       document.getElementById('sim-headcount-badge').textContent = `Total Turnout: ${alumni + spouses + kids} (${alumni + spouses} Adults, ${kids} Kids)`;
     }
 
@@ -2331,8 +2488,11 @@
     function openAddExpenseModal() { document.getElementById('add-expense-modal').classList.remove('hidden'); }
     function closeAddExpenseModal() { document.getElementById('add-expense-modal').classList.add('hidden'); }
 
-    function handleAddExpense(e) {
+    async function handleAddExpense(e) {
       e.preventDefault();
+      const billFile = document.getElementById('modal-exp-bill').files[0];
+      if (billFile && billFile.size > 1048576) { alert('Bill is over 1 MB. Please attach a smaller photo or PDF.'); return; }
+      const billData = billFile ? await new Promise(res => { const r = new FileReader(); r.onload = () => res(r.result); r.readAsDataURL(billFile); }) : null;
       const author = document.getElementById('modal-exp-author').value;
       const title = document.getElementById('modal-exp-title').value;
       const amount = Number(document.getElementById('modal-exp-amount').value);
@@ -2348,8 +2508,11 @@
         vendor: "Vendor TBD",
         added_by: author,
         status: "Paid",
-        receipt_url: "https://drive.google.com"
+        receipt_url: "https://drive.google.com",
+        bill_name: billFile ? billFile.name : ""
       });
+      if (billData) { BILLS[expId] = billData; persistBills(); }
+      document.getElementById('add-expense-form').reset();
 
       APP_DATA.change_log.push({
         id: "LOG-0" + (APP_DATA.change_log.length + 1),
